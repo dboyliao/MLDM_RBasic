@@ -189,6 +189,1508 @@ And you can claim that you can do sketch by a computer!
   <!-- Presenter Notes -->
 </slide>
 
+<slide class="segue" id="slide-10" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Table of Content</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Topics We Will Cover Today</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+<ul>
+<li>DATA: 一切的起源
+
+<ul>
+<li>資料屬性</li>
+<li>資料形態</li>
+</ul></li>
+<li>Loop
+
+<ul>
+<li>if/else if/else</li>
+<li>for</li>
+<li>while</li>
+</ul></li>
+</ul>
+
+</div>
+  <div style='float:right;width:48%;'>
+<ul>
+<li><p>基礎運算</p>
+
+<ul>
+<li>邏輯運算</li>
+<li>數值運算</li>
+</ul></li>
+<li><p>Mini Project: </p>
+
+<ul>
+<li>Barnsley Fern Fractal (We will go for this today)</li>
+<li>Battleship (Coming soon in DSC)</li>
+</ul></li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-12" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Data: Where the Story Begins</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-13" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>DATA: 一切的起源</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+<p>以資料屬性來分：</p>
+
+<ul>
+<li>Character (字串)</li>
+<li>Integer (整數)</li>
+<li>Numeric (雙浮點數 / 實數)</li>
+<li>Logical (邏輯值)</li>
+<li>Complex (複數)</li>
+</ul>
+
+</div>
+  <div style='float:right;width:48%;'>
+<p>以資料形態來分：</p>
+
+<ul>
+<li>一般變數</li>
+<li>Vector</li>
+<li>Matrix (Array)</li>
+<li>Factor and Data Frame</li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-14" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>基本賦值語法</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">(x &lt;- &#39;R is easy to learn!&#39;) # 這是字串
+(y &lt;- 3) # 這是整數
+(z &lt;- pi) # 圓周率
+(k &lt;- 1 + 2i) # 複數
+</code></pre>
+
+<pre><code>## [1] &quot;R is easy to learn!&quot;
+</code></pre>
+
+<pre><code>## [1] 3
+</code></pre>
+
+<pre><code>## [1] 3.142
+</code></pre>
+
+<pre><code>## [1] 1+2i
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-15" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Logical</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-16" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Logical</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">bol1 &lt;- T
+bol2 &lt;- TRUE
+bol3 &lt;- F
+bol1 == bol2
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<pre><code class="r">bol1 &amp; bol2
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<pre><code class="r">bol3 | 4 &gt; 5 
+</code></pre>
+
+<p>[1] FALSE</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-17" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Logical (續)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">4 &gt; 2
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<pre><code class="r">1 &gt;= 2
+</code></pre>
+
+<p>[1] FALSE</p>
+
+<pre><code class="r">&#39;Dboy&#39; == &#39;Dboy&#39;
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<pre><code class="r">a &lt;- NA
+a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
+</code></pre>
+
+<p>[1] NA</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-18" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Fun Time</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>於 Console 中依續執行下列程式碼。</h3>
+
+<ol>
+<li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
+<li>ind &lt;- my_vec &gt;= 5</li>
+<li>sum(my_vec)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Fun Time</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>於 Console 中依續執行下列程式碼。</h3>
+
+<ol>
+<li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
+<li>ind &lt;- my_vec &gt;= 5</li>
+<li>sum(my_vec) </li>
+</ol>
+
+<p><code>猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-20" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Loops</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-21" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>If Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-22" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>If Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>if / else</h3>
+
+<p>Syntex:</p>
+
+<pre><code>if (condition_1){
+    #Do something here....
+} else if (conditon_2){
+    #Do something here
+} else {
+    #Do something here
+}
+</code></pre>
+
+<p>Note: <strong>else if</strong> and <strong>else</strong> are optional.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-23" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>If Loop (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Exercise:</p>
+
+<ol>
+<li><p>定義一個變數 value，並隨意給予一個數值。</p></li>
+<li><p>寫個 <strong>if</strong>/<strong>else if</strong>/<strong>else</strong> 迴圈:</p>
+
+<ol>
+<li>若 value &gt; 100 或 &lt; -100，執行 print(&#39;Extreme&#39;)。</li>
+<li>若 value &lt;= 60 且 value &gt;= 40，執行 print(&#39;Median&#39;)。</li>
+<li>其餘狀況，執行 print(&#39;Normal&#39;)</li>
+</ol></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-24" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>For Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>For Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Syntex:</h3>
+
+<pre><code>for (iterator){
+    #Do something here....
+} 
+</code></pre>
+
+<h3>Example: 土炮 sum()</h3>
+
+<pre><code class="r"># 從 1 加到 10
+final_result &lt;- 0
+for (i in 1:10){
+        final_result &lt;- final_result + i
+}
+(final_result)
+</code></pre>
+
+<pre><code>## [1] 55
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-26" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>While Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>While Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Syntex:</h3>
+
+<pre><code>while (condition_1){
+    #Do something here....
+} 
+</code></pre>
+
+<h3>Example:</h3>
+
+<pre><code>while (T){
+        handsome &lt;- readline(&#39;Are you handsome? &#39;)
+        if (handsome == &#39;yes&#39;){
+                print(&#39;Really....!?&#39;)
+        } else {
+                print(&#39;Now we are talking.&#39;)
+                break
+        }
+}
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>While Loop (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/while.gif" height="60%" width="60%" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>While Loop (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><img src="assets/img/while.gif" height="60%" width="60%" /></p>
+
+<h3>Exercise</h3>
+
+<ol class = "build incremental">
+<li>那如果要把上述程式改成電腦不斷詢問 &quot;Do you like to code?&quot; 呢?</li>
+<li>至於要回答 &#39;yes&#39; or &#39;no&#39; 才會停....</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-30" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Vector, List, Factor, Data Frame and Matrix</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-31" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Vector</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-32" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Vector</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>c(): concatenation function</p></li>
+<li><p>範例：</p></li>
+</ul>
+
+<pre><code class="r">vec1 &lt;- c(1, 2, 3)
+vec2 &lt;- c(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)
+</code></pre>
+
+<ul>
+<li><p>vector 中所有元素都必須是同一種資料屬性。</p></li>
+<li><p>Named Vector:</p></li>
+</ul>
+
+<pre><code class="r">Bob &lt;- c(age = 27, height = 187, weight = 80)
+Bob
+</code></pre>
+
+<pre><code>##    age height weight 
+##     27    187     80
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-33" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2><strong>Funtime</strong></h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">mix_vec1 &lt;- c(&#39;a&#39;, 2)
+mix_vec2 &lt;- c(2, T)
+</code></pre>
+
+<p>猜看看結果會如何?</p>
+
+<ol class = "build incremental">
+<li>[1] &quot;a&quot; &quot;2&quot;</li>
+<li>[1] 2 1</li>
+<li>Why??</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-34" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Useful Methods (Vector)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>length(): 
+
+<ul>
+<li>語法: <strong>length(my_vec)</strong></li>
+<li>傳回 my_vect 的長度</li>
+</ul></li>
+<li>+, -, *, /:
+
+<ul>
+<li>語法: <strong>my_vec + other_vec</strong></li>
+<li>注意: R 中所有運算皆向量化。(element by element operation)</li>
+</ul></li>
+<li>names():
+
+<ul>
+<li>語法: <strong>names(my_vec)</strong></li>
+<li>傳回 my_vec 各維度的名字。</li>
+</ul></li>
+<li>[]:
+
+<ul>
+<li>語法: <strong>my_vec[index]</strong></li>
+<li>傳回 my_vec 的第 index 個元素。</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-35" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">vec1 &lt;- c(1, 2, 3)
+vec2 &lt;- c(4, 5, 6)
+vec1 + vec2
+vec1 - vec2
+vec1 * vec2
+vec1[1] + vec2[3]
+</code></pre>
+
+<pre><code>## [1] 5 7 9
+</code></pre>
+
+<pre><code>## [1] -3 -3 -3
+</code></pre>
+
+<pre><code>## [1]  4 10 18
+</code></pre>
+
+<pre><code>## [1] 7
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">names(Bob)
+Bob[&#39;age&#39;]   # reference by name.
+</code></pre>
+
+<pre><code>## [1] &quot;age&quot;    &quot;height&quot; &quot;weight&quot;
+</code></pre>
+
+<pre><code>## age 
+##  27
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-37" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>定義一個向量 me 記錄自己的身高(公分)、體重(公斤)與年齡。</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-38" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>定義一個向量 me 記錄自己的身高(公分)、體重(公斤)與年齡。</p>
+
+<p><code>如果我還想記錄頭髮的顏色跟電話號碼呢?</code></p>
+
+<ol class = "build incremental">
+<li>把 hair_color=&#39;Black&#39; 存進去?</li>
+<li>如果電話是 +886 911333966 呢?</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-39" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>List</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-40" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>List</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>list 是非常方便好用的資料形態。尤其是需儲存不同類型資料的時候，特別好用。</p></li>
+<li><p>Vector, Matrix, Data Frame and List.</p></li>
+<li><p>還記得剛剛提過的優先順序嗎？</p>
+
+<ul>
+<li>c(1, &#39;2&#39;)</li>
+<li>c(1, T)</li>
+</ul></li>
+<li><p>比較：</p>
+
+<ul>
+<li>list(1, &#39;2&#39;)</li>
+<li>list(1, T)</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-41" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>List: Examples</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">Bob &lt;- list(age=27, weight = 80,
+            favorite_data_name = &#39;iris&#39;, favorite_data = iris)
+(age1 &lt;- Bob[1])
+class(age1)
+(age2 &lt;- Bob[[1]])
+class(age2)
+</code></pre>
+
+<pre><code>## $age
+## [1] 27
+</code></pre>
+
+<pre><code>## [1] &quot;list&quot;
+</code></pre>
+
+<pre><code>## [1] 27
+</code></pre>
+
+<pre><code>## [1] &quot;numeric&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-42" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>List: Examples (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">(Age_and_DataName &lt;- Bob[c(1, 3)])
+head(Bob[[&#39;favorite_data&#39;]])
+</code></pre>
+
+<pre><code>## $age
+## [1] 27
+## 
+## $favorite_data_name
+## [1] &quot;iris&quot;
+</code></pre>
+
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-43" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With List</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3><code>Warmup for Battleship Mini Project: Drawing the Map</code></h3>
+
+<pre><code class="r">map =list(c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;),
+          c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;),
+          c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;),
+          c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;),
+          c(&#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;, &#39;O&#39;))
+for (i in 1:length(map)){
+        print(map[[i]])
+}
+</code></pre>
+
+<pre><code>## [1] &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot;
+## [1] &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot;
+## [1] &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot;
+## [1] &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot;
+## [1] &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot; &quot;O&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-44" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Factor and Data Frame</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-45" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Factor and Data Frame</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>R 中有很多內建資料庫，其中包括你不可以不知道的 iris 資料庫。</p></li>
+<li><p>用法也很簡單，只要輸入以下指令：</p></li>
+</ul>
+
+<pre><code class="r">data(iris)
+head(iris)
+</code></pre>
+
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-46" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Factor and Data Frame (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>names(iris) 將可以看到 iris 所有欄位的名字。</p></li>
+<li><p>關於 factor ，我們來看看下面這個例子。</p></li>
+</ol>
+
+<pre><code class="r">Species &lt;- iris[, &#39;Species&#39;]
+class(Species)                  # R 會告訴你他是個 factor。
+Species2 &lt;- as.numeric(Species) # 直接把 factor 轉成 numeric 向量。
+Species2
+# 你覺得上面這行 code 會跑出什麼呢? 試試看吧!
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-47" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Useful Functions for Data Frame</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>給定一個名叫 data 的 data frame</p>
+
+<ul>
+<li><p>names(data): 傳回 data 的所有欄位名稱。</p></li>
+<li><p>nrow(data)/ncol(data): 傳回 data 的列 / 行數目。</p></li>
+<li><p>head(data, n)/tail(data, n)/View(data)</p></li>
+<li><p>which(exp)</p></li>
+<li><p>sort/order</p></li>
+<li><p>max/min</p></li>
+<li><p>rbind/cbind: merge different data frames</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-48" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">nrow(iris)    # 顯示 iris 的列數
+ncol(iris)    # 顯示 iris 的行數
+dim(iris)     # 顯示 iris 的行、列數
+names(iris)   # 顯示 iris 的欄位名稱
+</code></pre>
+
+<pre><code>## [1] 150
+</code></pre>
+
+<pre><code>## [1] 5
+</code></pre>
+
+<pre><code>## [1] 150   5
+</code></pre>
+
+<pre><code>## [1] &quot;Sepal.Length&quot; &quot;Sepal.Width&quot;  &quot;Petal.Length&quot; &quot;Petal.Width&quot; 
+## [5] &quot;Species&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-49" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">head(iris, n = 10)    # 顯示 iris 前 10 筆資料 (預設為 6 筆)
+</code></pre>
+
+<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1           5.1         3.5          1.4         0.2  setosa
+## 2           4.9         3.0          1.4         0.2  setosa
+## 3           4.7         3.2          1.3         0.2  setosa
+## 4           4.6         3.1          1.5         0.2  setosa
+## 5           5.0         3.6          1.4         0.2  setosa
+## 6           5.4         3.9          1.7         0.4  setosa
+## 7           4.6         3.4          1.4         0.3  setosa
+## 8           5.0         3.4          1.5         0.2  setosa
+## 9           4.4         2.9          1.4         0.2  setosa
+## 10          4.9         3.1          1.5         0.1  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-50" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">tail(iris, n = 10)    # 顯示 iris 後 10 筆資料 (預設為 6 筆)
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 141          6.7         3.1          5.6         2.4 virginica
+## 142          6.9         3.1          5.1         2.3 virginica
+## 143          5.8         2.7          5.1         1.9 virginica
+## 144          6.8         3.2          5.9         2.3 virginica
+## 145          6.7         3.3          5.7         2.5 virginica
+## 146          6.7         3.0          5.2         2.3 virginica
+## 147          6.3         2.5          5.0         1.9 virginica
+## 148          6.5         3.0          5.2         2.0 virginica
+## 149          6.2         3.4          5.4         2.3 virginica
+## 150          5.9         3.0          5.1         1.8 virginica
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-51" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">ind1 &lt;- which(iris[, &#39;Sepal.Length&#39;] &gt;= 6.5 &amp; iris[, &#39;Species&#39;] == &#39;virginica&#39;)
+class(ind1)
+iris1 &lt;- iris[ind1, ]
+head(iris1)
+</code></pre>
+
+<pre><code>## [1] &quot;integer&quot;
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 103          7.1         3.0          5.9         2.1 virginica
+## 105          6.5         3.0          5.8         2.2 virginica
+## 106          7.6         3.0          6.6         2.1 virginica
+## 108          7.3         2.9          6.3         1.8 virginica
+## 109          6.7         2.5          5.8         1.8 virginica
+## 110          7.2         3.6          6.1         2.5 virginica
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-52" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">ind2 &lt;- which(iris[, &#39;Sepal.Length&#39;] &lt; 5.8 &amp; iris[, &#39;Species&#39;] == &#39;setosa&#39;)
+iris2 &lt;- iris[ind2, ]
+head(iris2)
+</code></pre>
+
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-53" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">iris3 &lt;- rbind(iris1, iris2)
+head(iris3)
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 103          7.1         3.0          5.9         2.1 virginica
+## 105          6.5         3.0          5.8         2.2 virginica
+## 106          7.6         3.0          6.6         2.1 virginica
+## 108          7.3         2.9          6.3         1.8 virginica
+## 109          6.7         2.5          5.8         1.8 virginica
+## 110          7.2         3.6          6.1         2.5 virginica
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-54" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">iris4 &lt;- cbind(iris1[1:10, ], iris2[1:10, ])
+head(iris4)   # View(iris4)
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
+## 103          7.1         3.0          5.9         2.1 virginica
+## 105          6.5         3.0          5.8         2.2 virginica
+## 106          7.6         3.0          6.6         2.1 virginica
+## 108          7.3         2.9          6.3         1.8 virginica
+## 109          6.7         2.5          5.8         1.8 virginica
+## 110          7.2         3.6          6.1         2.5 virginica
+##     Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 103          5.1         3.5          1.4         0.2  setosa
+## 105          4.9         3.0          1.4         0.2  setosa
+## 106          4.7         3.2          1.3         0.2  setosa
+## 108          4.6         3.1          1.5         0.2  setosa
+## 109          5.0         3.6          1.4         0.2  setosa
+## 110          5.4         3.9          1.7         0.4  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-55" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">sort(iris[1:30, 2])
+ind5 &lt;- order(iris[, &#39;Sepal.Length&#39;], iris[, &#39;Petal.Length&#39;])
+ind5[1:20]
+class(ind5)
+iris5 &lt;- iris[ind5, ]
+</code></pre>
+
+<pre><code>##  [1] 2.9 3.0 3.0 3.0 3.0 3.1 3.1 3.2 3.2 3.3 3.4 3.4 3.4 3.4 3.4 3.4 3.4
+## [18] 3.5 3.5 3.5 3.6 3.6 3.7 3.7 3.8 3.8 3.9 3.9 4.0 4.4
+</code></pre>
+
+<pre><code>##  [1] 14 39 43  9 42 23  7 48  4  3 30 13 46 12 31 25  2 38 10 35
+</code></pre>
+
+<pre><code>## [1] &quot;integer&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-56" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">head(iris5)
+</code></pre>
+
+<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 14          4.3         3.0          1.1         0.1  setosa
+## 39          4.4         3.0          1.3         0.2  setosa
+## 43          4.4         3.2          1.3         0.2  setosa
+## 9           4.4         2.9          1.4         0.2  setosa
+## 42          4.5         2.3          1.3         0.3  setosa
+## 23          4.6         3.6          1.0         0.2  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-57" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Examples: iris (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>我們也可以改變欄位的名字。</p>
+
+<pre><code class="r">iris6 &lt;- iris
+colnames(iris6) &lt;- c(&#39;SLength&#39;, &#39;SWidth&#39;, &#39;PLength&#39;, &#39;PWidth&#39;, &#39;Sp&#39;)
+# 也可以用 names(iris6) &lt;- c(&#39;SLength&#39;, &#39;SWidth&#39;, &#39;PLength&#39;, &#39;PWidth&#39;, &#39;Sp&#39;)
+head(iris6)
+</code></pre>
+
+<pre><code>##   SLength SWidth PLength PWidth     Sp
+## 1     5.1    3.5     1.4    0.2 setosa
+## 2     4.9    3.0     1.4    0.2 setosa
+## 3     4.7    3.2     1.3    0.2 setosa
+## 4     4.6    3.1     1.5    0.2 setosa
+## 5     5.0    3.6     1.4    0.2 setosa
+## 6     5.4    3.9     1.7    0.4 setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-58" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>我們用房貸餘額資料來練習!</p>
+
+<p><code>之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-59" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>我們用房貸餘額資料來練習!</p>
+
+<p><code>之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。</code></p>
+
+<p>到<a href="https://raw.githubusercontent.com/ntuaha/TWFS/master/db/cl_info_other.csv">這裡</a>下載檔案。(cl_info_other.csv)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-60" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># read.table 小技巧。
+tmp &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
+                 stringsAsFactors = F, header = T, nrows = 1000)
+</code></pre>
+
+<pre><code>## Warning: 無法開啟檔案 &#39;./cl_info_other.csv&#39; ：No such file or directory
+</code></pre>
+
+<pre><code>## Error: 無法開啟連結
+</code></pre>
+
+<pre><code class="r">colClasses &lt;- sapply(tmp, class)
+</code></pre>
+
+<pre><code>## Error: 找不到物件 &#39;tmp&#39;
+</code></pre>
+
+<pre><code class="r">DF &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
+                 header = T, colClasses = colClasses)
+</code></pre>
+
+<pre><code>## Warning: 無法開啟檔案 &#39;./cl_info_other.csv&#39; ：No such file or directory
+</code></pre>
+
+<pre><code>## Error: 無法開啟連結
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-61" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># read.table 小技巧。
+tmp &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
+                 stringsAsFactors = F, header = T, nrows = 1000)
+</code></pre>
+
+<pre><code>## Warning: 無法開啟檔案 &#39;./cl_info_other.csv&#39; ：No such file or directory
+</code></pre>
+
+<pre><code>## Error: 無法開啟連結
+</code></pre>
+
+<pre><code class="r">colClasses &lt;- sapply(tmp, class)
+</code></pre>
+
+<pre><code>## Error: 找不到物件 &#39;tmp&#39;
+</code></pre>
+
+<pre><code class="r">DF &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
+                 header = T, colClasses = colClasses)
+</code></pre>
+
+<pre><code>## Warning: 無法開啟檔案 &#39;./cl_info_other.csv&#39; ：No such file or directory
+</code></pre>
+
+<pre><code>## Error: 無法開啟連結
+</code></pre>
+
+<p><img src="assets/img/read_no_colClasses.png", height=80%, width=80%/></p>
+
+<p><img src="assets/img/read_colClasses.png", height=80%, width=80%/></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-62" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Exercises</code>:</p>
+
+<ol>
+<li>顯示 DF 前 20 筆資料與所有欄位的名稱。</li>
+<li>將 mortgage_cnt &lt; 2053 的資料另外儲存成 banks_below。</li>
+<li>將 mortgage_cnt &gt;= 22538 的資料另外儲存成 banks_above。</li>
+<li>將 banks_below 與 banks_above 合併。</li>
+<li>將 DF 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-63" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Matrix</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-64" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Matrix</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>語法: <strong>matrix(elements, norw, ncol, byrow = F)</strong></li>
+<li>例子: </li>
+</ul>
+
+<pre><code class="r">My_matrix1 &lt;- matrix(1:6, 2, 3)
+My_matrix2 &lt;- matrix(1:6, 2, 3, byrow = T)
+My_matrix1
+My_matrix2
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    3    5
+## [2,]    2    4    6
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+## [2,]    4    5    6
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-65" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Basic Operations on Matrix</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><strong>+, -, *, /</strong></li>
+<li>例子:</li>
+</ul>
+
+<pre><code class="r">My_matrix1 + My_matrix2
+My_matrix1 * My_matrix2
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    2    5    8
+## [2,]    6    9   12
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    6   15
+## [2,]    8   20   36
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-66" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Basic Operation on Matrix (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><strong>%*%</strong>: Matrix Mulplication</li>
+<li><strong>t()</strong>: Transpose</li>
+<li>例子:</li>
+</ul>
+
+<pre><code class="r">vec &lt;- c(1:3)
+(t(vec))
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3]
+## [1,]    1    2    3
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-67" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Basic Operation on Matrix (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><strong>%*%</strong>: Matrix Mulplication</li>
+<li><strong>t()</strong>: Transpose</li>
+<li>例子:</li>
+</ul>
+
+<pre><code class="r">my_vec &lt;- matrix(1:3, ncol = 1) # 用 c() 也跑得動。
+My_matrix1 %*% my_vec
+</code></pre>
+
+<pre><code>##      [,1]
+## [1,]   22
+## [2,]   28
+</code></pre>
+
+<pre><code class="r">My_matrix1 %*% t(my_vec)
+</code></pre>
+
+<pre><code>## Error: 非調和引數
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-68" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Basic Operation on Matrix (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><strong>my_matrix[row_index, col_index]</strong></li>
+<li>例子:</li>
+</ul>
+
+<pre><code class="r">My_matrix1[1, c(1, 3)]
+</code></pre>
+
+<pre><code>## [1] 1 5
+</code></pre>
+
+<pre><code class="r">My_matrix2[, c(2, 3)]
+</code></pre>
+
+<pre><code>##      [,1] [,2]
+## [1,]    2    3
+## [2,]    5    6
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-69" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Basic Operation on Matrix (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><strong>dim()</strong>: Dimension</li>
+<li>例子:</li>
+</ul>
+
+<pre><code class="r">dim(My_matrix1)
+</code></pre>
+
+<pre><code>## [1] 2 3
+</code></pre>
+
+<ol class = "build incremental">
+<li><p>記得常常確認矩陣的維度。</p></li>
+<li><p>尤其是在做複雜的模型時，維度是個非常好的指標。</p></li>
+<li><p>It&#39;s time for mini project!</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-70" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Mini Project 1: Barnsley Fern Fractal</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-71" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Mini Project 1: Barnsley Fern Fractal</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>起始點:
+<img src="assets/img/Barnsley_Fern_0.png" height="11.5%" width="11.5%"/></p></li>
+<li><p>With 5% probability:
+<img src="assets/img/Barnsley_Fern_1.png" height="25%" width="25%"/></p></li>
+<li><p>With 81% probability:
+<img src="assets/img/Barnsley_Fern_2.png" height="42.5%" width="42.5%"/></p></li>
+<li><p>With 7% probability:
+<img src="assets/img/Barnsley_Fern_3.png" height="42.5%" width="42.5%"/></p></li>
+<li><p>With 7% probability:
+<img src="assets/img/Barnsley_Fern_4.png" height="42.5%" width="42.5%"/></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-72" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Barnsley Fern Fractal</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>依此規則迭代出 10000 點，再把這些點畫成圖。</p></li>
+<li><p>只要用我們有學過的 <strong>for</strong>/<strong>if</strong> 迴圈和矩陣運算就可以做到這件事。</p></li>
+<li><p>你應該會看到:</p></li>
+</ul>
+
+<p><img src="assets/img/Barnsley_Fern.png" height="70%" width="70%" /></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-73" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Barnsley Fern Fractal: Tips</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
+<li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
+<li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-74" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Barnsley Fern Fractal: Tips</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
+<li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
+<li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
+<li><p><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R">Template</a></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-75" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Barnsley Fern Fractal: Tips</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
+<li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
+<li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
+<li><p><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R">Template</a></p></li>
+<li><p><code>敬請期待 Data Visualization 教學課程。</code></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
     <slide class="backdrop"></slide>
   </slides>
   <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
@@ -245,6 +1747,402 @@ And you can claim that you can do sketch by a computer!
       <a href="#" target="_self" rel='tooltip' 
         data-slide=9 title='Mini Project: Barnsley Fern Fractal'>
          9
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=10 title='Table of Content'>
+         10
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=11 title='Topics We Will Cover Today'>
+         11
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=12 title='Data: Where the Story Begins'>
+         12
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=13 title='DATA: 一切的起源'>
+         13
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=14 title='基本賦值語法'>
+         14
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=15 title='Logical'>
+         15
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=16 title='Logical'>
+         16
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=17 title='Logical (續)'>
+         17
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=18 title='Fun Time'>
+         18
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=19 title='Fun Time'>
+         19
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=20 title='Loops'>
+         20
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=21 title='If Loop'>
+         21
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=22 title='If Loop'>
+         22
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=23 title='If Loop (Cont.)'>
+         23
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=24 title='For Loop'>
+         24
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=25 title='For Loop'>
+         25
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=26 title='While Loop'>
+         26
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=27 title='While Loop'>
+         27
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=28 title='While Loop (Cont.)'>
+         28
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=29 title='While Loop (Cont.)'>
+         29
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=30 title='Vector, List, Factor, Data Frame and Matrix'>
+         30
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=31 title='Vector'>
+         31
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=32 title='Vector'>
+         32
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=33 title='<strong>Funtime</strong>'>
+         33
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=34 title='Useful Methods (Vector)'>
+         34
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=35 title='Examples'>
+         35
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=36 title='Examples (Cont.)'>
+         36
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=37 title='Exercise'>
+         37
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=38 title='Exercise'>
+         38
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=39 title='List'>
+         39
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=40 title='List'>
+         40
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=41 title='List: Examples'>
+         41
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=42 title='List: Examples (Cont.)'>
+         42
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=43 title='Play With List'>
+         43
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=44 title='Factor and Data Frame'>
+         44
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=45 title='Factor and Data Frame'>
+         45
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=46 title='Factor and Data Frame (Cont.)'>
+         46
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=47 title='Useful Functions for Data Frame'>
+         47
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=48 title='Examples: iris'>
+         48
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=49 title='Examples: iris (Cont.)'>
+         49
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=50 title='Examples: iris (Cont.)'>
+         50
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=51 title='Examples: iris (Cont.)'>
+         51
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=52 title='Examples: iris (Cont.)'>
+         52
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=53 title='Examples: iris (Cont.)'>
+         53
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=54 title='Examples: iris (Cont.)'>
+         54
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=55 title='Examples: iris (Cont.)'>
+         55
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=56 title='Examples: iris (Cont.)'>
+         56
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=57 title='Examples: iris (Cont.)'>
+         57
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=58 title='Play With It And You Will Master It!'>
+         58
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=59 title='Play With It And You Will Master It!'>
+         59
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=60 title='Play With It And You Will Master It!'>
+         60
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=61 title='Play With It And You Will Master It!'>
+         61
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=62 title='Play With It And You Will Master It!'>
+         62
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=63 title='Matrix'>
+         63
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=64 title='Matrix'>
+         64
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=65 title='Basic Operations on Matrix'>
+         65
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=66 title='Basic Operation on Matrix (Cont.)'>
+         66
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=67 title='Basic Operation on Matrix (Cont.)'>
+         67
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=68 title='Basic Operation on Matrix (Cont.)'>
+         68
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=69 title='Basic Operation on Matrix (Cont.)'>
+         69
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=70 title='Mini Project 1: Barnsley Fern Fractal'>
+         70
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=71 title='Mini Project 1: Barnsley Fern Fractal'>
+         71
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=72 title='Barnsley Fern Fractal'>
+         72
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=73 title='Barnsley Fern Fractal: Tips'>
+         73
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=74 title='Barnsley Fern Fractal: Tips'>
+         74
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=75 title='Barnsley Fern Fractal: Tips'>
+         75
       </a>
     </li>
   </ul>
