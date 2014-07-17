@@ -23,3 +23,5 @@ github:
 
 ## Mini Project: Barnsley Fern Fractal
 
+<img src="assets/img/Barnsley.gif" height="60%" width="60%" />
+
