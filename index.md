@@ -20,12 +20,56 @@ github:
 
 ---
 
-## My Reason
+## The Reasons
 
-1. It is cool to code something like this.
+<font size = '6'>
+**1. It is cool to code something like this:**
+</font>
 
-<img src="assets/img/terminal.gif" height="60%" width="60%" />
+<img src="assets/img/terminal.png" height="70%" width="70%" />
 
+
+---
+
+## The Reasons
+
+<font size = "6">
+Coding in R looks like this:
+</font>
+
+<img src="assets/img/R_code.png" height="70%" width="70%" />
+
+---
+
+## The Reasons
+
+<font size = "6">
+`By a simple logic, R is cool.`
+</font>
+
+<img src = 'assets/img/Taiwan-R-logo.png' height='40%' width='40%'>
+
+---
+
+## The Reasons
+
+<font size = "6">
+**2. Everyone wants to be cool.**
+</font>
+
+<img src="assets/img/cool_hacker.jpg" height="60%" width="60%" />
+<br>
+[圖片來源](http://www.teachprivacy.com/category/phishing/)
+
+---
+
+## The Reasons
+
+<font size = "6">
+`Again, by a simple logic, everyone should learn R!`
+</font>
+
+<img src = 'assets/img/Taiwan-R-logo.png' height='40%' width='40%'>
 
 --- .segue bg:navy
 
@@ -36,5 +80,20 @@ github:
 
 ## Mini Project: Barnsley Fern Fractal
 
-<img src="assets/img/Barnsley.gif" height="60%" width="60%" />
+<font size = '6'>
+Work this cool picture out.
+</font>
+
+<img src="assets/img/Barnsley.gif" height="70%" width="70%" />
+
+---
+
+## Mini Project: Barnsley Fern Fractal
+
+<font size = '6'>
+Work this cool picture out. <br>
+And you can claim that you can do sketch by a computer!
+</font>
+
+<img src="assets/img/Barnsley.gif" height="70%" width="70%" />
 
