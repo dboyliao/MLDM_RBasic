@@ -13,6 +13,19 @@ github:
   user: dboyliao
   repo: MLDM_RBasic
 
+--- .segue bg:navy
+
+## Why R?
+
+
+---
+
+## My Reason
+
+1. It is cool to code something like this.
+
+<img src="assets/img/terminal.gif" height="60%" width="60%" />
+
 
 --- .segue bg:navy
 
