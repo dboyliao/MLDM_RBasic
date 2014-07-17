@@ -73,7 +73,7 @@ Coding in R looks like this:
 
 --- .segue bg:navy
 
-## Our Gaol Today.
+## Our Gaol Today: Become a Cool Guy!
 
 
 ---
