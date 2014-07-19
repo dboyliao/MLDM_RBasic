@@ -164,6 +164,8 @@ Coding in R looks like this:
   <article data-timings="">
     <p><font size = '6'>
 Work this cool picture out.
+<br>
+<br>
 </font></p>
 
 <p><img src="assets/img/Barnsley.gif" height="70%" width="70%" /></p>
@@ -480,7 +482,9 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
     <h2>Exercise: SVM Classifier</h2>
   </hgroup>
   <article data-timings="">
-    <p><code>Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)</code></p>
+    <p><font size='5'>
+<code>Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)</code>
+</font></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -492,7 +496,9 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
     <h2>Exercise: SVM Classifier</h2>
   </hgroup>
   <article data-timings="">
-    <p><code>Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)</code><br></p>
+    <p><font size='5'>
+<code>Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)</code><br>
+</font></p>
 
 <p>(暫時)不要問我怎麼把這個向量生出來的。(汗)</p>
 
@@ -506,7 +512,9 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
     <h2>Exercise: SVM Classifier</h2>
   </hgroup>
   <article data-timings="">
-    <p><code>Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)</code><br></p>
+    <p><font size='5'>
+<code>Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)</code><br>
+</font></p>
 
 <p>或許你可以問助教，助教都比我厲害。</p>
 
@@ -538,7 +546,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
   <article data-timings="">
     <ol class = "build incremental">
 <li>寫個 if 迴圈計算 X1 中某一筆資料與 magic vector 內積的結果。<br> (sum(X1[i, ] * magic_vec))</li>
-<li>如果內積值大於或等於 1.5，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
+<li>如果內積值大於或等於 -1，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
 <li>跟 y1 比對一下，有何發現？</li>
 </ol>
 
@@ -1452,7 +1460,7 @@ My_matrix1 * My_matrix2
 <li>例子:</li>
 </ul>
 
-<pre><code class="r">my_vec &lt;- matrix(1:3, ncol = 1) # 用 c() 也跑得動。
+<pre><code class="r">my_vec &lt;- matrix(1:3, ncol = 1) 
 My_matrix1 %*% my_vec
 </code></pre>
 
@@ -1626,6 +1634,17 @@ My_matrix1 %*% my_vec
 <li><p><code>敬請期待 Data Visualization 教學課程。</code></p></li>
 </ul>
 
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-76" style="background:orange; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Thanks for Your Attention!</h2>
+  </hgroup>
+  <article data-timings="">
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -2082,6 +2101,12 @@ My_matrix1 %*% my_vec
       <a href="#" target="_self" rel='tooltip' 
         data-slide=75 title='Barnsley Fern Fractal: Tips'>
          75
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=76 title='Thanks for Your Attention!'>
+         76
       </a>
     </li>
   </ul>

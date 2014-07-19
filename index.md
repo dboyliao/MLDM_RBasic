@@ -82,6 +82,8 @@ Coding in R looks like this:
 
 <font size = '6'>
 Work this cool picture out.
+<br>
+<br>
 </font>
 
 <img src="assets/img/Barnsley.gif" height="70%" width="70%" />
@@ -291,14 +293,18 @@ Note: **else if** and **else** are optional.
 
 ## Exercise: SVM Classifier
 
-`Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)`
+<font size='5'>
+`Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)`
+</font>
 
 
 ---
 
 ## Exercise: SVM Classifier
 
-`Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)`<br>
+<font size='5'>
+`Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)`<br>
+</font>
 
 (暫時)不要問我怎麼把這個向量生出來的。(汗)
 
@@ -307,7 +313,9 @@ Note: **else if** and **else** are optional.
 
 ## Exercise: SVM Classifier
 
-`Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)`<br>
+<font size='5'>
+`Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)`<br>
+</font>
 
 或許你可以問助教，助教都比我厲害。
 
@@ -327,7 +335,7 @@ Note: **else if** and **else** are optional.
 ## Exercise: SVM Classifier
 
 > 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic vector 內積的結果。<br> (sum(X1[i, ] * magic_vec))
-> 2. 如果內積值大於或等於 1.5，print('setosa');反之，print('versicolor')
+> 2. 如果內積值大於或等於 -1，print('setosa');反之，print('versicolor')
 > 3. 跟 y1 比對一下，有何發現？
 
 
@@ -1060,7 +1068,7 @@ vec <- c(1:3)
 
 
 ```r
-my_vec <- matrix(1:3, ncol = 1) # 用 c() 也跑得動。
+my_vec <- matrix(1:3, ncol = 1) 
 My_matrix1 %*% my_vec
 ```
 
@@ -1198,4 +1206,10 @@ dim(My_matrix1)
 - [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R)
 
 - `敬請期待 Data Visualization 教學課程。`
+
+
+--- .segue bg:orange
+
+## Thanks for Your Attention!
+
 
