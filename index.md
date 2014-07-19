@@ -246,7 +246,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
 
 1. my_vec <- c(1, 2, 5, 90, 37)
 2. ind <- my_vec >= 5
-3. sum(my_vec)
+3. sum(ind)
 
 
 ---
@@ -257,7 +257,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
 
 1. my_vec <- c(1, 2, 5, 90, 37)
 2. ind <- my_vec >= 5
-3. sum(my_vec) 
+3. sum(ind) 
 
 `猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)`
 
@@ -289,19 +289,47 @@ Note: **else if** and **else** are optional.
 
 ---
 
-## If Loop (Cont.)
+## Exercise: SVM Classifier
 
-Exercise:
+`Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)`
 
-1. 定義一個變數 value，並隨意給予一個數值。
 
-2. 寫個 **if**/**else if**/**else** 迴圈:
+---
 
-   1. 若 value > 100 或 < -100，執行 print('Extreme')。
-   
-   2. 若 value <= 60 且 value >= 40，執行 print('Median')。
-   
-   3. 其餘狀況，執行 print('Normal')
+## Exercise: SVM Classifier
+
+`Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)`<br>
+
+(暫時)不要問我怎麼把這個向量生出來的。(汗)
+
+
+---
+
+## Exercise: SVM Classifier
+
+`Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)`<br>
+
+或許你可以問助教，助教都比我厲害。
+
+
+---
+
+## Exercise: SVM Classifier
+
+<br>
+
+<font size = 6''>
+[Data](https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/MLDM_RBasic_ForLoop_Ex.RData)
+</font>
+
+---
+
+## Exercise: SVM Classifier
+
+> 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic vector 內積的結果。<br> (sum(X1[i, ] * magic_vec))
+> 2. 如果內積值大於或等於 1.5，print('setosa');反之，print('versicolor')
+> 3. 跟 y1 比對一下，有何發現？
+
 
 --- .segue bg:green
 
@@ -332,51 +360,6 @@ for (i in 1:10){
 ```
 ## [1] 55
 ```
-
---- .segue bg:green
-
-## While Loop
-
----
-
-## While Loop
-
-### Syntex:
-
-    while (condition_1){
-        #Do something here....
-    } 
-
-### Example:
-
-
-    while (T){
-            handsome <- readline('Are you handsome? ')
-            if (handsome == 'yes'){
-                    print('Really....!?')
-            } else {
-                    print('Now we are talking.')
-                    break
-            }
-    }
-
-
----
-
-## While Loop (Cont.)
-
-<img src="assets/img/while.gif" height="60%" width="60%" />
-
----
-
-## While Loop (Cont.)
-
-<img src="assets/img/while.gif" height="60%" width="60%" />
-
-### Exercise
-
-> 1. 那如果要把上述程式改成電腦不斷詢問 "Do you like to code?" 呢?
-> 2. 至於要回答 'yes' or 'no' 才會停....
 
 
 --- .segue bg:navy
@@ -955,37 +938,11 @@ head(iris6)
 
 ```r
 # read.table 小技巧。
-tmp <- read.table('./cl_info_other.csv', sep = ',',
+tmp <- read.table('cl_info_other.csv', sep = ',',
                  stringsAsFactors = F, header = T, nrows = 1000)
-```
-
-```
-## Warning: 無法開啟檔案 './cl_info_other.csv' ：No such file or directory
-```
-
-```
-## Error: 無法開啟連結
-```
-
-```r
 colClasses <- sapply(tmp, class)
-```
-
-```
-## Error: 找不到物件 'tmp'
-```
-
-```r
-DF <- read.table('./cl_info_other.csv', sep = ',',
+DF <- read.table('cl_info_other.csv', sep = ',',
                  header = T, colClasses = colClasses)
-```
-
-```
-## Warning: 無法開啟檔案 './cl_info_other.csv' ：No such file or directory
-```
-
-```
-## Error: 無法開啟連結
 ```
 
 
@@ -997,37 +954,11 @@ DF <- read.table('./cl_info_other.csv', sep = ',',
 
 ```r
 # read.table 小技巧。
-tmp <- read.table('./cl_info_other.csv', sep = ',',
+tmp <- read.table('cl_info_other.csv', sep = ',',
                  stringsAsFactors = F, header = T, nrows = 1000)
-```
-
-```
-## Warning: 無法開啟檔案 './cl_info_other.csv' ：No such file or directory
-```
-
-```
-## Error: 無法開啟連結
-```
-
-```r
 colClasses <- sapply(tmp, class)
-```
-
-```
-## Error: 找不到物件 'tmp'
-```
-
-```r
-DF <- read.table('./cl_info_other.csv', sep = ',',
+DF <- read.table('cl_info_other.csv', sep = ',',
                  header = T, colClasses = colClasses)
-```
-
-```
-## Warning: 無法開啟檔案 './cl_info_other.csv' ：No such file or directory
-```
-
-```
-## Error: 無法開啟連結
 ```
 
 <img src="assets/img/read_no_colClasses.png", height=80%, width=80%/>

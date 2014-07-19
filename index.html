@@ -400,7 +400,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
 <ol>
 <li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
 <li>ind &lt;- my_vec &gt;= 5</li>
-<li>sum(my_vec)</li>
+<li>sum(ind)</li>
 </ol>
 
   </article>
@@ -418,7 +418,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
 <ol>
 <li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
 <li>ind &lt;- my_vec &gt;= 5</li>
-<li>sum(my_vec) </li>
+<li>sum(ind) </li>
 </ol>
 
 <p><code>猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)</code></p>
@@ -477,27 +477,76 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
 <slide class="" id="slide-23" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>If Loop (Cont.)</h2>
+    <h2>Exercise: SVM Classifier</h2>
   </hgroup>
   <article data-timings="">
-    <p>Exercise:</p>
+    <p><code>Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)</code></p>
 
-<ol>
-<li><p>定義一個變數 value，並隨意給予一個數值。</p></li>
-<li><p>寫個 <strong>if</strong>/<strong>else if</strong>/<strong>else</strong> 迴圈:</p>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
 
-<ol>
-<li>若 value &gt; 100 或 &lt; -100，執行 print(&#39;Extreme&#39;)。</li>
-<li>若 value &lt;= 60 且 value &gt;= 40，執行 print(&#39;Median&#39;)。</li>
-<li>其餘狀況，執行 print(&#39;Normal&#39;)</li>
-</ol></li>
+<slide class="" id="slide-24" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)</code><br></p>
+
+<p>(暫時)不要問我怎麼把這個向量生出來的。(汗)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Magic Vector: c(0.2673260, 0.3580795, -0.2110096, -0.4143959)</code><br></p>
+
+<p>或許你可以問助教，助教都比我厲害。</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<p><font size = 6''>
+<a href="https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/MLDM_RBasic_ForLoop_Ex.RData">Data</a>
+</font></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol class = "build incremental">
+<li>寫個 if 迴圈計算 X1 中某一筆資料與 magic vector 內積的結果。<br> (sum(X1[i, ] * magic_vec))</li>
+<li>如果內積值大於或等於 1.5，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
+<li>跟 y1 比對一下，有何發現？</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-24" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-28" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -508,7 +557,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-29" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -533,78 +582,6 @@ for (i in 1:10){
 
 <pre><code>## [1] 55
 </code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue" id="slide-26" style="background:green; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>While Loop</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>While Loop</h2>
-  </hgroup>
-  <article data-timings="">
-    <h3>Syntex:</h3>
-
-<pre><code>while (condition_1){
-    #Do something here....
-} 
-</code></pre>
-
-<h3>Example:</h3>
-
-<pre><code>while (T){
-        handsome &lt;- readline(&#39;Are you handsome? &#39;)
-        if (handsome == &#39;yes&#39;){
-                print(&#39;Really....!?&#39;)
-        } else {
-                print(&#39;Now we are talking.&#39;)
-                break
-        }
-}
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-28" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>While Loop (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><img src="assets/img/while.gif" height="60%" width="60%" /></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-29" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>While Loop (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><img src="assets/img/while.gif" height="60%" width="60%" /></p>
-
-<h3>Exercise</h3>
-
-<ol class = "build incremental">
-<li>那如果要把上述程式改成電腦不斷詢問 &quot;Do you like to code?&quot; 呢?</li>
-<li>至於要回答 &#39;yes&#39; or &#39;no&#39; 才會停....</li>
-</ol>
 
   </article>
   <!-- Presenter Notes -->
@@ -1315,30 +1292,11 @@ head(iris6)
   </hgroup>
   <article data-timings="">
     <pre><code class="r"># read.table 小技巧。
-tmp &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
+tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
                  stringsAsFactors = F, header = T, nrows = 1000)
-</code></pre>
-
-<pre><code>## Warning: 無法開啟檔案 &#39;./cl_info_other.csv&#39; ：No such file or directory
-</code></pre>
-
-<pre><code>## Error: 無法開啟連結
-</code></pre>
-
-<pre><code class="r">colClasses &lt;- sapply(tmp, class)
-</code></pre>
-
-<pre><code>## Error: 找不到物件 &#39;tmp&#39;
-</code></pre>
-
-<pre><code class="r">DF &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
+colClasses &lt;- sapply(tmp, class)
+DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
                  header = T, colClasses = colClasses)
-</code></pre>
-
-<pre><code>## Warning: 無法開啟檔案 &#39;./cl_info_other.csv&#39; ：No such file or directory
-</code></pre>
-
-<pre><code>## Error: 無法開啟連結
 </code></pre>
 
   </article>
@@ -1352,30 +1310,11 @@ tmp &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
   </hgroup>
   <article data-timings="">
     <pre><code class="r"># read.table 小技巧。
-tmp &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
+tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
                  stringsAsFactors = F, header = T, nrows = 1000)
-</code></pre>
-
-<pre><code>## Warning: 無法開啟檔案 &#39;./cl_info_other.csv&#39; ：No such file or directory
-</code></pre>
-
-<pre><code>## Error: 無法開啟連結
-</code></pre>
-
-<pre><code class="r">colClasses &lt;- sapply(tmp, class)
-</code></pre>
-
-<pre><code>## Error: 找不到物件 &#39;tmp&#39;
-</code></pre>
-
-<pre><code class="r">DF &lt;- read.table(&#39;./cl_info_other.csv&#39;, sep = &#39;,&#39;,
+colClasses &lt;- sapply(tmp, class)
+DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
                  header = T, colClasses = colClasses)
-</code></pre>
-
-<pre><code>## Warning: 無法開啟檔案 &#39;./cl_info_other.csv&#39; ：No such file or directory
-</code></pre>
-
-<pre><code>## Error: 無法開啟連結
 </code></pre>
 
 <p><img src="assets/img/read_no_colClasses.png", height=80%, width=80%/></p>
@@ -1829,43 +1768,43 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='If Loop (Cont.)'>
+        data-slide=23 title='Exercise: SVM Classifier'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='For Loop'>
+        data-slide=24 title='Exercise: SVM Classifier'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='For Loop'>
+        data-slide=25 title='Exercise: SVM Classifier'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='While Loop'>
+        data-slide=26 title='Exercise: SVM Classifier'>
          26
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='While Loop'>
+        data-slide=27 title='Exercise: SVM Classifier'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='While Loop (Cont.)'>
+        data-slide=28 title='For Loop'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='While Loop (Cont.)'>
+        data-slide=29 title='For Loop'>
          29
       </a>
     </li>
