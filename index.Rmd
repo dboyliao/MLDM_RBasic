@@ -12,6 +12,7 @@ logo        : Taiwan-R-logo.png
 github:
   user: dboyliao
   repo: MLDM_RBasic
+license: by-nc-sa
 
 --- .segue bg:navy
 
@@ -865,6 +866,28 @@ dim(My_matrix1)
 <font size='6'>
 - `敬請期待 Data Visualization 教學課程。`
 </font>
+
+
+--- .segue bg:green
+
+## One Last Thing: Help Yourself by Yourself
+
+
+---
+
+## Why?
+
+> 1. By this time, you are already a R user.
+> 2. However, life sucks. Bugs and problems are everywhere.
+> 3. No one can give you a hand if you does not reach out.
+
+---
+
+## But How?
+
+> 1. ?/??: helper function in R.
+> 2. [Stack overflow](http://stackoverflow.com)
+> 3. [Google](http://google.com/)
 
 
 --- .segue bg:orange
