@@ -1322,7 +1322,7 @@ tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
                  stringsAsFactors = F, header = T, nrows = 1000)
 colClasses &lt;- sapply(tmp, class)
 DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
-                 header = T, colClasses = colClasses)
+                 stringsAsFactors = F, header = T, colClasses = colClasses)
 </code></pre>
 
 <p><img src="assets/img/read_no_colClasses.png", height=80%, width=80%/></p>
@@ -1336,17 +1336,15 @@ DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
 <slide class="" id="slide-62" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Play With It And You Will Master It!</h2>
+    <h2>Exercises:</h2>
   </hgroup>
   <article data-timings="">
-    <p><code>Exercises</code>:</p>
-
-<ol>
+    <ol>
 <li>顯示 DF 前 20 筆資料與所有欄位的名稱。</li>
 <li>將 mortgage_cnt &lt; 2053 的資料另外儲存成 banks_below。</li>
 <li>將 mortgage_cnt &gt;= 22538 的資料另外儲存成 banks_above。</li>
-<li>將 banks_below 與 banks_above 合併。</li>
-<li>將 DF 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)</li>
+<li>將 banks_below 與 banks_above 合併成 DF2。</li>
+<li>將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)</li>
 </ol>
 
   </article>
@@ -1525,17 +1523,36 @@ My_matrix1 %*% my_vec
 <pre><code>## [1] 2 3
 </code></pre>
 
-<ol class = "build incremental">
-<li><p>記得常常確認矩陣的維度。</p></li>
-<li><p>尤其是在做複雜的模型時，維度是個非常好的指標。</p></li>
-<li><p>It&#39;s time for mini project!</p></li>
-</ol>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-70" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Basic Operation on Matrix (Cont.)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><strong>dim()</strong>: Dimension</li>
+<li>例子:</li>
+</ul>
+
+<pre><code class="r">dim(My_matrix1)
+</code></pre>
+
+<pre><code>## [1] 2 3
+</code></pre>
+
+<p><font size='5'>
+<code>It&#39;s time for mini project!</code>
+</font></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-70" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-71" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project 1: Barnsley Fern Fractal</h2>
@@ -1546,7 +1563,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-71" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-72" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project 1: Barnsley Fern Fractal</h2>
@@ -1569,35 +1586,19 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-72" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-73" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal</h2>
   </hgroup>
   <article data-timings="">
     <ul>
-<li><p>依此規則迭代出 10000 點，再把這些點畫成圖。</p></li>
+<li><p>依此規則迭代出 40000 點，再把這些點畫成圖。</p></li>
 <li><p>只要用我們有學過的 <strong>for</strong>/<strong>if</strong> 迴圈和矩陣運算就可以做到這件事。</p></li>
 <li><p>你應該會看到:</p></li>
 </ul>
 
-<p><img src="assets/img/Barnsley_Fern.png" height="70%" width="70%" /></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-73" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Barnsley Fern Fractal: Tips</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
-<li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
-<li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
-</ul>
+<p><img src="assets/img/Barnsley_Fern_40000.png" height="70%" width="70%" /></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -1613,7 +1614,6 @@ My_matrix1 %*% my_vec
 <li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
 <li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
 <li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
-<li><p><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R">Template</a></p></li>
 </ul>
 
   </article>
@@ -1630,15 +1630,44 @@ My_matrix1 %*% my_vec
 <li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
 <li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
 <li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
-<li><p><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R">Template</a></p></li>
-<li><p><code>敬請期待 Data Visualization 教學課程。</code></p></li>
+</ul>
+
+<p><font size='6'></p>
+
+<ul>
+<li><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R">Template</a>
+</font></li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-76" style="background:orange; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-76" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Barnsley Fern Fractal: Tips</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )</p></li>
+<li><p>最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。</p></li>
+<li><p>這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)</p></li>
+<li><p><a href="https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R">Template</a></p></li>
+</ul>
+
+<p><font size='6'></p>
+
+<ul>
+<li><code>敬請期待 Data Visualization 教學課程。</code>
+</font></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-77" style="background:orange; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Thanks for Your Attention!</h2>
@@ -2021,7 +2050,7 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=62 title='Play With It And You Will Master It!'>
+        data-slide=62 title='Exercises:'>
          62
       </a>
     </li>
@@ -2069,7 +2098,7 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=70 title='Mini Project 1: Barnsley Fern Fractal'>
+        data-slide=70 title='Basic Operation on Matrix (Cont.)'>
          70
       </a>
     </li>
@@ -2081,13 +2110,13 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=72 title='Barnsley Fern Fractal'>
+        data-slide=72 title='Mini Project 1: Barnsley Fern Fractal'>
          72
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=73 title='Barnsley Fern Fractal: Tips'>
+        data-slide=73 title='Barnsley Fern Fractal'>
          73
       </a>
     </li>
@@ -2105,8 +2134,14 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=76 title='Thanks for Your Attention!'>
+        data-slide=76 title='Barnsley Fern Fractal: Tips'>
          76
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=77 title='Thanks for Your Attention!'>
+         77
       </a>
     </li>
   </ul>

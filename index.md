@@ -71,6 +71,7 @@ Coding in R looks like this:
 
 <img src = 'assets/img/Taiwan-R-logo.png' height='40%' width='40%'>
 
+
 --- .segue bg:navy
 
 ## Our Gaol Today: Become a Cool Guy!
@@ -966,7 +967,7 @@ tmp <- read.table('cl_info_other.csv', sep = ',',
                  stringsAsFactors = F, header = T, nrows = 1000)
 colClasses <- sapply(tmp, class)
 DF <- read.table('cl_info_other.csv', sep = ',',
-                 header = T, colClasses = colClasses)
+                 stringsAsFactors = F, header = T, colClasses = colClasses)
 ```
 
 <img src="assets/img/read_no_colClasses.png", height=80%, width=80%/>
@@ -975,15 +976,13 @@ DF <- read.table('cl_info_other.csv', sep = ',',
 
 ---
 
-## Play With It And You Will Master It!
-
-`Exercises`:
+## Exercises:
 
 1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
 3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
 4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
-5. 將 banks_below 與 banks_above 合併。
-6. 將 DF 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)
+5. 將 banks_below 與 banks_above 合併成 DF2。
+6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)
 
 --- .segue bg:green
 
@@ -1127,11 +1126,24 @@ dim(My_matrix1)
 ## [1] 2 3
 ```
 
-> 1. 記得常常確認矩陣的維度。
+---
 
-> 2. 尤其是在做複雜的模型時，維度是個非常好的指標。
+## Basic Operation on Matrix (Cont.)
 
-> 3. It's time for mini project!
+- **dim()**: Dimension
+- 例子:
+
+```r
+dim(My_matrix1)
+```
+
+```
+## [1] 2 3
+```
+
+<font size='5'>
+`It's time for mini project!`
+</font>
 
 
 --- .segue bg:navy
@@ -1162,13 +1174,13 @@ dim(My_matrix1)
 
 ## Barnsley Fern Fractal
 
-- 依此規則迭代出 10000 點，再把這些點畫成圖。
+- 依此規則迭代出 40000 點，再把這些點畫成圖。
 
 - 只要用我們有學過的 **for**/**if** 迴圈和矩陣運算就可以做到這件事。
 
 - 你應該會看到:
 
-<img src="assets/img/Barnsley_Fern.png" height="70%" width="70%" />
+<img src="assets/img/Barnsley_Fern_40000.png" height="70%" width="70%" />
 
 ---
 
@@ -1179,6 +1191,21 @@ dim(My_matrix1)
 - 最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。
 
 - 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
+
+---
+
+## Barnsley Fern Fractal: Tips
+
+- 可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )
+
+- 最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。
+
+- 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
+
+<font size='6'>
+- [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R)
+</font>
+
 
 ---
 
@@ -1192,20 +1219,9 @@ dim(My_matrix1)
 
 - [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R)
 
-
----
-
-## Barnsley Fern Fractal: Tips
-
-- 可以把迭代出來的點用一個 data.frame 存起來。(例如說存成 coor )
-
-- 最後用 plot(x = coor[, 2], y = coor[, 1], plt = c(0, 10, -5, 5), cex = 0.1, asp = 1) 把它畫出來。
-
-- 這些參數不懂沒關係，它們的唯一功能就只是讓圖變漂亮而已。(很多我也是 Google 來的XD)
-
-- [Template](https://dl.dropboxusercontent.com/u/5487490/RBasic/Barnsley_Fern_template.R)
-
+<font size='6'>
 - `敬請期待 Data Visualization 教學課程。`
+</font>
 
 
 --- .segue bg:orange
