@@ -113,6 +113,30 @@ And you can claim that you can do sketch by a computer!
 
 <img src="assets/img/Barnsley.gif" height="70%" width="70%" />
 
+---
+
+## 最後讓我們打個廣告XDD
+
+接下來的系列課程:
+
+- ETL
+- Data Analysis
+- Data Visulization
+
+
+---
+
+## 最後讓我們打個廣告XDD
+
+接下來的系列課程:
+
+- ETL
+- Data Analysis
+- Data Visulization
+
+`在今天的課程裡也會讓大家體會一下每個課程的主題是什麼。`
+
+
 --- .segue bg:navy
 
 ## Table of Content
