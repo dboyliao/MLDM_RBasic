@@ -379,7 +379,7 @@ final_result
 ## 剛剛的例子有點兒無聊....
 
         # 讓 R 幫你驅邪避凶!!
-        for (i in 1:10){
+        for (i in 1:5){
                 system("say 'Nann Moll Ah Mi Tow Fo'")
                 system("say 'Ah Men'")
         }
