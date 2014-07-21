@@ -275,7 +275,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
 2. ind <- my_vec >= 5
 3. sum(ind) 
 
-`猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)`
+`猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)` <br>
 `順便看看 ind 長啥樣子吧!`
 
 --- .segue bg:navy
