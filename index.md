@@ -55,7 +55,7 @@ Coding in R looks like this:
 ## The Reasons
 
 <font size = "6">
-**2. Everyone wants to be cool.**
+**2. Everyone wants to be a cool guy.**
 </font>
 
 <img src="assets/img/cool_hacker.jpg" height="60%" width="60%" />
