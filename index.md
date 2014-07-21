@@ -432,7 +432,7 @@ mix_vec2 <- c(2, T)
 ## Useful Methods (Vector)
 - length(): 
   - 語法: **length(my_vec)**
-  - 傳回 my_vect 的長度
+  - 傳回 my_vec 的長度
 - +, -, *, /:
   - 語法: **my_vec + other_vec**
   - 注意: R 中所有運算皆向量化。(element by element operation)
