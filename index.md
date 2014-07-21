@@ -296,7 +296,8 @@ Note: **else if** and **else** are optional.
 ## Exercise: SVM Classifier
 
 <font size='5'>
-`Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)`
+`Magic Vector:` <br>
+`c(1.45284450 ,-0.04625854, 0.5211828, -1.003045, -0.4641298)`
 </font>
 
 
@@ -305,7 +306,8 @@ Note: **else if** and **else** are optional.
 ## Exercise: SVM Classifier
 
 <font size='5'>
-`Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)`<br>
+`Magic Vector:` <br>
+`c(1.45284450, -0.04625854, 0.5211828, -1.003045, -0.4641298)`<br>
 </font>
 
 (暫時)不要問我怎麼把這個向量生出來的。(汗)
@@ -316,7 +318,8 @@ Note: **else if** and **else** are optional.
 ## Exercise: SVM Classifier
 
 <font size='5'>
-`Magic Vector: c(-0.04625854, 0.5211828, -1.003045, -0.4641298)`<br>
+`Magic Vector:` <br> 
+`c(1.45284450, -0.04625854, 0.5211828, -1.003045, -0.4641298)`<br>
 </font>
 
 或許你可以問助教，助教都比我厲害。
@@ -336,9 +339,9 @@ Note: **else if** and **else** are optional.
 
 ## Exercise: SVM Classifier
 
-> 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic vector 內積的結果。<br> (sum(X1[i, ] * magic_vec))
-> 2. 如果內積值大於或等於 -1，print('setosa');反之，print('versicolor')
-> 3. 跟 y1 比對一下，有何發現？
+> 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)
+> 2. 如果內積值大於或等於 0，print('setosa');反之，print('versicolor')
+> 3. 跟 y1[i] 比對一下，有何發現？
 
 
 --- .segue bg:green
@@ -364,7 +367,7 @@ final_result <- 0
 for (i in 1:10){
         final_result <- final_result + i
 }
-(final_result)
+final_result
 ```
 
 ```
@@ -401,8 +404,7 @@ vec2 <- c('a', 'b', 'c')
 
 
 ```r
-Bob <- c(age = 27, height = 187, weight = 80)
-Bob
+(Bob <- c(age = 27, height = 187, weight = 80))
 ```
 
 ```
@@ -478,8 +480,14 @@ vec1[1] + vec2[3]
 
 
 ```r
+Bob
 names(Bob)
 Bob['age']   # reference by name.
+```
+
+```
+##    age height weight 
+##     27    187     80
 ```
 
 ```
@@ -536,7 +544,7 @@ Bob['age']   # reference by name.
 
 ```r
 Bob <- list(age=27, weight = 80,
-            favorite_data_name = 'iris', favorite_data = iris)
+            favorite_data_name = 'iris', favorite_data = head(iris))
 (age1 <- Bob[1])
 class(age1)
 (age2 <- Bob[[1]])
@@ -567,7 +575,7 @@ class(age2)
 
 ```r
 (Age_and_DataName <- Bob[c(1, 3)])
-head(Bob[['favorite_data']])
+Bob[['favorite_data']]
 ```
 
 ```
@@ -593,26 +601,24 @@ head(Bob[['favorite_data']])
 
 ## Play With List
 
-### `Warmup for Battleship Mini Project: Drawing the Map`
-
 
 ```r
-map =list(c('O', 'O', 'O', 'O', 'O'),
-          c('O', 'O', 'O', 'O', 'O'),
-          c('O', 'O', 'O', 'O', 'O'),
-          c('O', 'O', 'O', 'O', 'O'),
-          c('O', 'O', 'O', 'O', 'O'))
-for (i in 1:length(map)){
-        print(map[[i]])
+for (Attribute in Bob){
+        print(Attribute)
 }
 ```
 
 ```
-## [1] "O" "O" "O" "O" "O"
-## [1] "O" "O" "O" "O" "O"
-## [1] "O" "O" "O" "O" "O"
-## [1] "O" "O" "O" "O" "O"
-## [1] "O" "O" "O" "O" "O"
+## [1] 27
+## [1] 80
+## [1] "iris"
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
 ```
 
 --- .segue bg:green
@@ -937,7 +943,7 @@ head(iris6)
 
 `之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。`
 
-到[這裡](https://raw.githubusercontent.com/ntuaha/TWFS/master/db/cl_info_other.csv)下載檔案。(cl_info_other.csv)
+到[這裡](https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/cl_info_other.csv)下載檔案。(cl_info_other.csv)
 
 
 ---
@@ -984,6 +990,40 @@ DF <- read.table('cl_info_other.csv', sep = ',',
 4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
 5. 將 banks_below 與 banks_above 合併成 DF2。
 6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)
+
+
+---
+
+## Exercises:
+
+1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
+3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
+4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
+5. 將 banks_below 與 banks_above 合併成 DF2。
+6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) 
+
+<br>
+
+<font size='6'>
+`學員OS: 這作業實在太 trivial 了，簡直侮辱我的智慧。`
+</font>
+
+
+---
+
+## Exercises:
+
+1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
+3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
+4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
+5. 將 banks_below 與 banks_above 合併成 DF2。
+6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) 
+
+<br>
+
+<font size='6'>
+`接下來的 ETL 課程保證會滿足你的渴望!`
+</font>
 
 --- .segue bg:green
 

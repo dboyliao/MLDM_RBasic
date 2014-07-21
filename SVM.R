@@ -8,8 +8,8 @@ y <- iris$Species
 
 ind1 <- which(iris[, "Species"] == "setosa" | iris[, 'Species'] == "versicolor")
 X1 <- X[ind1, ]
-#ones <- rep(1, dim(X1)[1])
-#X1 <- cbind(ones, X1)
+#Intersect <- rep(1, dim(X1)[1])
+#X1 <- cbind(Intersect, X1)
 y1 <- y[ind1]
 y1 <- factor(y1, levels = c("setosa", 'versicolor'))
 data1 <- cbind(X1, y1)
@@ -34,8 +34,8 @@ model1 <- svm(y1 ~ ., data = data1, kernel = 'linear', scale = F)
 model2 <- svm(y2 ~ ., data = data2, kernel = 'linear', scale = F)
 model3 <- svm(y3 ~ ., data = data3, kernel = 'linear', scale = F)
 
-plot(model1, data1, Petal.Width ~ Petal.Length,
-     slice = list(Sepal.Width = 3, Sepal.Length = 4),color.palette = terrain.colors)
+plot(model1, data1, Petal.Length ~ Petal.Width,
+     slice = list(Sepal.Width = 3, Sepal.Length = -4),color.palette = terrain.colors)
 
 plot(model2, data2, Petal.Width ~ Petal.Length,
      slice = list(Sepal.Width = 3, Sepal.Length = 4),color.palette = terrain.colors)
@@ -44,13 +44,13 @@ plot(model3, data3, Petal.Width ~ Petal.Length,
      slice = list(Sepal.Width = 3, Sepal.Length = 4),color.palette = terrain.colors)
 
 predict1 <- predict(model1, subset(data1, select = -y1))
-table(predict1)
+table(predict1, y1)
 coef1 <- matrix(model1$coefs, nrow = 1)
-w1 <- t(coef1 %*% model1$SV)
-test <- (as.matrix(X1) %*% w1)[model1$index]
+w1 <- rbind(-model1$rho, t(coef1 %*% model1$SV))
+(test <- (cbind(1,as.matrix(X1)) %*% w1)[model1$index])
 
 predict2 <- predict(model2, subset(data2, select = -y2))
-table(predict2)
+table(predict2, y2)
 coef2 <- matrix(model2$coefs, nrow = 1)
 w2 <- t(coef2 %*% model2$SV)
 
