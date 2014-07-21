@@ -527,8 +527,6 @@ Bob['age']   # reference by name.
 
 - list 是非常方便好用的資料形態。尤其是需儲存不同類型資料的時候，特別好用。
 
-- Vector, Matrix, Data Frame and List.
-
 - 還記得剛剛提過的優先順序嗎？
  - c(1, '2')
  - c(1, T)
