@@ -321,6 +321,15 @@ final_result
 ```
 
 
+---
+
+## 剛剛的例子有點兒無聊....
+
+        # 讓 R 幫你驅邪避凶!!
+        for (i in 1:10){
+                system("say 'Nan Wu Ah Mi Tow Fo'")
+        }
+
 --- .segue bg:green
 
 ## If Loop
