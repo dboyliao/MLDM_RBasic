@@ -167,7 +167,10 @@ And you can claim that you can do sketch by a computer!
 - Data Analysis
 - Data Visulization
 
+<br>
+<font size='6'>
 `在今天的課程裡也會讓大家體會一下每個課程的主題是什麼。`
+</font>
 
 
 --- .segue bg:navy
