@@ -330,7 +330,7 @@ Note: **else if** and **else** are optional.
 
 ## Exercise: SVM Classifier
 
-> 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)
+> 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> **(** sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數 **)**
 > 2. 如果內積值大於或等於 0，print('setosa');反之，print('versicolor')
 > 3. 執行 print(y1[i])，有何發現？
 
@@ -338,7 +338,7 @@ Note: **else if** and **else** are optional.
 
 ## Exercise: SVM Classifier
 
-1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)
+1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> **(** sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數 **)**
 2. 如果內積值大於或等於 0，print('setosa');反之，print('versicolor')
 3. 執行 print(y1[i])，有何發現？
 
