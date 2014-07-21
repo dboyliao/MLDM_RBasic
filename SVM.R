@@ -30,6 +30,7 @@ y3 <- y[ind3]
 y3 <- factor(y3, levels = c('versicolor', 'virginica'))
 data3 <- cbind(X3, y3)
 
+model0 <- svm(Species ~ ., data = iris, kernel = "radial", scale = F)
 model1 <- svm(y1 ~ ., data = data1, kernel = 'linear', scale = F)
 model2 <- svm(y2 ~ ., data = data2, kernel = 'linear', scale = F)
 model3 <- svm(y3 ~ ., data = data3, kernel = 'linear', scale = F)
@@ -38,10 +39,13 @@ plot(model1, data1, Petal.Length ~ Petal.Width,
      slice = list(Sepal.Width = 3, Sepal.Length = -4),color.palette = terrain.colors)
 
 plot(model2, data2, Petal.Width ~ Petal.Length,
-     slice = list(Sepal.Width = 3, Sepal.Length = 4),color.palette = terrain.colors)
+     slice = list(Sepal.Width = 3, Sepal.Length = 4),color.palette = topo.colors)
 
 plot(model3, data3, Petal.Width ~ Petal.Length,
-     slice = list(Sepal.Width = 3, Sepal.Length = 4),color.palette = terrain.colors)
+     slice = list(Sepal.Width = 3, Sepal.Length = 4),color.palette = topo.colors)
+
+predict0 <- predict(model0, subset(iris, select=-Species))
+table(predict0, iris[, "Species"])
 
 predict1 <- predict(model1, subset(data1, select = -y1))
 table(predict1, y1)
