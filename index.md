@@ -281,6 +281,38 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
 
 ## Loops
 
+
+--- .segue bg:green
+
+## For Loop
+
+---
+
+## For Loop
+
+### Syntex:
+
+    for (iterator){
+        #Do something here....
+    } 
+
+### Example: 土炮 sum()
+
+
+```r
+# 從 1 加到 10
+final_result <- 0
+for (i in 1:10){
+        final_result <- final_result + i
+}
+final_result
+```
+
+```
+## [1] 55
+```
+
+
 --- .segue bg:green
 
 ## If Loop
@@ -367,37 +399,6 @@ Note: **else if** and **else** are optional.
 <font size='6'>
 `其他更精彩的資料分析模型的理論與操作，敬請期待 Data Analysis 課程!`
 </font>
-
-
---- .segue bg:green
-
-## For Loop
-
----
-
-## For Loop
-
-### Syntex:
-
-    for (iterator){
-        #Do something here....
-    } 
-
-### Example: 土炮 sum()
-
-
-```r
-# 從 1 加到 10
-final_result <- 0
-for (i in 1:10){
-        final_result <- final_result + i
-}
-final_result
-```
-
-```
-## [1] 55
-```
 
 
 --- .segue bg:navy

@@ -469,144 +469,6 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
 <slide class="segue" id="slide-22" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>If Loop</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-23" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>If Loop</h2>
-  </hgroup>
-  <article data-timings="">
-    <h3>if / else</h3>
-
-<p>Syntex:</p>
-
-<pre><code>if (condition_1){
-    #Do something here....
-} else if (conditon_2){
-    #Do something here
-} else {
-    #Do something here
-}
-</code></pre>
-
-<p>Note: <strong>else if</strong> and <strong>else</strong> are optional.</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-24" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercise: SVM Classifier</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><font size='5'>
-<code>Magic Vector:</code> <br>
-<code>c(1.45284450 ,-0.04625854, 0.5211828, -1.003045, -0.4641298)</code>
-</font></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-25" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercise: SVM Classifier</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><font size='5'>
-<code>Magic Vector:</code> <br>
-<code>c(1.45284450, -0.04625854, 0.5211828, -1.003045, -0.4641298)</code><br>
-</font></p>
-
-<p>(暫時)不要問我怎麼把這個向量生出來的。(汗)</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-26" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercise: SVM Classifier</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><font size='5'>
-<code>Magic Vector:</code> <br> 
-<code>c(1.45284450, -0.04625854, 0.5211828, -1.003045, -0.4641298)</code><br>
-</font></p>
-
-<p>或許你可以問助教，助教什麼都會!</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercise: SVM Classifier</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><br></p>
-
-<p><font size = 6''>
-<a href="https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/MLDM_RBasic_ForLoop_Ex.RData">Data</a>
-</font></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-28" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercise: SVM Classifier</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol class = "build incremental">
-<li>寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)</li>
-<li>如果內積值大於或等於 0，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
-<li>執行 print(y1[i])，有何發現？</li>
-</ol>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-29" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercise: SVM Classifier</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li>寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)</li>
-<li>如果內積值大於或等於 0，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
-<li>執行 print(y1[i])，有何發現？</li>
-</ol>
-
-<p><br>
-<font size='6'>
-<code>其他更精彩的資料分析模型的理論與操作，敬請期待 Data Analysis 課程!</code>
-</font></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue" id="slide-30" style="background:green; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
     <h2>For Loop</h2>
   </hgroup>
   <article data-timings="">
@@ -615,7 +477,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-31" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-23" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -640,6 +502,144 @@ final_result
 
 <pre><code>## [1] 55
 </code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-24" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>If Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>If Loop</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>if / else</h3>
+
+<p>Syntex:</p>
+
+<pre><code>if (condition_1){
+    #Do something here....
+} else if (conditon_2){
+    #Do something here
+} else {
+    #Do something here
+}
+</code></pre>
+
+<p>Note: <strong>else if</strong> and <strong>else</strong> are optional.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-26" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size='5'>
+<code>Magic Vector:</code> <br>
+<code>c(1.45284450 ,-0.04625854, 0.5211828, -1.003045, -0.4641298)</code>
+</font></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size='5'>
+<code>Magic Vector:</code> <br>
+<code>c(1.45284450, -0.04625854, 0.5211828, -1.003045, -0.4641298)</code><br>
+</font></p>
+
+<p>(暫時)不要問我怎麼把這個向量生出來的。(汗)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-28" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size='5'>
+<code>Magic Vector:</code> <br> 
+<code>c(1.45284450, -0.04625854, 0.5211828, -1.003045, -0.4641298)</code><br>
+</font></p>
+
+<p>或許你可以問助教，助教什麼都會!</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-29" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br></p>
+
+<p><font size = 6''>
+<a href="https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/MLDM_RBasic_ForLoop_Ex.RData">Data</a>
+</font></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-30" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol class = "build incremental">
+<li>寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)</li>
+<li>如果內積值大於或等於 0，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
+<li>執行 print(y1[i])，有何發現？</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-31" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercise: SVM Classifier</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)</li>
+<li>如果內積值大於或等於 0，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
+<li>執行 print(y1[i])，有何發現？</li>
+</ol>
+
+<p><br>
+<font size='6'>
+<code>其他更精彩的資料分析模型的理論與操作，敬請期待 Data Analysis 課程!</code>
+</font></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -1952,25 +1952,25 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='If Loop'>
+        data-slide=22 title='For Loop'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='If Loop'>
+        data-slide=23 title='For Loop'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Exercise: SVM Classifier'>
+        data-slide=24 title='If Loop'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='Exercise: SVM Classifier'>
+        data-slide=25 title='If Loop'>
          25
       </a>
     </li>
@@ -2000,13 +2000,13 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='For Loop'>
+        data-slide=30 title='Exercise: SVM Classifier'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='For Loop'>
+        data-slide=31 title='Exercise: SVM Classifier'>
          31
       </a>
     </li>
