@@ -73,6 +73,18 @@ Coding in R looks like this:
 <img src = 'assets/img/Taiwan-R-logo.png' height='40%' width='40%'>
 
 
+---
+
+## The Reasons
+
+<font size='10'>
+> 1. It is FREE!
+> 2. It is open!
+> 3. It is popular! [Kaggle](https://www.kaggle.com/wiki/Software)
+> 4. Hence, it is powerful!
+
+</font>
+
 --- .segue bg:navy
 
 ## Our Gaol Today: Become a Cool Guy!
@@ -342,6 +354,19 @@ Note: **else if** and **else** are optional.
 > 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)
 > 2. 如果內積值大於或等於 0，print('setosa');反之，print('versicolor')
 > 3. 跟 y1[i] 比對一下，有何發現？
+
+---
+
+## Exercise: SVM Classifier
+
+1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> (sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數)
+2. 如果內積值大於或等於 0，print('setosa');反之，print('versicolor')
+3. 跟 y1[i] 比對一下，有何發現？
+
+<br>
+<font size='6'>
+`其他更精彩的資料分析模型的理論與操作，敬請期待 Data Analysis 課程!`
+</font>
 
 
 --- .segue bg:green
