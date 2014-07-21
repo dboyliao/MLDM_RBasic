@@ -327,7 +327,8 @@ final_result
 
         # 讓 R 幫你驅邪避凶!!
         for (i in 1:10){
-                system("say 'Nan Wu Ah Mi Tow Fo'")
+                system("say 'Nann Moll Ah Mi Tow Fo'")
+                system("say 'Ah Men'")
         }
 
 --- .segue bg:green
