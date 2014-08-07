@@ -21,7 +21,7 @@ license: by-nc-sa
 
 --- &twocol
 
-## Topics We Will Cover Today
+## Why Not R?
 
 *** =left
 - 1. It is FREE!
