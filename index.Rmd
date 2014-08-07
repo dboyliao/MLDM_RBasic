@@ -1,8 +1,8 @@
 ---
 title       : MLDM Monday
 subtitle    : R Basic Tutorial
-author      : 'Dboy'
-job         : 'Taiwan UseR Group for Hackers'
+author      : Dboy
+job         : Taiwan UseR Group for Hackers
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -32,7 +32,7 @@ license: by-nc-sa
 *** =right
 <br>
 <br>
-Be a Hacker!!<br>
+It is cool to be a hacker!!<br>
 <img src="assets/img/cool_hacker.jpg" height="100%" width="100%" />
 <br>
 [圖片來源](http://www.teachprivacy.com/category/phishing/)
@@ -122,36 +122,44 @@ And you can claim that you can do sketch by a computer!
 
 <br>
 <font size='6'>
-`在今天的課程裡也會讓大家體會一下每個課程的主題是什麼。`
+`在今天的課程裡也會讓大家體驗一下每個課程的主題是什麼。`
 </font>
 
 
 --- .segue bg:navy
 
-## Table of Content
+## Syllabus
 
 
 --- &twocol
 
-## Topics We Will Cover Today
+## Syllabus
 
 *** =left
-- DATA: 一切的起源
+- **DATA: Where the Story Begins**
   - 資料屬性
   - 資料形態
-- Loop
+- **Subsetting - Phase I**
+  - Vector v.s List
+  - Matrix Subsetting
+  - Data Frame Subsetting
+- **Subsetting - Phase II**
+  - Matrix Subsetting (Cont.)
+  - Data Frame Subsetting (Cont.)
+- **Merging**
+  - cbind v.s rbind
+
+*** =right
+- **Basic Operation**
+  - Logical Operations
+  - Arithmetic Operations
+- **Loop**
   - if/else if/else
   - for
   - while
-
-*** =right
-- 基礎運算
-  - 邏輯運算
-  - 數值運算
-  
-- Mini Project: 
-  - Barnsley Fern Fractal (We will go for this today)
-  - Battleship (Coming soon in DSC)
+- **Mini Project**
+  - Barnsley Fern Fractal
+  - Battleship
 
 
 --- .segue bg:navy
@@ -160,7 +168,7 @@ And you can claim that you can do sketch by a computer!
 
 --- &twocol
 
-## DATA: 一切的起源
+## DATA
 *** =left
 以資料屬性來分：
 - Character (字串)
@@ -173,19 +181,420 @@ And you can claim that you can do sketch by a computer!
 以資料形態來分：
 - 一般變數
 - Vector
-- Matrix (Array)
+- Matrix
 - Factor and Data Frame
 
 ---
 
-## 基本賦值語法
+## Examples
 
 ```{r, results='hold'}
 (x <- 'R is easy to learn!') # 這是字串
 (y <- 3) # 這是整數
 (z <- pi) # 圓周率
-(k <- 1 + 2i) # 複數
 ```
+
+---
+
+## Examples (Cont.)
+
+```{r, results='hold'}
+(k <- 1 + 2i) # 複數
+(boo1 <- TRUE) # TRUE (or T for short)
+(boo2 <- FALSE) # FALSE (or F for short)
+```
+
+
+--- .segue bg:green
+
+## Vector and List
+
+---
+
+## Vector
+
+- c(): concatenation function
+
+- 範例：
+
+```{r, results = 'hide'}
+vec1 <- c(1, 2, 3)
+vec2 <- c('a', 'b', 'c')
+```
+
+- vector 中所有元素都必須是同一種資料屬性。
+
+- Named Vector:
+
+```{r, results = 'hold'}
+(Bob <- c(age = 27, height = 187, weight = 80))
+```
+
+---
+
+## **Funtime**
+```{r, results='hold'}
+mix_vec1 <- c('a', 2)
+mix_vec2 <- c(2, T)
+```
+猜看看結果會如何?
+
+> 1. [1] "a" "2"
+> 2. [1] 2 1
+> 3. Why??
+
+
+---
+
+## Useful Methods (Vector)
+- length(): 
+  - 語法: **length(my_vec)**
+  - 傳回 my_vec 的長度
+- names():
+ - 語法: **names(my_vec)**
+ - 傳回 my_vec 各維度的名字。
+
+
+---
+
+## Examples
+
+```{r, results = 'hold'}
+vec <- c(4, 5, 6, 11, 5)
+length(vec)
+Bob
+names(Bob)
+```
+
+
+---
+
+## Examples
+
+c() 也可以被用來結合兩個向量。
+
+```{r, results = "hold"}
+x <- c(1:5)
+y <- c(2, 4, 8)
+z <- c(x, y)
+z
+```
+
+---
+
+## Exercise
+
+定義一個向量 me 記錄自己的身高(公分)、體重(公斤)與年齡。
+
+---
+
+## Exercise
+
+定義一個向量 me 記錄自己的身高(公分)、體重(公斤)與年齡。
+
+`如果我還想記錄頭髮的顏色跟電話號碼呢?`
+
+> 1. 把 hair_color='Black' 存進去?
+> 2. 如果電話是 +886 911333966 呢?
+
+
+--- .segue bg:green
+
+## List
+
+---
+
+## List
+
+- list 是非常方便好用的資料形態。尤其是需儲存不同類型資料的時候，特別好用。
+
+- 還記得剛剛提過的優先順序嗎？
+ - c(1, '2')
+ - c(1, T)
+
+- 比較：
+ - list(1, '2')
+ - list(1, T)
+
+---
+
+## List: Examples
+
+```{r, results='hold'}
+Bob <- list(age=27, weight = 80,
+            favorite_data_name = 'iris', favorite_data = head(iris))
+```
+
+> - 我們可以用 list 來儲存異質的資料。
+> - 但如何從中擷取出想要的資料呢?
+> - 在接下來的 Subsetting 單元中將一一介紹。
+
+--- .segue bg:navy
+
+## Subsetting Phase I: Index
+
+--- .segue bg:green
+
+## Vector Subsetting - Phase I
+
+---
+
+## Reference by Index
+
+**Syntax: vec[index]**
+
+Examples:
+
+```{r, results='hold'}
+vec <- c(1, 5, 10, 33, 6)
+vec[3]
+vec[length(vec)]
+```
+
+---
+
+## Reference by Name
+
+**Syntax: vec["name"]**
+
+```{r, results='markup'}
+Dboy <- c(age=27, weight=82, heigh=172)
+Dboy["age"]
+```
+
+--- .segue bg:green
+
+## List Subsetting - Phase I
+
+---
+
+## Reference by Index
+
+**Syntax: a_list[index]** or **a_list[[index]]**
+
+Examples:
+```{r, results='hold'}
+Bob[1]; class(Bob[1])
+Bob[[1]]; class(Bob[[1]])
+```
+
+---
+
+## Reference by Name
+
+**Syntax: a_list["name"]** or **a_list[["name"]]**
+
+Examples:
+```{r, results='hold'}
+Bob["age"]
+Bob[["age"]]
+```
+
+--- .segue bg:green
+
+## Matrix Subsetting - Phase I
+
+---
+
+## Matrix: First Look
+
+<br>
+<font size="6" color="DarkSlateGray">
+A Matrix is something looks like this:
+</font>
+
+<img src="assets/img/R_Basic_Matrix.png" height="75%" width="75%"/>
+
+---
+
+## Dimension
+
+<br>
+<font size="6" color="DarkSlateGray">
+A Matrix has two dimensions, denoted by i and j.<br>
+i for row indexing, j for column indexing.
+</font>
+
+
+---
+
+## Dimension
+
+<br>
+<font size="6" color="DarkSlateGray">
+ i alone can specify one row.
+</font>
+
+<img src="assets/img/R_Basic_Matrix_row.png" height="75%" width="75%"/>
+
+
+---
+
+## Dimension
+
+<br>
+<font size="6" color="DarkSlateGray">
+j alone can specify one column.
+</font>
+
+<img src="assets/img/R_Basic_Matrix_col.png" height="70%" width="70%"/>
+
+---
+
+## Dimension
+
+<br>
+<font size="6" color="DarkSlateGray">
+i together with j can specify one element in a matrix.
+</font>
+
+<img src="assets/img/R_Basic_Matrix_RowAndCol.png" height="75%" width="75%"/>
+
+
+---
+
+## Matrix in R
+
+```{r, results='hold'}
+M1 <- matrix(c(1:144), 12, 12)
+```
+
+<img src="assets/img/R_Basic_Matrix_ex.png" height="75%" width="75%"/>
+
+
+---
+
+## Matrix: Reference by Index.
+
+<font size='6'>
+`Syntax: my_matrix[i, j]`
+</font>
+
+```{r, results='hold'}
+M1[6, ]
+```
+
+<img src="assets/img/R_Basic_Matrix_ex_row.png" height="70%" width="70%"/>
+
+---
+
+## Matrix: Subsetting by Index
+
+```{r, results='hold'}
+M1[, 6]
+```
+
+<img src="assets/img/R_Basic_Matrix_ex_col.png" height="75%" width="75%"/>
+
+---
+
+## Matrix: Rename
+
+```{r, results='hold'}
+colnames(M1) <- LETTERS[1:12]
+```
+
+<img src="assets/img/R_Basic_Matrix_ex_name.png" height="75%" width="75%"/>
+
+
+---
+
+## Matrix: Subsetting by Name
+
+```{r, results='hold'}
+M1[, 'F']
+```
+
+<img src="assets/img/R_Basic_Matrix_ex_name_ref.png" height="70%" width="70%"/>
+
+
+--- .segue bg:green
+
+## Data Frame Subsetting - Phase I
+
+---
+
+## Data Frame: First Look
+
+<center>
+<br>
+<font size="6" color="DarkSlateGray">
+We take iris data set for example
+</font>
+</center>
+<br>
+<center>
+<img src="assets/img/iris.png" height="70%" width=70%>
+</center>
+
+
+---
+
+## Dimension
+
+<center>
+<br>
+<font size="6" color="DarkSlateGray">
+Similer to the matrix, a data frame also has two dimensions.
+</font>
+    <center>
+    <img src="assets/img/iris_index.png" height="70%" width="70%">
+    </center>
+</center>
+
+---
+
+## Data Frame: Subsetting by Index
+
+```{r, results='hold'}
+iris[6, ]
+```
+
+<img src="assets/img/iris_row.png" height="70%" width="70%">
+
+---
+
+## Data Frame: Subsetting by Index
+
+```{r, results='hold'}
+iris[, 2]
+```
+
+<img src="assets/img/iris_col.png" height="70%" width="70%">
+
+
+---
+
+## Data Frame: Subsetting by Column Name
+
+```{r, results='hold'}
+iris[, "Sepal.Width"]
+```
+
+<img src="assets/img/iris_col.png" height="70%" width="70%">
+
+
+---
+
+## Data Frame: Rename
+
+```{r, results='hold'}
+colnames(iris) <- c("Sepal.L", "Sepal.W", "Petal.L", "Petal.W", "Species")
+iris[, ]
+```
+
+
+--- .segue bg:navy
+
+## Subsetting Phase II: Indices
+
+--- .segue bg:green
+
+## Vector and List
+
+---
+
+## Vector: Reference by Indices
 
 
 --- .segue bg:green
@@ -380,150 +789,6 @@ Note: **else if** and **else** are optional.
 --- .segue bg:green
 
 ## Vector
-
----
-
-## Vector
-
-- c(): concatenation function
-
-- 範例：
-
-```{r, results = 'hide'}
-vec1 <- c(1, 2, 3)
-vec2 <- c('a', 'b', 'c')
-```
-
-- vector 中所有元素都必須是同一種資料屬性。
-
-- Named Vector:
-
-```{r, results = 'hold'}
-(Bob <- c(age = 27, height = 187, weight = 80))
-```
-
----
-
-## **Funtime**
-```{r, results='hold'}
-mix_vec1 <- c('a', 2)
-mix_vec2 <- c(2, T)
-```
-猜看看結果會如何?
-
-> 1. [1] "a" "2"
-> 2. [1] 2 1
-> 3. Why??
-
-
----
-
-## Useful Methods (Vector)
-- length(): 
-  - 語法: **length(my_vec)**
-  - 傳回 my_vec 的長度
-- +, -, *, /:
-  - 語法: **my_vec + other_vec**
-  - 注意: R 中所有運算皆向量化。(element by element operation)
-- names():
- - 語法: **names(my_vec)**
- - 傳回 my_vec 各維度的名字。
-- []:
- - 語法: **my_vec[index]**
- - 傳回 my_vec 的第 index 個元素。
-
-
----
-
-## Examples
-
-```{r, results = 'hold'}
-vec1 <- c(1, 2, 3)
-vec2 <- c(4, 5, 6)
-vec1 + vec2
-vec1 - vec2
-vec1 * vec2
-vec1[1] + vec2[3]
-```
-
----
-
-## Examples (Cont.)
-
-```{r, results = 'hold'}
-Bob
-names(Bob)
-Bob['age']   # reference by name.
-```
-
----
-
-## Exercise
-
-定義一個向量 me 記錄自己的身高(公分)、體重(公斤)與年齡。
-
----
-
-## Exercise
-
-定義一個向量 me 記錄自己的身高(公分)、體重(公斤)與年齡。
-
-`如果我還想記錄頭髮的顏色跟電話號碼呢?`
-
-> 1. 把 hair_color='Black' 存進去?
-> 2. 如果電話是 +886 911333966 呢?
-
-
---- .segue bg:green
-
-## List
-
----
-
-## List
-
-- list 是非常方便好用的資料形態。尤其是需儲存不同類型資料的時候，特別好用。
-
-- 還記得剛剛提過的優先順序嗎？
- - c(1, '2')
- - c(1, T)
-
-- 比較：
- - list(1, '2')
- - list(1, T)
-
----
-
-## List: Examples
-
-```{r, results='hold'}
-Bob <- list(age=27, weight = 80,
-            favorite_data_name = 'iris', favorite_data = head(iris))
-(age1 <- Bob[1])
-class(age1)
-(age2 <- Bob[[1]])
-class(age2)
-```
-
----
-
-## List: Examples (Cont.)
-
-```{r, results='hold'}
-(Age_and_DataName <- Bob[c(1, 3)])
-Bob[['favorite_data']]
-```
-
-
----
-
-## Play With List
-
-```{r, results = 'hold'}
-for (Attribute in Bob){
-        print(Attribute)
-}
-```
 
 --- .segue bg:green
 
