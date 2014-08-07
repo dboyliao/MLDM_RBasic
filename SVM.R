@@ -8,8 +8,8 @@ y <- iris$Species
 
 ind1 <- which(iris[, "Species"] == "setosa" | iris[, 'Species'] == "versicolor")
 X1 <- X[ind1, ]
-#Intersect <- rep(1, dim(X1)[1])
-#X1 <- cbind(Intersect, X1)
+Intersect <- rep(1, dim(X1)[1])
+X1 <- cbind(Intersect, X1)
 y1 <- y[ind1]
 y1 <- factor(y1, levels = c("setosa", 'versicolor'))
 data1 <- cbind(X1, y1)

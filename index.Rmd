@@ -19,71 +19,24 @@ license: by-nc-sa
 ## Why R?
 
 
----
+--- &twocol
 
-## The Reasons
+## Topics We Will Cover Today
 
-<font size = '6'>
-**1. It is cool to code something like this:**
-</font>
+*** =left
+- 1. It is FREE!
+- 2. It is open!
+- 3. It is popular! [Kaggle](https://www.kaggle.com/wiki/Software)
+- 4. It is powerful!
 
-<img src="assets/img/terminal.png" height="70%" width="70%" />
-
-
----
-
-## The Reasons
-
-<font size = "6">
-Coding in R looks like this:
-</font>
-
-<img src="assets/img/R_code.png" height="70%" width="70%" />
-
----
-
-## The Reasons
-
-<font size = "6">
-`By a simple logic, R is cool.`
-</font>
-
-<img src = 'assets/img/Taiwan-R-logo.png' height='40%' width='40%'>
-
----
-
-## The Reasons
-
-<font size = "6">
-**2. Everyone wants to be a cool guy.**
-</font>
-
-<img src="assets/img/cool_hacker.jpg" height="60%" width="60%" />
+*** =right
+<br>
+<br>
+Be a Hacker!!<br>
+<img src="assets/img/cool_hacker.jpg" height="100%" width="100%" />
 <br>
 [圖片來源](http://www.teachprivacy.com/category/phishing/)
 
----
-
-## The Reasons
-
-<font size = "6">
-`Again, by a simple logic, everyone should learn R!`
-</font>
-
-<img src = 'assets/img/Taiwan-R-logo.png' height='40%' width='40%'>
-
-
----
-
-## The Reasons
-
-<font size='10'>
-> 1. It is FREE!
-> 2. It is open!
-> 3. It is popular! [Kaggle](https://www.kaggle.com/wiki/Software)
-> 4. Hence, it is powerful!
-
-</font>
 
 --- .segue bg:navy
 
@@ -401,7 +354,7 @@ Note: **else if** and **else** are optional.
 
 ## Exercise: SVM Classifier
 
-> 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> **(** sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數 **)**
+> 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> **(** sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 **)**
 > 2. 如果內積值大於或等於 0，print('setosa');反之，print('versicolor')
 > 3. 執行 print(y1[i])，有何發現？
 
@@ -875,7 +828,7 @@ vec <- c(1:3)
 ```{r}
 my_vec <- matrix(1:3, ncol = 1) 
 My_matrix1 %*% my_vec
-My_matrix1 %*% t(my_vec)
+# My_matrix1 %*% t(my_vec)
 ```
 
 
