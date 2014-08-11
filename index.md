@@ -1082,7 +1082,7 @@ Example:
 
 ---
 
-## Merging: rsbind
+## Merging: rbind
 
 - rbind: Row-like Binding (merge by column).
 - Merge two data frames (or matrices) like rows.
@@ -1111,7 +1111,7 @@ iris[1:3, ]
 
 ---
 
-## Merging: cbind
+## Merging: rbind
 
 `Syntax: rbind(A, B) where A and B are two data frames or matrices`
 
@@ -1208,7 +1208,7 @@ iris[1:5, 2:4]
 
 ## Merging: cbind
 
-`Syntax: rbind(A, B) where A and B are two data frames or matrices`
+`Syntax: cbind(A, B) where A and B are two data frames or matrices`
 
 Our beloved iris data set.
 
