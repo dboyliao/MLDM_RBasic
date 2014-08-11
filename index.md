@@ -139,19 +139,20 @@ And you can claim that you can do sketch by a computer!
 - **DATA: Where the Story Begins**
   - 資料屬性
   - 資料形態
+- **Basic Operations - Phase I**
+  - Logical Operations: &, |, ==
 - **Subsetting - Phase I**
-  - Vector v.s List
-  - Matrix Subsetting
-  - Data Frame Subsetting
+  - Vector and List
+  - Matrix Subsetting - Phase I
+  - Data Frame Subsetting - Phase I
 - **Subsetting - Phase II**
-  - Matrix Subsetting (Cont.)
-  - Data Frame Subsetting (Cont.)
-- **Merging**
-  - cbind v.s rbind
+  - Matrix Subsetting - Phase II
+  - Data Frame Subsetting - Phase II
 
 *** =right
-- **Basic Operation**
-  - Logical Operations
+- **Merging**
+  - cbind v.s rbind
+- **Basic Operation - Phase II**
   - Arithmetic Operations
 - **Loop**
   - if/else if/else
@@ -230,6 +231,92 @@ And you can claim that you can do sketch by a computer!
 ## [1] FALSE
 ```
 
+--- .segue bg:green
+
+## Logical Operation
+
+---
+
+## Basic Operations: & (and), | (or), ==
+
+
+```r
+bol1 <- T; bol2 <- TRUE
+bol3 <- F
+('Dboy' == 'Dboy')
+```
+
+[1] TRUE
+
+```r
+(bol1 == bol2)
+```
+
+[1] TRUE
+
+```r
+(bol1 & bol2)
+```
+
+[1] TRUE
+
+```r
+(bol3 | 4 > 5)
+```
+
+[1] FALSE
+
+---
+
+## Basic Operations: >, <, >=, <=
+
+
+```r
+4 > 2
+```
+
+[1] TRUE
+
+```r
+1 >= 2
+```
+
+[1] FALSE
+
+```r
+a <- NA
+a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
+```
+
+[1] NA
+
+
+---
+
+## Fun Time
+
+### 於 Console 中依續執行下列程式碼。
+
+1. my_vec <- c(1, 2, 5, 90, 37)
+2. ind <- my_vec >= 5
+3. sum(ind)
+
+---
+
+## Fun Time
+
+### 於 Console 中依續執行下列程式碼。
+
+1. my_vec <- c(1, 2, 5, 90, 37)
+2. ind <- my_vec >= 5
+3. sum(ind) 
+
+`猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)` <br>
+
+
+--- .segue bg:navy
+
+## Subsetting Phase I: Index
 
 --- .segue bg:green
 
@@ -383,9 +470,6 @@ Bob <- list(age=27, weight = 80,
 > - 但如何從中擷取出想要的資料呢?
 > - 在接下來的 Subsetting 單元中將一一介紹。
 
---- .segue bg:navy
-
-## Subsetting Phase I: Index
 
 --- .segue bg:green
 
@@ -393,7 +477,7 @@ Bob <- list(age=27, weight = 80,
 
 ---
 
-## Reference by Index
+## Subsetting by Index
 
 **Syntax: vec[index]**
 
@@ -416,7 +500,7 @@ vec[length(vec)]
 
 ---
 
-## Reference by Name
+## Subsetting by Name
 
 **Syntax: vec["name"]**
 
@@ -437,7 +521,7 @@ Dboy["age"]
 
 ---
 
-## Reference by Index
+## Subsetting by Index
 
 **Syntax: a_list[index]** or **a_list[[index]]**
 
@@ -467,7 +551,7 @@ Bob[[1]]; class(Bob[[1]])
 
 ---
 
-## Reference by Name
+## Subsetting by Name
 
 **Syntax: a_list["name"]** or **a_list[["name"]]**
 
@@ -557,15 +641,16 @@ i together with j can specify one element in a matrix.
 M1 <- matrix(c(1:144), 12, 12)
 ```
 
+<center>
 <img src="assets/img/R_Basic_Matrix_ex.png" height="75%" width="75%"/>
-
+</center>
 
 ---
 
-## Matrix: Reference by Index.
+## Matrix: Subsetting by Index.
 
 <font size='6'>
-`Syntax: my_matrix[i, j]`
+`Syntax: my_matrix[i, ] or my_matrix[, j]`
 </font>
 
 
@@ -577,7 +662,9 @@ M1[6, ]
 ##  [1]   6  18  30  42  54  66  78  90 102 114 126 138
 ```
 
-<img src="assets/img/R_Basic_Matrix_ex_row.png" height="70%" width="70%"/>
+<center>
+<img src="assets/img/R_Basic_Matrix_ex_row.png" height="65%" width="65%"/>
+</center>
 
 ---
 
@@ -592,7 +679,9 @@ M1[, 6]
 ##  [1] 61 62 63 64 65 66 67 68 69 70 71 72
 ```
 
-<img src="assets/img/R_Basic_Matrix_ex_col.png" height="75%" width="75%"/>
+<center>
+<img src="assets/img/R_Basic_Matrix_ex_col.png" height="70%" width="70%"/>
+</center>
 
 ---
 
@@ -603,8 +692,9 @@ M1[, 6]
 colnames(M1) <- LETTERS[1:12]
 ```
 
+<center>
 <img src="assets/img/R_Basic_Matrix_ex_name.png" height="75%" width="75%"/>
-
+</center>
 
 ---
 
@@ -619,8 +709,9 @@ M1[, 'F']
 ##  [1] 61 62 63 64 65 66 67 68 69 70 71 72
 ```
 
-<img src="assets/img/R_Basic_Matrix_ex_name_ref.png" height="70%" width="70%"/>
-
+<center>
+<img src="assets/img/R_Basic_Matrix_ex_name_ref.png" height="65%" width="65%"/>
+</center>
 
 --- .segue bg:green
 
@@ -636,7 +727,8 @@ M1[, 'F']
 We take iris data set for example
 </font>
 </center>
-<br>
+ <br>
+ <br>
 <center>
 <img src="assets/img/iris.png" height="70%" width=70%>
 </center>
@@ -650,6 +742,7 @@ We take iris data set for example
 <br>
 <font size="6" color="DarkSlateGray">
 Similer to the matrix, a data frame also has two dimensions.
+ <br>
 </font>
     <center>
     <img src="assets/img/iris_index.png" height="70%" width="70%">
@@ -670,7 +763,9 @@ iris[6, ]
 ## 6          5.4         3.9          1.7         0.4  setosa
 ```
 
+<center>
 <img src="assets/img/iris_row.png" height="70%" width="70%">
+</center>
 
 ---
 
@@ -685,8 +780,9 @@ iris[, 2]
 ##  [1] 3.5 3.0 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 3.7 3.4
 ```
 
+<center>
 <img src="assets/img/iris_col.png" height="70%" width="70%">
-
+</center>
 
 ---
 
@@ -701,8 +797,9 @@ iris[, "Sepal.Width"]
 ##  [1] 3.5 3.0 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 3.7 3.4
 ```
 
+<center>
 <img src="assets/img/iris_col.png" height="70%" width="70%">
-
+</center>
 
 ---
 
@@ -739,96 +836,721 @@ iris[, ]
 
 ## Vector and List
 
+
 ---
 
 ## Vector: Reference by Indices
 
+In R, we use c() to specify multiple indices.
+
+Example:
+
+
+```r
+(Dboy)
+(Dboy[c(1, 3)])
+```
+
+```
+##    age weight  heigh 
+##     27     82    172
+```
+
+```
+##   age heigh 
+##    27   172
+```
+
+---
+
+## Vector: Multi Indexing with Expression
+
+Examples:
+
+```r
+data(cars)
+speed <- cars[, "speed"]
+speed[speed > 5]
+```
+
+```
+##  [1]  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15
+## [24] 15 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24
+## [47] 24 25
+```
+
+
+---
+
+## Vector: Multi Indexing with which()
+
+`Syntax: which(expression)`
+
+Examples:
+
+```r
+my_vec <- runif(30, 0, 1) # 用 runif 從(0, 1)均勻分佈中抽取 30 個值。
+(ind <- which(my_vec > 0.5))
+(my_vec[ind])
+```
+
+```
+##  [1]  3  4  6  7  8  9 10 13 14 16 21 22 23 26 29 30
+```
+
+```
+##  [1] 0.9916 0.7548 0.8688 0.9199 0.7925 0.6050 0.8816 0.8873 0.7259 0.8394
+## [11] 0.6789 0.7920 0.6141 0.7296 0.6543 0.7705
+```
+
+---
+
+## Vector: Multi Indexing with which()
+
+`Syntax: which(expression)`
+
+Examples:
+
+```r
+(ind <- which(names(Dboy) %in% c("age", "weight")))
+Dboy[ind]
+```
+
+```
+## [1] 1 2
+```
+
+```
+##    age weight 
+##     27     82
+```
+
+
+---
+
+## List: Subsetting by Indices
+
+Similarly, we use c() for multiple indexing in a list.
+
+`Syntax: my_list[c(ind1, ind2, ...)]`
+
+Example:
+
+
+```r
+Bob[c(1, 3)]
+```
+
+```
+## $age
+## [1] 27
+## 
+## $favorite_data_name
+## [1] "iris"
+```
+
+---
+
+## List: Subsetting with which()
+
+Example:
+
+
+```r
+(names(Bob))
+(ind <- which(names(Bob) %in% c("age", "favorite_data")))
+```
+
+```
+## [1] "age"                "weight"             "favorite_data_name"
+## [4] "favorite_data"
+```
+
+```
+## [1] 1 4
+```
+
+
+---
+
+## List: Subsetting with which()
+
+Example:
+
+```r
+Bob[ind]
+```
+
+```
+## $age
+## [1] 27
+## 
+## $favorite_data
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+```
 
 --- .segue bg:green
 
-## Logical
+## Matrix Subsetting - Phase II
+
+---
+
+## Matrix: Subsetting with Indices
+
+`Syntax: my_matrix[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]`
+
+Example
+
+```r
+M1[c(2, 4), 2:4]
+```
+
+```
+##       B  C  D
+## [1,] 14 26 38
+## [2,] 16 28 40
+```
 
 
 ---
 
-## Logical
+## Matrix: Subsetting with Indices
 
+`Syntax: my_matrix[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]`
 
-```r
-bol1 <- T
-bol2 <- TRUE
-bol3 <- F
-bol1 == bol2
-```
+Example:
 
-[1] TRUE
-
-```r
-bol1 & bol2
-```
-
-[1] TRUE
-
-```r
-bol3 | 4 > 5 
-```
-
-[1] FALSE
+<center>
+<img src="assets/img/Matrix_Subsetting_2.png" width="70%" height="70%">
+</center>
 
 ---
 
-## Logical (續)
+## Data Frame: Subsetting with Indices
 
+`Syntax: myDataFrame[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]`
 
-```r
-4 > 2
-```
-
-[1] TRUE
+Example:
 
 ```r
-1 >= 2
+iris[c(2, 5), seq(from=1, to = 5, by = 2)]
 ```
 
-[1] FALSE
+```
+##   Sepal.L Petal.L Species
+## 2     4.9     1.4  setosa
+## 5     5.0     1.4  setosa
+```
+
+---
+
+## Data Frame: Subsetting with Indices
+
+`Syntax: myDataFrame[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]`
+
+Example:
+
+<center>
+<img src="assets/img/DataFrameSubsetting2.png" width="70%" height="70%">
+</center>
+
+--- .segue bg:navy
+
+## Merging: rbind and cbind
+
+--- .segue bg:green
+
+## rbind
+
+---
+
+## Merging: rbind
+
+<font size="6">
+**First Look**:
+</font>
+
+<center>
+<img src="assets/img/rbind.png" width="35%" height="35%">
+</center>
+
+---
+
+## Merging: rsbind
+
+- rbind: Row-like Binding (merge by column).
+- Merge two data frames (or matrices) like rows.
+
+---
+
+## Merging: rbind
+
+`Syntax: rbind(A, B) where A and B are two data frames or matrices`
+
+Again, let's play with iris data set.
+
+Example:
 
 ```r
-'Dboy' == 'Dboy'
+data(iris)
+iris[1:3, ]
 ```
 
-[1] TRUE
+```
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+```
+
+---
+
+## Merging: cbind
+
+`Syntax: rbind(A, B) where A and B are two data frames or matrices`
+
+Again, let's play with iris data set.
+
+Example:
 
 ```r
-a <- NA
-a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
+iris[100:103, ]
 ```
 
-[1] NA
+```
+##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 100          5.7         2.8          4.1         1.3 versicolor
+## 101          6.3         3.3          6.0         2.5  virginica
+## 102          5.8         2.7          5.1         1.9  virginica
+## 103          7.1         3.0          5.9         2.1  virginica
+```
+
+---
+
+## Merging: rbind
+
+`Syntax: rbind(A, B) where A and B are two data frames or matrices`
+
+Again, let's play with iris data set.
+
+Example:
+
+```r
+rbind(iris[1:3, ], iris[100:103, ])
+```
+
+```
+##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 1            5.1         3.5          1.4         0.2     setosa
+## 2            4.9         3.0          1.4         0.2     setosa
+## 3            4.7         3.2          1.3         0.2     setosa
+## 100          5.7         2.8          4.1         1.3 versicolor
+## 101          6.3         3.3          6.0         2.5  virginica
+## 102          5.8         2.7          5.1         1.9  virginica
+## 103          7.1         3.0          5.9         2.1  virginica
+```
+
+--- .segue bg:green
+
+## cbind
+
+---
+
+## Merging: cbind
+
+<font size="6">
+**First Look**: 
+</font>
+  <br>
+  <br>
+
+<center>
+<img src="assets/img/cbind.png" width="50%" height="50%">
+</center>
+
+---
+
+## Merging: cbind
+
+- cbind: Column-like Binding (merge by row).
+- Merge two data frames (or matrices) like columns.
+
+---
+
+## Merging: cbind
+
+`Syntax: cbind(A, B) where A and B are two data frames or matrices`
+
+Our beloved iris data set.
+
+Example:
+
+```r
+iris[1:5, 2:4]
+```
+
+```
+##   Sepal.Width Petal.Length Petal.Width
+## 1         3.5          1.4         0.2
+## 2         3.0          1.4         0.2
+## 3         3.2          1.3         0.2
+## 4         3.1          1.5         0.2
+## 5         3.6          1.4         0.2
+```
+
+---
+
+## Merging: cbind
+
+`Syntax: rbind(A, B) where A and B are two data frames or matrices`
+
+Our beloved iris data set.
+
+Example:
+
+```r
+iris[101:105, 1:2]
+```
+
+```
+##     Sepal.Length Sepal.Width
+## 101          6.3         3.3
+## 102          5.8         2.7
+## 103          7.1         3.0
+## 104          6.3         2.9
+## 105          6.5         3.0
+```
+
+---
+
+## Merging: cbind
+
+`Syntax: cbind(A, B) where A and B are two data frames or matrices`
+
+Our beloved iris data set.
+
+Example:
+
+```r
+cbind(iris[1:5, 2:4], iris[101:105, 1:2])
+```
+
+```
+##   Sepal.Width Petal.Length Petal.Width Sepal.Length Sepal.Width
+## 1         3.5          1.4         0.2          6.3         3.3
+## 2         3.0          1.4         0.2          5.8         2.7
+## 3         3.2          1.3         0.2          7.1         3.0
+## 4         3.1          1.5         0.2          6.3         2.9
+## 5         3.6          1.4         0.2          6.5         3.0
+```
+
+--- .segue bg:green
+
+## sort() and order()
+
+---
+
+## The Difference Between sort() and order()
+
+<font size="5">
+- **sort()**: sort (or order) a vector or factor (partially) into ascending or descending order.
+</font>
+<font size="5">
+- **order()**: order returns a permutation which rearranges its first argument into ascending or descending order, breaking ties by further arguments.
+</font>
+
+<center>
+<img src="assets/img/Blah.jpg" width="40%" height="40%">
+</center>
+
+---
+
+## The Difference Between sort() and order()
+
+<center>
+<img src="assets/img/What.png" width="50%" height="50%">
+</center>
+
+---
+
+## Let the Code Reveals Itself
+
+Examples:
+
+```r
+Sepal.Length <- iris[, "Sepal.L"]
+(sort(Sepal.Length))
+(order(Sepal.Length))
+```
+
+```
+##  [1] 4.4 4.6 4.6 4.7 4.8 4.9 4.9 5.0 5.0 5.1 5.4 5.4
+```
+
+```
+##  [1]  9  4  7  3 12  2 10  5  8  1  6 11
+```
+
+---
+
+## Ordering by Multiple Arguments
+
+Examples:
+
+```r
+ind <- order(iris[, "Sepal.L"], iris[, "Sepal.W"])
+(iris_ordered <- iris[ind, ]) 
+```
+
+```
+##    Sepal.L Sepal.W Petal.L Petal.W Species
+## 9      4.4     2.9     1.4     0.2  setosa
+## 4      4.6     3.1     1.5     0.2  setosa
+## 7      4.6     3.4     1.4     0.3  setosa
+## 3      4.7     3.2     1.3     0.2  setosa
+## 12     4.8     3.4     1.6     0.2  setosa
+## 2      4.9     3.0     1.4     0.2  setosa
+## 10     4.9     3.1     1.5     0.1  setosa
+## 8      5.0     3.4     1.5     0.2  setosa
+## 5      5.0     3.6     1.4     0.2  setosa
+## 1      5.1     3.5     1.4     0.2  setosa
+## 11     5.4     3.7     1.5     0.2  setosa
+## 6      5.4     3.9     1.7     0.4  setosa
+```
+
+---
+
+## Play With It And You Will Master It!
+
+我們用房貸餘額資料來練習!
+
+`之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。`
 
 
 ---
 
-## Fun Time
+## Play With It And You Will Master It!
 
-### 於 Console 中依續執行下列程式碼。
+我們用房貸餘額資料來練習!
 
-1. my_vec <- c(1, 2, 5, 90, 37)
-2. ind <- my_vec >= 5
-3. sum(ind)
+`之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。`
+
+到[這裡](https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/cl_info_other.csv)下載檔案。(cl_info_other.csv)
 
 
 ---
 
-## Fun Time
+## Play With It And You Will Master It!
 
-### 於 Console 中依續執行下列程式碼。
 
-1. my_vec <- c(1, 2, 5, 90, 37)
-2. ind <- my_vec >= 5
-3. sum(ind) 
 
-`猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)` <br>
-`順便看看 ind 長啥樣子吧!`
+```r
+# read.table 小技巧。
+tmp <- read.table('cl_info_other.csv', sep = ',',
+                 stringsAsFactors = F, header = T, nrows = 1000)
+colClasses <- sapply(tmp, class)
+DF <- read.table('cl_info_other.csv', sep = ',',
+                 header = T, colClasses = colClasses)
+```
+
+
+---
+
+## Play With It And You Will Master It!
+
+
+
+```r
+# read.table 小技巧。
+tmp <- read.table('cl_info_other.csv', sep = ',',
+                 stringsAsFactors = F, header = T, nrows = 1000)
+colClasses <- sapply(tmp, class)
+DF <- read.table('cl_info_other.csv', sep = ',',
+                 stringsAsFactors = F, header = T, colClasses = colClasses)
+```
+
+<img src="assets/img/read_no_colClasses.png", height=80%, width=80%/>
+
+<img src="assets/img/read_colClasses.png", height=80%, width=80%/>
+
+---
+
+## Exercises:
+
+1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
+3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
+4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
+5. 將 banks_below 與 banks_above 合併成 DF2。
+6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)
+
+
+---
+
+## Exercises:
+
+1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
+3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
+4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
+5. 將 banks_below 與 banks_above 合併成 DF2。
+6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) 
+
+<br>
+
+<font size='6'>
+`學員OS: 這作業實在太 trivial 了，簡直侮辱我的智慧。`
+</font>
+
+
+---
+
+## Exercises:
+
+1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
+3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
+4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
+5. 將 banks_below 與 banks_above 合併成 DF2。
+6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) 
+
+<br>
+
+<font size='6'>
+`接下來的 ETL 課程保證會滿足你的渴望!`
+</font>
+
+
+
+--- .segue bg:green
+
+## Factor
+
+---
+
+## Factor: First Look
+
+
+```r
+(Petal.W <- as.factor(iris[, "Petal.W"]))
+```
+
+```
+##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+## Levels: 0.1 0.2 0.3 0.4
+```
+
+---
+
+## Factor: First Look
+
+
+```r
+(Petal.W <- as.factor(iris[, "Petal.W"]))
+```
+
+```
+##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+## Levels: 0.1 0.2 0.3 0.4
+```
+
+`有啥特別的? 不就多個 levels 嗎? 跟向量不是差不多?`
+
+---
+
+## Factor: First Look
+
+
+```r
+(Petal.W <- as.factor(iris[, "Petal.W"]))
+```
+
+```
+##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+## Levels: 0.1 0.2 0.3 0.4
+```
+
+`同款就不同師父啊(台)`
+
+---
+
+## Try Try See
+
+**Try this code**:
+
+```
+Petal.W <- as.numeric(Petal.W)
+```
+
+---
+
+## Try Try See
+
+**Try this code**:
+
+```
+Petal.W <- as.numeric(Petal.W)
+```
+  <br>
+
+**You may expect something like this**:
+
+```
+[1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+```
+
+---
+
+## Try Try See
+
+**This is what you really get**:
+
+
+```r
+as.numeric(Petal.W)
+```
+
+```
+##  [1] 2 2 2 2 2 4 3 2 2 1 2 2
+```
+
+---
+
+## Try Try See
+
+<center>
+<img src="assets/img/What.png" width="50%" height="50%">
+<font size="10">
+**Part II**
+</font>
+</cent>
+
+---
+
+## A Closer Look
+
+<font size="6">
+**Vector in R**
+</font>
+  <br>
+<center>
+<img src="assets/img/Vector.png" width="70%" height="70%">
+</center>
+
+---
+
+## A Closer Look
+
+<font size="6">
+**Factor in R: A Key-Value Mapping**
+</font>
+  <br>
+<center>
+<img src="assets/img/Factor.png" width="70%" height="70%">
+</center>
 
 --- .segue bg:navy
 
@@ -946,36 +1668,18 @@ Note: **else if** and **else** are optional.
 
 ## Exercise: SVM Classifier
 
-> 1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> **(** sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 **)**
-> 2. 如果內積值大於或等於 0，print('setosa');反之，print('versicolor')
+> 1. 計算 X1 中某一筆資料與 magic_vector 內積的結果，並儲存為 inner。<br> **(** sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 **)**
+> 2. 如果 inner 大於或等於 0，print('setosa');反之，print('versicolor')
 > 3. 執行 print(y1[i])，有何發現？
 
 ---
 
 ## Exercise: SVM Classifier
 
-1. 寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> **(** sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數 **)**
-2. 如果內積值大於或等於 0，print('setosa');反之，print('versicolor')
-3. 執行 print(y1[i])，有何發現？
-
 <br>
 <font size='6'>
 `其他更精彩的資料分析模型的理論與操作，敬請期待 Data Analysis 課程!`
 </font>
-
-
---- .segue bg:navy
-
-## Vector, List, Factor, Data Frame and Matrix
-
-
---- .segue bg:green
-
-## Vector
-
---- .segue bg:green
-
-## Factor and Data Frame
 
 
 ---
@@ -1277,105 +1981,6 @@ head(iris6)
 ## 6     5.4    3.9     1.7    0.4 setosa
 ```
 
-
----
-
-## Play With It And You Will Master It!
-
-我們用房貸餘額資料來練習!
-
-`之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。`
-
-
----
-
-## Play With It And You Will Master It!
-
-我們用房貸餘額資料來練習!
-
-`之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。`
-
-到[這裡](https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/cl_info_other.csv)下載檔案。(cl_info_other.csv)
-
-
----
-
-## Play With It And You Will Master It!
-
-
-
-```r
-# read.table 小技巧。
-tmp <- read.table('cl_info_other.csv', sep = ',',
-                 stringsAsFactors = F, header = T, nrows = 1000)
-colClasses <- sapply(tmp, class)
-DF <- read.table('cl_info_other.csv', sep = ',',
-                 header = T, colClasses = colClasses)
-```
-
-
----
-
-## Play With It And You Will Master It!
-
-
-
-```r
-# read.table 小技巧。
-tmp <- read.table('cl_info_other.csv', sep = ',',
-                 stringsAsFactors = F, header = T, nrows = 1000)
-colClasses <- sapply(tmp, class)
-DF <- read.table('cl_info_other.csv', sep = ',',
-                 stringsAsFactors = F, header = T, colClasses = colClasses)
-```
-
-<img src="assets/img/read_no_colClasses.png", height=80%, width=80%/>
-
-<img src="assets/img/read_colClasses.png", height=80%, width=80%/>
-
----
-
-## Exercises:
-
-1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
-3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
-4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
-5. 將 banks_below 與 banks_above 合併成 DF2。
-6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)
-
-
----
-
-## Exercises:
-
-1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
-3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
-4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
-5. 將 banks_below 與 banks_above 合併成 DF2。
-6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) 
-
-<br>
-
-<font size='6'>
-`學員OS: 這作業實在太 trivial 了，簡直侮辱我的智慧。`
-</font>
-
-
----
-
-## Exercises:
-
-1. 顯示 DF 前 20 筆資料與所有欄位的名稱。
-3. 將 mortgage_cnt < 2053 的資料另外儲存成 banks_below。
-4. 將 mortgage_cnt >= 22538 的資料另外儲存成 banks_above。
-5. 將 banks_below 與 banks_above 合併成 DF2。
-6. 將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) 
-
-<br>
-
-<font size='6'>
-`接下來的 ETL 課程保證會滿足你的渴望!`
-</font>
 
 --- .segue bg:green
 

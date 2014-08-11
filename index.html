@@ -264,33 +264,37 @@ And you can claim that you can do sketch by a computer!
 <li>資料屬性</li>
 <li>資料形態</li>
 </ul></li>
+<li><strong>Basic Operations - Phase I</strong>
+
+<ul>
+<li>Logical Operations: &amp;, |, ==</li>
+</ul></li>
 <li><strong>Subsetting - Phase I</strong>
 
 <ul>
-<li>Vector v.s List</li>
-<li>Matrix Subsetting</li>
-<li>Data Frame Subsetting</li>
+<li>Vector and List</li>
+<li>Matrix Subsetting - Phase I</li>
+<li>Data Frame Subsetting - Phase I</li>
 </ul></li>
 <li><strong>Subsetting - Phase II</strong>
 
 <ul>
-<li>Matrix Subsetting (Cont.)</li>
-<li>Data Frame Subsetting (Cont.)</li>
-</ul></li>
-<li><strong>Merging</strong>
-
-<ul>
-<li>cbind v.s rbind</li>
+<li>Matrix Subsetting - Phase II</li>
+<li>Data Frame Subsetting - Phase II</li>
 </ul></li>
 </ul>
 
 </div>
   <div style='float:right;width:48%;'>
 <ul>
-<li><strong>Basic Operation</strong>
+<li><strong>Merging</strong>
 
 <ul>
-<li>Logical Operations</li>
+<li>cbind v.s rbind</li>
+</ul></li>
+<li><strong>Basic Operation - Phase II</strong>
+
+<ul>
 <li>Arithmetic Operations</li>
 </ul></li>
 <li><strong>Loop</strong>
@@ -409,7 +413,7 @@ And you can claim that you can do sketch by a computer!
 <slide class="segue" id="slide-17" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Vector and List</h2>
+    <h2>Logical Operation</h2>
   </hgroup>
   <article data-timings="">
     
@@ -418,6 +422,124 @@ And you can claim that you can do sketch by a computer!
 </slide>
 
 <slide class="" id="slide-18" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Basic Operations: &amp; (and), | (or), ==</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">bol1 &lt;- T; bol2 &lt;- TRUE
+bol3 &lt;- F
+(&#39;Dboy&#39; == &#39;Dboy&#39;)
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<pre><code class="r">(bol1 == bol2)
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<pre><code class="r">(bol1 &amp; bol2)
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<pre><code class="r">(bol3 | 4 &gt; 5)
+</code></pre>
+
+<p>[1] FALSE</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-19" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Basic Operations: &gt;, &lt;, &gt;=, &lt;=</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">4 &gt; 2
+</code></pre>
+
+<p>[1] TRUE</p>
+
+<pre><code class="r">1 &gt;= 2
+</code></pre>
+
+<p>[1] FALSE</p>
+
+<pre><code class="r">a &lt;- NA
+a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
+</code></pre>
+
+<p>[1] NA</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-20" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Fun Time</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>於 Console 中依續執行下列程式碼。</h3>
+
+<ol>
+<li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
+<li>ind &lt;- my_vec &gt;= 5</li>
+<li>sum(ind)</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-21" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Fun Time</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>於 Console 中依續執行下列程式碼。</h3>
+
+<ol>
+<li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
+<li>ind &lt;- my_vec &gt;= 5</li>
+<li>sum(ind) </li>
+</ol>
+
+<p><code>猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)</code> <br></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-22" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Subsetting Phase I: Index</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-23" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Vector and List</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-24" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector</h2>
@@ -448,7 +570,7 @@ vec2 &lt;- c(&#39;a&#39;, &#39;b&#39;, &#39;c&#39;)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-19" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-25" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2><strong>Funtime</strong></h2>
@@ -470,7 +592,7 @@ mix_vec2 &lt;- c(2, T)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-20" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-26" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Useful Methods (Vector)</h2>
@@ -495,7 +617,7 @@ mix_vec2 &lt;- c(2, T)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-21" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples</h2>
@@ -521,7 +643,7 @@ names(Bob)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-22" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-28" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples</h2>
@@ -542,7 +664,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-23" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-29" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise</h2>
@@ -554,7 +676,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-24" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-30" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise</h2>
@@ -573,7 +695,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-25" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-31" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List</h2>
@@ -584,7 +706,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-26" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-32" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List</h2>
@@ -610,7 +732,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-27" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-33" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List: Examples</h2>
@@ -630,18 +752,7 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-28" style="background:navy; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Subsetting Phase I: Index</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue" id="slide-29" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-34" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector Subsetting - Phase I</h2>
@@ -652,10 +763,10 @@ z
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-30" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-35" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Reference by Index</h2>
+    <h2>Subsetting by Index</h2>
   </hgroup>
   <article data-timings="">
     <p><strong>Syntax: vec[index]</strong></p>
@@ -677,10 +788,10 @@ vec[length(vec)]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-31" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-36" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Reference by Name</h2>
+    <h2>Subsetting by Name</h2>
   </hgroup>
   <article data-timings="">
     <p><strong>Syntax: vec[&quot;name&quot;]</strong></p>
@@ -697,7 +808,7 @@ Dboy[&quot;age&quot;]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-32" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-37" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>List Subsetting - Phase I</h2>
@@ -708,10 +819,10 @@ Dboy[&quot;age&quot;]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-33" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-38" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Reference by Index</h2>
+    <h2>Subsetting by Index</h2>
   </hgroup>
   <article data-timings="">
     <p><strong>Syntax: a_list[index]</strong> or <strong>a_list[[index]]</strong></p>
@@ -739,10 +850,10 @@ Bob[[1]]; class(Bob[[1]])
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-34" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-39" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Reference by Name</h2>
+    <h2>Subsetting by Name</h2>
   </hgroup>
   <article data-timings="">
     <p><strong>Syntax: a_list[&quot;name&quot;]</strong> or <strong>a_list[[&quot;name&quot;]]</strong></p>
@@ -764,7 +875,7 @@ Bob[[&quot;age&quot;]]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-35" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-40" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix Subsetting - Phase I</h2>
@@ -775,7 +886,7 @@ Bob[[&quot;age&quot;]]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-36" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-41" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: First Look</h2>
@@ -792,7 +903,7 @@ A Matrix is something looks like this:
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-37" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-42" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -808,7 +919,7 @@ i for row indexing, j for column indexing.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-38" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-43" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -825,7 +936,7 @@ i for row indexing, j for column indexing.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-39" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-44" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -842,7 +953,7 @@ j alone can specify one column.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-40" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-45" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -859,7 +970,7 @@ i together with j can specify one element in a matrix.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-41" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-46" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix in R</h2>
@@ -868,20 +979,22 @@ i together with j can specify one element in a matrix.
     <pre><code class="r">M1 &lt;- matrix(c(1:144), 12, 12)
 </code></pre>
 
-<p><img src="assets/img/R_Basic_Matrix_ex.png" height="75%" width="75%"/></p>
+<p><center>
+<img src="assets/img/R_Basic_Matrix_ex.png" height="75%" width="75%"/>
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-42" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-47" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Matrix: Reference by Index.</h2>
+    <h2>Matrix: Subsetting by Index.</h2>
   </hgroup>
   <article data-timings="">
     <p><font size='6'>
-<code>Syntax: my_matrix[i, j]</code>
+<code>Syntax: my_matrix[i, ] or my_matrix[, j]</code>
 </font></p>
 
 <pre><code class="r">M1[6, ]
@@ -890,13 +1003,15 @@ i together with j can specify one element in a matrix.
 <pre><code>##  [1]   6  18  30  42  54  66  78  90 102 114 126 138
 </code></pre>
 
-<p><img src="assets/img/R_Basic_Matrix_ex_row.png" height="70%" width="70%"/></p>
+<p><center>
+<img src="assets/img/R_Basic_Matrix_ex_row.png" height="65%" width="65%"/>
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-43" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-48" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Subsetting by Index</h2>
@@ -908,13 +1023,15 @@ i together with j can specify one element in a matrix.
 <pre><code>##  [1] 61 62 63 64 65 66 67 68 69 70 71 72
 </code></pre>
 
-<p><img src="assets/img/R_Basic_Matrix_ex_col.png" height="75%" width="75%"/></p>
+<p><center>
+<img src="assets/img/R_Basic_Matrix_ex_col.png" height="70%" width="70%"/>
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-44" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-49" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Rename</h2>
@@ -923,13 +1040,15 @@ i together with j can specify one element in a matrix.
     <pre><code class="r">colnames(M1) &lt;- LETTERS[1:12]
 </code></pre>
 
-<p><img src="assets/img/R_Basic_Matrix_ex_name.png" height="75%" width="75%"/></p>
+<p><center>
+<img src="assets/img/R_Basic_Matrix_ex_name.png" height="75%" width="75%"/>
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-45" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-50" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix: Subsetting by Name</h2>
@@ -941,13 +1060,15 @@ i together with j can specify one element in a matrix.
 <pre><code>##  [1] 61 62 63 64 65 66 67 68 69 70 71 72
 </code></pre>
 
-<p><img src="assets/img/R_Basic_Matrix_ex_name_ref.png" height="70%" width="70%"/></p>
+<p><center>
+<img src="assets/img/R_Basic_Matrix_ex_name_ref.png" height="65%" width="65%"/>
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-46" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-51" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame Subsetting - Phase I</h2>
@@ -958,7 +1079,7 @@ i together with j can specify one element in a matrix.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-47" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-52" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: First Look</h2>
@@ -970,7 +1091,8 @@ i together with j can specify one element in a matrix.
 We take iris data set for example
 </font>
 </center>
-<br>
+ <br>
+ <br>
 <center>
 <img src="assets/img/iris.png" height="70%" width=70%>
 </center></p>
@@ -979,7 +1101,7 @@ We take iris data set for example
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-48" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-53" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Dimension</h2>
@@ -989,6 +1111,7 @@ We take iris data set for example
 <br>
 <font size="6" color="DarkSlateGray">
 Similer to the matrix, a data frame also has two dimensions.
+ <br>
 </font>
     <center>
     <img src="assets/img/iris_index.png" height="70%" width="70%">
@@ -999,7 +1122,7 @@ Similer to the matrix, a data frame also has two dimensions.
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-49" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-54" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Subsetting by Index</h2>
@@ -1012,13 +1135,15 @@ Similer to the matrix, a data frame also has two dimensions.
 ## 6          5.4         3.9          1.7         0.4  setosa
 </code></pre>
 
-<p><img src="assets/img/iris_row.png" height="70%" width="70%"></p>
+<p><center>
+<img src="assets/img/iris_row.png" height="70%" width="70%">
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-50" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-55" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Subsetting by Index</h2>
@@ -1030,13 +1155,15 @@ Similer to the matrix, a data frame also has two dimensions.
 <pre><code>##  [1] 3.5 3.0 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 3.7 3.4
 </code></pre>
 
-<p><img src="assets/img/iris_col.png" height="70%" width="70%"></p>
+<p><center>
+<img src="assets/img/iris_col.png" height="70%" width="70%">
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-51" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-56" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Subsetting by Column Name</h2>
@@ -1048,13 +1175,15 @@ Similer to the matrix, a data frame also has two dimensions.
 <pre><code>##  [1] 3.5 3.0 3.2 3.1 3.6 3.9 3.4 3.4 2.9 3.1 3.7 3.4
 </code></pre>
 
-<p><img src="assets/img/iris_col.png" height="70%" width="70%"></p>
+<p><center>
+<img src="assets/img/iris_col.png" height="70%" width="70%">
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-52" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-57" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Data Frame: Rename</h2>
@@ -1083,7 +1212,7 @@ iris[, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-53" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-58" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Subsetting Phase II: Indices</h2>
@@ -1094,7 +1223,7 @@ iris[, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-54" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-59" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector and List</h2>
@@ -1105,21 +1234,186 @@ iris[, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-55" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-60" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Vector: Reference by Indices</h2>
   </hgroup>
   <article data-timings="">
-    
+    <p>In R, we use c() to specify multiple indices.</p>
+
+<p>Example:</p>
+
+<pre><code class="r">(Dboy)
+(Dboy[c(1, 3)])
+</code></pre>
+
+<pre><code>##    age weight  heigh 
+##     27     82    172
+</code></pre>
+
+<pre><code>##   age heigh 
+##    27   172
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-56" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-61" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Logical</h2>
+    <h2>Vector: Multi Indexing with Expression</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Examples:</p>
+
+<pre><code class="r">data(cars)
+speed &lt;- cars[, &quot;speed&quot;]
+speed[speed &gt; 5]
+</code></pre>
+
+<pre><code>##  [1]  7  7  8  9 10 10 10 11 11 12 12 12 12 13 13 13 13 14 14 14 14 15 15
+## [24] 15 16 16 17 17 17 18 18 18 18 19 19 19 20 20 20 20 20 22 23 24 24 24
+## [47] 24 25
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-62" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Vector: Multi Indexing with which()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: which(expression)</code></p>
+
+<p>Examples:</p>
+
+<pre><code class="r">my_vec &lt;- runif(30, 0, 1) # 用 runif 從(0, 1)均勻分佈中抽取 30 個值。
+(ind &lt;- which(my_vec &gt; 0.5))
+(my_vec[ind])
+</code></pre>
+
+<pre><code>##  [1]  3  4  6  7  8  9 10 13 14 16 21 22 23 26 29 30
+</code></pre>
+
+<pre><code>##  [1] 0.9916 0.7548 0.8688 0.9199 0.7925 0.6050 0.8816 0.8873 0.7259 0.8394
+## [11] 0.6789 0.7920 0.6141 0.7296 0.6543 0.7705
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-63" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Vector: Multi Indexing with which()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: which(expression)</code></p>
+
+<p>Examples:</p>
+
+<pre><code class="r">(ind &lt;- which(names(Dboy) %in% c(&quot;age&quot;, &quot;weight&quot;)))
+Dboy[ind]
+</code></pre>
+
+<pre><code>## [1] 1 2
+</code></pre>
+
+<pre><code>##    age weight 
+##     27     82
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-64" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>List: Subsetting by Indices</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Similarly, we use c() for multiple indexing in a list.</p>
+
+<p><code>Syntax: my_list[c(ind1, ind2, ...)]</code></p>
+
+<p>Example:</p>
+
+<pre><code class="r">Bob[c(1, 3)]
+</code></pre>
+
+<pre><code>## $age
+## [1] 27
+## 
+## $favorite_data_name
+## [1] &quot;iris&quot;
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-65" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>List: Subsetting with which()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Example:</p>
+
+<pre><code class="r">(names(Bob))
+(ind &lt;- which(names(Bob) %in% c(&quot;age&quot;, &quot;favorite_data&quot;)))
+</code></pre>
+
+<pre><code>## [1] &quot;age&quot;                &quot;weight&quot;             &quot;favorite_data_name&quot;
+## [4] &quot;favorite_data&quot;
+</code></pre>
+
+<pre><code>## [1] 1 4
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-66" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>List: Subsetting with which()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Example:</p>
+
+<pre><code class="r">Bob[ind]
+</code></pre>
+
+<pre><code>## $age
+## [1] 27
+## 
+## $favorite_data
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-67" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Matrix Subsetting - Phase II</h2>
   </hgroup>
   <article data-timings="">
     
@@ -1127,105 +1421,763 @@ iris[, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-57" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-68" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Logical</h2>
+    <h2>Matrix: Subsetting with Indices</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">bol1 &lt;- T
-bol2 &lt;- TRUE
-bol3 &lt;- F
-bol1 == bol2
+    <p><code>Syntax: my_matrix[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]</code></p>
+
+<p>Example</p>
+
+<pre><code class="r">M1[c(2, 4), 2:4]
 </code></pre>
 
-<p>[1] TRUE</p>
-
-<pre><code class="r">bol1 &amp; bol2
+<pre><code>##       B  C  D
+## [1,] 14 26 38
+## [2,] 16 28 40
 </code></pre>
-
-<p>[1] TRUE</p>
-
-<pre><code class="r">bol3 | 4 &gt; 5 
-</code></pre>
-
-<p>[1] FALSE</p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-58" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-69" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Logical (續)</h2>
+    <h2>Matrix: Subsetting with Indices</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">4 &gt; 2
-</code></pre>
+    <p><code>Syntax: my_matrix[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]</code></p>
 
-<p>[1] TRUE</p>
+<p>Example:</p>
 
-<pre><code class="r">1 &gt;= 2
-</code></pre>
-
-<p>[1] FALSE</p>
-
-<pre><code class="r">&#39;Dboy&#39; == &#39;Dboy&#39;
-</code></pre>
-
-<p>[1] TRUE</p>
-
-<pre><code class="r">a &lt;- NA
-a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
-</code></pre>
-
-<p>[1] NA</p>
+<p><center>
+<img src="assets/img/Matrix_Subsetting_2.png" width="70%" height="70%">
+</center></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-59" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-70" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Fun Time</h2>
+    <h2>Data Frame: Subsetting with Indices</h2>
   </hgroup>
   <article data-timings="">
-    <h3>於 Console 中依續執行下列程式碼。</h3>
+    <p><code>Syntax: myDataFrame[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]</code></p>
 
-<ol>
-<li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
-<li>ind &lt;- my_vec &gt;= 5</li>
-<li>sum(ind)</li>
+<p>Example:</p>
+
+<pre><code class="r">iris[c(2, 5), seq(from=1, to = 5, by = 2)]
+</code></pre>
+
+<pre><code>##   Sepal.L Petal.L Species
+## 2     4.9     1.4  setosa
+## 5     5.0     1.4  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-71" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Data Frame: Subsetting with Indices</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: myDataFrame[c(rowind1, rowind2, ...), c(colind1, colind2, ...)]</code></p>
+
+<p>Example:</p>
+
+<p><center>
+<img src="assets/img/DataFrameSubsetting2.png" width="70%" height="70%">
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-72" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: rbind and cbind</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-73" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>rbind</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-74" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: rbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<strong>First Look</strong>:
+</font></p>
+
+<p><center>
+<img src="assets/img/rbind.png" width="35%" height="35%">
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-75" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: rsbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>rbind: Row-like Binding (merge by column).</li>
+<li>Merge two data frames (or matrices) like rows.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-76" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: rbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: rbind(A, B) where A and B are two data frames or matrices</code></p>
+
+<p>Again, let&#39;s play with iris data set.</p>
+
+<p>Example:</p>
+
+<pre><code class="r">data(iris)
+iris[1:3, ]
+</code></pre>
+
+<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-77" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: cbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: rbind(A, B) where A and B are two data frames or matrices</code></p>
+
+<p>Again, let&#39;s play with iris data set.</p>
+
+<p>Example:</p>
+
+<pre><code class="r">iris[100:103, ]
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 100          5.7         2.8          4.1         1.3 versicolor
+## 101          6.3         3.3          6.0         2.5  virginica
+## 102          5.8         2.7          5.1         1.9  virginica
+## 103          7.1         3.0          5.9         2.1  virginica
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-78" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: rbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: rbind(A, B) where A and B are two data frames or matrices</code></p>
+
+<p>Again, let&#39;s play with iris data set.</p>
+
+<p>Example:</p>
+
+<pre><code class="r">rbind(iris[1:3, ], iris[100:103, ])
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width    Species
+## 1            5.1         3.5          1.4         0.2     setosa
+## 2            4.9         3.0          1.4         0.2     setosa
+## 3            4.7         3.2          1.3         0.2     setosa
+## 100          5.7         2.8          4.1         1.3 versicolor
+## 101          6.3         3.3          6.0         2.5  virginica
+## 102          5.8         2.7          5.1         1.9  virginica
+## 103          7.1         3.0          5.9         2.1  virginica
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-79" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>cbind</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-80" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: cbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<strong>First Look</strong>: 
+</font>
+  <br>
+  <br></p>
+
+<p><center>
+<img src="assets/img/cbind.png" width="50%" height="50%">
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-81" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: cbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>cbind: Column-like Binding (merge by row).</li>
+<li>Merge two data frames (or matrices) like columns.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-82" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: cbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: cbind(A, B) where A and B are two data frames or matrices</code></p>
+
+<p>Our beloved iris data set.</p>
+
+<p>Example:</p>
+
+<pre><code class="r">iris[1:5, 2:4]
+</code></pre>
+
+<pre><code>##   Sepal.Width Petal.Length Petal.Width
+## 1         3.5          1.4         0.2
+## 2         3.0          1.4         0.2
+## 3         3.2          1.3         0.2
+## 4         3.1          1.5         0.2
+## 5         3.6          1.4         0.2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-83" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: cbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: rbind(A, B) where A and B are two data frames or matrices</code></p>
+
+<p>Our beloved iris data set.</p>
+
+<p>Example:</p>
+
+<pre><code class="r">iris[101:105, 1:2]
+</code></pre>
+
+<pre><code>##     Sepal.Length Sepal.Width
+## 101          6.3         3.3
+## 102          5.8         2.7
+## 103          7.1         3.0
+## 104          6.3         2.9
+## 105          6.5         3.0
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-84" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Merging: cbind</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><code>Syntax: cbind(A, B) where A and B are two data frames or matrices</code></p>
+
+<p>Our beloved iris data set.</p>
+
+<p>Example:</p>
+
+<pre><code class="r">cbind(iris[1:5, 2:4], iris[101:105, 1:2])
+</code></pre>
+
+<pre><code>##   Sepal.Width Petal.Length Petal.Width Sepal.Length Sepal.Width
+## 1         3.5          1.4         0.2          6.3         3.3
+## 2         3.0          1.4         0.2          5.8         2.7
+## 3         3.2          1.3         0.2          7.1         3.0
+## 4         3.1          1.5         0.2          6.3         2.9
+## 5         3.6          1.4         0.2          6.5         3.0
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-85" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>sort() and order()</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-86" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>The Difference Between sort() and order()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="5"></p>
+
+<ul>
+<li><strong>sort()</strong>: sort (or order) a vector or factor (partially) into ascending or descending order.
+</font>
+<font size="5"></li>
+<li><strong>order()</strong>: order returns a permutation which rearranges its first argument into ascending or descending order, breaking ties by further arguments.
+</font></li>
+</ul>
+
+<p><center>
+<img src="assets/img/Blah.jpg" width="40%" height="40%">
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-87" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>The Difference Between sort() and order()</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src="assets/img/What.png" width="50%" height="50%">
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-88" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Let the Code Reveals Itself</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Examples:</p>
+
+<pre><code class="r">Sepal.Length &lt;- iris[, &quot;Sepal.L&quot;]
+(sort(Sepal.Length))
+(order(Sepal.Length))
+</code></pre>
+
+<pre><code>##  [1] 4.4 4.6 4.6 4.7 4.8 4.9 4.9 5.0 5.0 5.1 5.4 5.4
+</code></pre>
+
+<pre><code>##  [1]  9  4  7  3 12  2 10  5  8  1  6 11
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-89" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Ordering by Multiple Arguments</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Examples:</p>
+
+<pre><code class="r">ind &lt;- order(iris[, &quot;Sepal.L&quot;], iris[, &quot;Sepal.W&quot;])
+(iris_ordered &lt;- iris[ind, ]) 
+</code></pre>
+
+<pre><code>##    Sepal.L Sepal.W Petal.L Petal.W Species
+## 9      4.4     2.9     1.4     0.2  setosa
+## 4      4.6     3.1     1.5     0.2  setosa
+## 7      4.6     3.4     1.4     0.3  setosa
+## 3      4.7     3.2     1.3     0.2  setosa
+## 12     4.8     3.4     1.6     0.2  setosa
+## 2      4.9     3.0     1.4     0.2  setosa
+## 10     4.9     3.1     1.5     0.1  setosa
+## 8      5.0     3.4     1.5     0.2  setosa
+## 5      5.0     3.6     1.4     0.2  setosa
+## 1      5.1     3.5     1.4     0.2  setosa
+## 11     5.4     3.7     1.5     0.2  setosa
+## 6      5.4     3.9     1.7     0.4  setosa
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-90" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>我們用房貸餘額資料來練習!</p>
+
+<p><code>之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-91" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>我們用房貸餘額資料來練習!</p>
+
+<p><code>之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。</code></p>
+
+<p>到<a href="https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/cl_info_other.csv">這裡</a>下載檔案。(cl_info_other.csv)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-92" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># read.table 小技巧。
+tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
+                 stringsAsFactors = F, header = T, nrows = 1000)
+colClasses &lt;- sapply(tmp, class)
+DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
+                 header = T, colClasses = colClasses)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-93" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Play With It And You Will Master It!</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r"># read.table 小技巧。
+tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
+                 stringsAsFactors = F, header = T, nrows = 1000)
+colClasses &lt;- sapply(tmp, class)
+DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
+                 stringsAsFactors = F, header = T, colClasses = colClasses)
+</code></pre>
+
+<p><img src="assets/img/read_no_colClasses.png", height=80%, width=80%/></p>
+
+<p><img src="assets/img/read_colClasses.png", height=80%, width=80%/></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-94" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercises:</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>顯示 DF 前 20 筆資料與所有欄位的名稱。</li>
+<li>將 mortgage_cnt &lt; 2053 的資料另外儲存成 banks_below。</li>
+<li>將 mortgage_cnt &gt;= 22538 的資料另外儲存成 banks_above。</li>
+<li>將 banks_below 與 banks_above 合併成 DF2。</li>
+<li>將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)</li>
 </ol>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-60" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-95" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Fun Time</h2>
+    <h2>Exercises:</h2>
   </hgroup>
   <article data-timings="">
-    <h3>於 Console 中依續執行下列程式碼。</h3>
-
-<ol>
-<li>my_vec &lt;- c(1, 2, 5, 90, 37)</li>
-<li>ind &lt;- my_vec &gt;= 5</li>
-<li>sum(ind) </li>
+    <ol>
+<li>顯示 DF 前 20 筆資料與所有欄位的名稱。</li>
+<li>將 mortgage_cnt &lt; 2053 的資料另外儲存成 banks_below。</li>
+<li>將 mortgage_cnt &gt;= 22538 的資料另外儲存成 banks_above。</li>
+<li>將 banks_below 與 banks_above 合併成 DF2。</li>
+<li>將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) </li>
 </ol>
 
-<p><code>猜猜看答案會是多少? (sum 是 R 中的內建函式，用以求和。)</code> <br>
-<code>順便看看 ind 長啥樣子吧!</code></p>
+<p><br></p>
+
+<p><font size='6'>
+<code>學員OS: 這作業實在太 trivial 了，簡直侮辱我的智慧。</code>
+</font></p>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-61" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-96" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Exercises:</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>顯示 DF 前 20 筆資料與所有欄位的名稱。</li>
+<li>將 mortgage_cnt &lt; 2053 的資料另外儲存成 banks_below。</li>
+<li>將 mortgage_cnt &gt;= 22538 的資料另外儲存成 banks_above。</li>
+<li>將 banks_below 與 banks_above 合併成 DF2。</li>
+<li>將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) </li>
+</ol>
+
+<p><br></p>
+
+<p><font size='6'>
+<code>接下來的 ETL 課程保證會滿足你的渴望!</code>
+</font></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-97" style="background:green; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Factor</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-98" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Factor: First Look</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">(Petal.W &lt;- as.factor(iris[, &quot;Petal.W&quot;]))
+</code></pre>
+
+<pre><code>##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+## Levels: 0.1 0.2 0.3 0.4
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-99" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Factor: First Look</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">(Petal.W &lt;- as.factor(iris[, &quot;Petal.W&quot;]))
+</code></pre>
+
+<pre><code>##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+## Levels: 0.1 0.2 0.3 0.4
+</code></pre>
+
+<p><code>有啥特別的? 不就多個 levels 嗎? 跟向量不是差不多?</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-100" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Factor: First Look</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">(Petal.W &lt;- as.factor(iris[, &quot;Petal.W&quot;]))
+</code></pre>
+
+<pre><code>##  [1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+## Levels: 0.1 0.2 0.3 0.4
+</code></pre>
+
+<p><code>同款就不同師父啊(台)</code></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-101" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Try Try See</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>Try this code</strong>:</p>
+
+<pre><code>Petal.W &lt;- as.numeric(Petal.W)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-102" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Try Try See</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>Try this code</strong>:</p>
+
+<pre><code>Petal.W &lt;- as.numeric(Petal.W)
+</code></pre>
+
+<p><br></p>
+
+<p><strong>You may expect something like this</strong>:</p>
+
+<pre><code>[1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-103" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Try Try See</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>This is what you really get</strong>:</p>
+
+<pre><code class="r">as.numeric(Petal.W)
+</code></pre>
+
+<pre><code>##  [1] 2 2 2 2 2 4 3 2 2 1 2 2
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-104" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Try Try See</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><center>
+<img src="assets/img/What.png" width="50%" height="50%">
+<font size="10">
+<strong>Part II</strong>
+</font>
+</cent></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-105" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>A Closer Look</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<strong>Vector in R</strong>
+</font>
+  <br>
+<center>
+<img src="assets/img/Vector.png" width="70%" height="70%">
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-106" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>A Closer Look</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><font size="6">
+<strong>Factor in R: A Key-Value Mapping</strong>
+</font>
+  <br>
+<center>
+<img src="assets/img/Factor.png" width="70%" height="70%">
+</center></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-107" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Loops</h2>
@@ -1236,7 +2188,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-62" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-108" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -1247,7 +2199,7 @@ a == NA     # 要用 is.na(a) 才會回傳 TRUE。(另外還有 is.nan)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-63" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-109" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>For Loop</h2>
@@ -1277,7 +2229,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-64" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-110" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>剛剛的例子有點兒無聊....</h2>
@@ -1294,7 +2246,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-65" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-111" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>If Loop</h2>
@@ -1305,7 +2257,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-66" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-112" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>If Loop</h2>
@@ -1330,7 +2282,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-67" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-113" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -1345,7 +2297,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-68" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-114" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -1362,7 +2314,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-69" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-115" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -1379,7 +2331,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-70" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-116" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
@@ -1395,15 +2347,15 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-71" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-117" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
   </hgroup>
   <article data-timings="">
     <ol class = "build incremental">
-<li>寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> <strong>(</strong> sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 <strong>)</strong></li>
-<li>如果內積值大於或等於 0，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
+<li>計算 X1 中某一筆資料與 magic_vector 內積的結果，並儲存為 inner。<br> <strong>(</strong> sum(X1[i, ] * magic_vector), i 可以是1~100任何一個整數 <strong>)</strong></li>
+<li>如果 inner 大於或等於 0，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
 <li>執行 print(y1[i])，有何發現？</li>
 </ol>
 
@@ -1411,19 +2363,13 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-72" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-118" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Exercise: SVM Classifier</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>寫個 if 迴圈計算 X1 中某一筆資料與 magic_vector 內積的結果。<br> <strong>(</strong> sum(X1[i, ] * magic_vec), i 可以是1~100任何一個整數 <strong>)</strong></li>
-<li>如果內積值大於或等於 0，print(&#39;setosa&#39;);反之，print(&#39;versicolor&#39;)</li>
-<li>執行 print(y1[i])，有何發現？</li>
-</ol>
-
-<p><br>
+    <p><br>
 <font size='6'>
 <code>其他更精彩的資料分析模型的理論與操作，敬請期待 Data Analysis 課程!</code>
 </font></p>
@@ -1432,40 +2378,7 @@ final_result
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-73" style="background:navy; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Vector, List, Factor, Data Frame and Matrix</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue" id="slide-74" style="background:green; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Vector</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue" id="slide-75" style="background:green; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Factor and Data Frame</h2>
-  </hgroup>
-  <article data-timings="">
-    
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-76" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-119" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Factor and Data Frame</h2>
@@ -1493,7 +2406,7 @@ head(iris)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-77" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-120" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Factor and Data Frame (Cont.)</h2>
@@ -1515,7 +2428,7 @@ Species2
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-78" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-121" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Useful Functions for Data Frame</h2>
@@ -1537,7 +2450,7 @@ Species2
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-79" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-122" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris</h2>
@@ -1566,7 +2479,7 @@ names(iris)   # 顯示 iris 的欄位名稱
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-80" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-123" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1592,7 +2505,7 @@ names(iris)   # 顯示 iris 的欄位名稱
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-81" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-124" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1618,7 +2531,7 @@ names(iris)   # 顯示 iris 的欄位名稱
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-82" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-125" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1646,7 +2559,7 @@ head(iris1)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-83" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-126" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1670,7 +2583,7 @@ head(iris2)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-84" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-127" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1693,7 +2606,7 @@ head(iris3)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-85" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-128" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1723,7 +2636,7 @@ head(iris4)   # View(iris4)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-86" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-129" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1750,7 +2663,7 @@ iris5 &lt;- iris[ind5, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-87" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-130" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1772,7 +2685,7 @@ iris5 &lt;- iris[ind5, ]
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-88" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-131" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Examples: iris (Cont.)</h2>
@@ -1799,143 +2712,7 @@ head(iris6)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-89" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Play With It And You Will Master It!</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>我們用房貸餘額資料來練習!</p>
-
-<p><code>之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。</code></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-90" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Play With It And You Will Master It!</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>我們用房貸餘額資料來練習!</p>
-
-<p><code>之後會在 ETL 課程再度碰到它，也會學到進階的資料處理技巧。</code></p>
-
-<p>到<a href="https://dl.dropboxusercontent.com/u/5487490/MLDM%20Monday/RBasic/cl_info_other.csv">這裡</a>下載檔案。(cl_info_other.csv)</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-91" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Play With It And You Will Master It!</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r"># read.table 小技巧。
-tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
-                 stringsAsFactors = F, header = T, nrows = 1000)
-colClasses &lt;- sapply(tmp, class)
-DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
-                 header = T, colClasses = colClasses)
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-92" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Play With It And You Will Master It!</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r"># read.table 小技巧。
-tmp &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
-                 stringsAsFactors = F, header = T, nrows = 1000)
-colClasses &lt;- sapply(tmp, class)
-DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
-                 stringsAsFactors = F, header = T, colClasses = colClasses)
-</code></pre>
-
-<p><img src="assets/img/read_no_colClasses.png", height=80%, width=80%/></p>
-
-<p><img src="assets/img/read_colClasses.png", height=80%, width=80%/></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-93" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercises:</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li>顯示 DF 前 20 筆資料與所有欄位的名稱。</li>
-<li>將 mortgage_cnt &lt; 2053 的資料另外儲存成 banks_below。</li>
-<li>將 mortgage_cnt &gt;= 22538 的資料另外儲存成 banks_above。</li>
-<li>將 banks_below 與 banks_above 合併成 DF2。</li>
-<li>將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order)</li>
-</ol>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-94" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercises:</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li>顯示 DF 前 20 筆資料與所有欄位的名稱。</li>
-<li>將 mortgage_cnt &lt; 2053 的資料另外儲存成 banks_below。</li>
-<li>將 mortgage_cnt &gt;= 22538 的資料另外儲存成 banks_above。</li>
-<li>將 banks_below 與 banks_above 合併成 DF2。</li>
-<li>將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) </li>
-</ol>
-
-<p><br></p>
-
-<p><font size='6'>
-<code>學員OS: 這作業實在太 trivial 了，簡直侮辱我的智慧。</code>
-</font></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-95" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Exercises:</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li>顯示 DF 前 20 筆資料與所有欄位的名稱。</li>
-<li>將 mortgage_cnt &lt; 2053 的資料另外儲存成 banks_below。</li>
-<li>將 mortgage_cnt &gt;= 22538 的資料另外儲存成 banks_above。</li>
-<li>將 banks_below 與 banks_above 合併成 DF2。</li>
-<li>將 DF2 先依 mortgage_cnt 再依 mortgage_bal 排序。(Hint: order) </li>
-</ol>
-
-<p><br></p>
-
-<p><font size='6'>
-<code>接下來的 ETL 課程保證會滿足你的渴望!</code>
-</font></p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue" id="slide-96" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-132" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix</h2>
@@ -1946,7 +2723,7 @@ DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-97" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-133" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Matrix</h2>
@@ -1977,7 +2754,7 @@ My_matrix2
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-98" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-134" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Basic Operations on Matrix</h2>
@@ -2006,7 +2783,7 @@ My_matrix1 * My_matrix2
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-99" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-135" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Basic Operation on Matrix (Cont.)</h2>
@@ -2030,7 +2807,7 @@ My_matrix1 * My_matrix2
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-100" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-136" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Basic Operation on Matrix (Cont.)</h2>
@@ -2058,7 +2835,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-101" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-137" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Basic Operation on Matrix (Cont.)</h2>
@@ -2087,7 +2864,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-102" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-138" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Basic Operation on Matrix (Cont.)</h2>
@@ -2108,7 +2885,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-103" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-139" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Basic Operation on Matrix (Cont.)</h2>
@@ -2133,7 +2910,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-104" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-140" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project 1: Barnsley Fern Fractal</h2>
@@ -2144,7 +2921,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-105" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-141" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project 1: Barnsley Fern Fractal</h2>
@@ -2167,7 +2944,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-106" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-142" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal</h2>
@@ -2185,7 +2962,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-107" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-143" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -2201,7 +2978,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-108" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-144" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -2224,7 +3001,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-109" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-145" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -2248,7 +3025,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-110" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-146" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>One Last Thing: Help Yourself by Yourself</h2>
@@ -2259,7 +3036,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-111" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-147" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Why?</h2>
@@ -2275,7 +3052,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-112" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-148" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>But How?</h2>
@@ -2291,7 +3068,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-113" style="background:orange; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-149" style="background:orange; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Thanks for Your Attention!</h2>
@@ -2404,439 +3181,439 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=17 title='Vector and List'>
+        data-slide=17 title='Logical Operation'>
          17
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=18 title='Vector'>
+        data-slide=18 title='Basic Operations: &amp; (and), | (or), =='>
          18
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=19 title='<strong>Funtime</strong>'>
+        data-slide=19 title='Basic Operations: &gt;, &lt;, &gt;=, &lt;='>
          19
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Useful Methods (Vector)'>
+        data-slide=20 title='Fun Time'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Examples'>
+        data-slide=21 title='Fun Time'>
          21
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=22 title='Examples'>
+        data-slide=22 title='Subsetting Phase I: Index'>
          22
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=23 title='Exercise'>
+        data-slide=23 title='Vector and List'>
          23
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=24 title='Exercise'>
+        data-slide=24 title='Vector'>
          24
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=25 title='List'>
+        data-slide=25 title='<strong>Funtime</strong>'>
          25
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=26 title='List'>
+        data-slide=26 title='Useful Methods (Vector)'>
          26
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=27 title='List: Examples'>
+        data-slide=27 title='Examples'>
          27
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=28 title='Subsetting Phase I: Index'>
+        data-slide=28 title='Examples'>
          28
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=29 title='Vector Subsetting - Phase I'>
+        data-slide=29 title='Exercise'>
          29
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Reference by Index'>
+        data-slide=30 title='Exercise'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='Reference by Name'>
+        data-slide=31 title='List'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='List Subsetting - Phase I'>
+        data-slide=32 title='List'>
          32
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Reference by Index'>
+        data-slide=33 title='List: Examples'>
          33
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=34 title='Reference by Name'>
+        data-slide=34 title='Vector Subsetting - Phase I'>
          34
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='Matrix Subsetting - Phase I'>
+        data-slide=35 title='Subsetting by Index'>
          35
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=36 title='Matrix: First Look'>
+        data-slide=36 title='Subsetting by Name'>
          36
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=37 title='Dimension'>
+        data-slide=37 title='List Subsetting - Phase I'>
          37
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=38 title='Dimension'>
+        data-slide=38 title='Subsetting by Index'>
          38
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=39 title='Dimension'>
+        data-slide=39 title='Subsetting by Name'>
          39
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=40 title='Dimension'>
+        data-slide=40 title='Matrix Subsetting - Phase I'>
          40
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=41 title='Matrix in R'>
+        data-slide=41 title='Matrix: First Look'>
          41
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=42 title='Matrix: Reference by Index.'>
+        data-slide=42 title='Dimension'>
          42
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=43 title='Matrix: Subsetting by Index'>
+        data-slide=43 title='Dimension'>
          43
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=44 title='Matrix: Rename'>
+        data-slide=44 title='Dimension'>
          44
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=45 title='Matrix: Subsetting by Name'>
+        data-slide=45 title='Dimension'>
          45
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=46 title='Data Frame Subsetting - Phase I'>
+        data-slide=46 title='Matrix in R'>
          46
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=47 title='Data Frame: First Look'>
+        data-slide=47 title='Matrix: Subsetting by Index.'>
          47
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=48 title='Dimension'>
+        data-slide=48 title='Matrix: Subsetting by Index'>
          48
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=49 title='Data Frame: Subsetting by Index'>
+        data-slide=49 title='Matrix: Rename'>
          49
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=50 title='Data Frame: Subsetting by Index'>
+        data-slide=50 title='Matrix: Subsetting by Name'>
          50
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=51 title='Data Frame: Subsetting by Column Name'>
+        data-slide=51 title='Data Frame Subsetting - Phase I'>
          51
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=52 title='Data Frame: Rename'>
+        data-slide=52 title='Data Frame: First Look'>
          52
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=53 title='Subsetting Phase II: Indices'>
+        data-slide=53 title='Dimension'>
          53
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=54 title='Vector and List'>
+        data-slide=54 title='Data Frame: Subsetting by Index'>
          54
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=55 title='Vector: Reference by Indices'>
+        data-slide=55 title='Data Frame: Subsetting by Index'>
          55
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=56 title='Logical'>
+        data-slide=56 title='Data Frame: Subsetting by Column Name'>
          56
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=57 title='Logical'>
+        data-slide=57 title='Data Frame: Rename'>
          57
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=58 title='Logical (續)'>
+        data-slide=58 title='Subsetting Phase II: Indices'>
          58
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=59 title='Fun Time'>
+        data-slide=59 title='Vector and List'>
          59
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=60 title='Fun Time'>
+        data-slide=60 title='Vector: Reference by Indices'>
          60
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=61 title='Loops'>
+        data-slide=61 title='Vector: Multi Indexing with Expression'>
          61
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=62 title='For Loop'>
+        data-slide=62 title='Vector: Multi Indexing with which()'>
          62
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=63 title='For Loop'>
+        data-slide=63 title='Vector: Multi Indexing with which()'>
          63
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=64 title='剛剛的例子有點兒無聊....'>
+        data-slide=64 title='List: Subsetting by Indices'>
          64
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=65 title='If Loop'>
+        data-slide=65 title='List: Subsetting with which()'>
          65
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=66 title='If Loop'>
+        data-slide=66 title='List: Subsetting with which()'>
          66
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=67 title='Exercise: SVM Classifier'>
+        data-slide=67 title='Matrix Subsetting - Phase II'>
          67
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=68 title='Exercise: SVM Classifier'>
+        data-slide=68 title='Matrix: Subsetting with Indices'>
          68
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=69 title='Exercise: SVM Classifier'>
+        data-slide=69 title='Matrix: Subsetting with Indices'>
          69
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=70 title='Exercise: SVM Classifier'>
+        data-slide=70 title='Data Frame: Subsetting with Indices'>
          70
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=71 title='Exercise: SVM Classifier'>
+        data-slide=71 title='Data Frame: Subsetting with Indices'>
          71
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=72 title='Exercise: SVM Classifier'>
+        data-slide=72 title='Merging: rbind and cbind'>
          72
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=73 title='Vector, List, Factor, Data Frame and Matrix'>
+        data-slide=73 title='rbind'>
          73
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=74 title='Vector'>
+        data-slide=74 title='Merging: rbind'>
          74
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=75 title='Factor and Data Frame'>
+        data-slide=75 title='Merging: rsbind'>
          75
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=76 title='Factor and Data Frame'>
+        data-slide=76 title='Merging: rbind'>
          76
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=77 title='Factor and Data Frame (Cont.)'>
+        data-slide=77 title='Merging: cbind'>
          77
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=78 title='Useful Functions for Data Frame'>
+        data-slide=78 title='Merging: rbind'>
          78
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=79 title='Examples: iris'>
+        data-slide=79 title='cbind'>
          79
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=80 title='Examples: iris (Cont.)'>
+        data-slide=80 title='Merging: cbind'>
          80
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=81 title='Examples: iris (Cont.)'>
+        data-slide=81 title='Merging: cbind'>
          81
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=82 title='Examples: iris (Cont.)'>
+        data-slide=82 title='Merging: cbind'>
          82
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=83 title='Examples: iris (Cont.)'>
+        data-slide=83 title='Merging: cbind'>
          83
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=84 title='Examples: iris (Cont.)'>
+        data-slide=84 title='Merging: cbind'>
          84
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=85 title='Examples: iris (Cont.)'>
+        data-slide=85 title='sort() and order()'>
          85
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=86 title='Examples: iris (Cont.)'>
+        data-slide=86 title='The Difference Between sort() and order()'>
          86
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=87 title='Examples: iris (Cont.)'>
+        data-slide=87 title='The Difference Between sort() and order()'>
          87
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=88 title='Examples: iris (Cont.)'>
+        data-slide=88 title='Let the Code Reveals Itself'>
          88
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=89 title='Play With It And You Will Master It!'>
+        data-slide=89 title='Ordering by Multiple Arguments'>
          89
       </a>
     </li>
@@ -2860,7 +3637,7 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=93 title='Exercises:'>
+        data-slide=93 title='Play With It And You Will Master It!'>
          93
       </a>
     </li>
@@ -2878,110 +3655,326 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=96 title='Matrix'>
+        data-slide=96 title='Exercises:'>
          96
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=97 title='Matrix'>
+        data-slide=97 title='Factor'>
          97
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=98 title='Basic Operations on Matrix'>
+        data-slide=98 title='Factor: First Look'>
          98
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=99 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=99 title='Factor: First Look'>
          99
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=100 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=100 title='Factor: First Look'>
          100
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=101 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=101 title='Try Try See'>
          101
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=102 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=102 title='Try Try See'>
          102
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=103 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=103 title='Try Try See'>
          103
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=104 title='Mini Project 1: Barnsley Fern Fractal'>
+        data-slide=104 title='Try Try See'>
          104
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=105 title='Mini Project 1: Barnsley Fern Fractal'>
+        data-slide=105 title='A Closer Look'>
          105
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=106 title='Barnsley Fern Fractal'>
+        data-slide=106 title='A Closer Look'>
          106
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=107 title='Barnsley Fern Fractal: Tips'>
+        data-slide=107 title='Loops'>
          107
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=108 title='Barnsley Fern Fractal: Tips'>
+        data-slide=108 title='For Loop'>
          108
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=109 title='Barnsley Fern Fractal: Tips'>
+        data-slide=109 title='For Loop'>
          109
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=110 title='One Last Thing: Help Yourself by Yourself'>
+        data-slide=110 title='剛剛的例子有點兒無聊....'>
          110
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=111 title='Why?'>
+        data-slide=111 title='If Loop'>
          111
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=112 title='But How?'>
+        data-slide=112 title='If Loop'>
          112
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=113 title='Thanks for Your Attention!'>
+        data-slide=113 title='Exercise: SVM Classifier'>
          113
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=114 title='Exercise: SVM Classifier'>
+         114
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=115 title='Exercise: SVM Classifier'>
+         115
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=116 title='Exercise: SVM Classifier'>
+         116
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=117 title='Exercise: SVM Classifier'>
+         117
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=118 title='Exercise: SVM Classifier'>
+         118
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=119 title='Factor and Data Frame'>
+         119
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=120 title='Factor and Data Frame (Cont.)'>
+         120
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=121 title='Useful Functions for Data Frame'>
+         121
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=122 title='Examples: iris'>
+         122
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=123 title='Examples: iris (Cont.)'>
+         123
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=124 title='Examples: iris (Cont.)'>
+         124
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=125 title='Examples: iris (Cont.)'>
+         125
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=126 title='Examples: iris (Cont.)'>
+         126
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=127 title='Examples: iris (Cont.)'>
+         127
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=128 title='Examples: iris (Cont.)'>
+         128
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=129 title='Examples: iris (Cont.)'>
+         129
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=130 title='Examples: iris (Cont.)'>
+         130
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=131 title='Examples: iris (Cont.)'>
+         131
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=132 title='Matrix'>
+         132
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=133 title='Matrix'>
+         133
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=134 title='Basic Operations on Matrix'>
+         134
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=135 title='Basic Operation on Matrix (Cont.)'>
+         135
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=136 title='Basic Operation on Matrix (Cont.)'>
+         136
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=137 title='Basic Operation on Matrix (Cont.)'>
+         137
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=138 title='Basic Operation on Matrix (Cont.)'>
+         138
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=139 title='Basic Operation on Matrix (Cont.)'>
+         139
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=140 title='Mini Project 1: Barnsley Fern Fractal'>
+         140
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=141 title='Mini Project 1: Barnsley Fern Fractal'>
+         141
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=142 title='Barnsley Fern Fractal'>
+         142
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=143 title='Barnsley Fern Fractal: Tips'>
+         143
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=144 title='Barnsley Fern Fractal: Tips'>
+         144
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=145 title='Barnsley Fern Fractal: Tips'>
+         145
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=146 title='One Last Thing: Help Yourself by Yourself'>
+         146
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=147 title='Why?'>
+         147
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=148 title='But How?'>
+         148
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=149 title='Thanks for Your Attention!'>
+         149
       </a>
     </li>
   </ul>
