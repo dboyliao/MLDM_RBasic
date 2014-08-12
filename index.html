@@ -300,8 +300,8 @@ And you can claim that you can do sketch by a computer!
 <li><strong>Loop</strong>
 
 <ul>
-<li>if/else if/else</li>
 <li>for</li>
+<li>if/else if/else</li>
 <li>while</li>
 </ul></li>
 <li><strong>Mini Project</strong>
@@ -2072,14 +2072,41 @@ DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
 <slide class="" id="slide-101" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Try Try See</h2>
+    <h2>Try This Code</h2>
   </hgroup>
   <article data-timings="">
-    <p><strong>Try this code</strong>:</p>
+    
+<div class="quiz quiz-single well ">
+  <div>
+<font color="blue" size="5">
+<strong>Petal.W <- as.numeric(Petal.W)</strong> <br>
+  <br>
+Which is the correct outcome? <br>
+  <br>
+</font>
+</div>
 
-<pre><code>Petal.W &lt;- as.numeric(Petal.W)
-</code></pre>
+<ol>
+<li>0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2</li>
+<li>&quot;I&quot; &quot;love&quot; &quot;data&quot; &quot;science&quot; &quot;It&#39;s&quot; &quot;the&quot; &quot;coolest&quot; &quot;thing&quot; &quot;ever&quot; </li>
+<li><em>2 2 2 2 2 4 3 2 2 1 2 2</em></li>
+<li>None of above.</li>
+</ol>
 
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p>Just try it!</p>
+
+</div>
+<div class="quiz-explanation">
+  <p>Factor in R is a key-value mapping.</p>
+
+</div>
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -2087,29 +2114,7 @@ DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
 <slide class="" id="slide-102" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Try Try See</h2>
-  </hgroup>
-  <article data-timings="">
-    <p><strong>Try this code</strong>:</p>
-
-<pre><code>Petal.W &lt;- as.numeric(Petal.W)
-</code></pre>
-
-<p><br></p>
-
-<p><strong>You may expect something like this</strong>:</p>
-
-<pre><code>[1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-103" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Try Try See</h2>
+    <h2>The Answer</h2>
   </hgroup>
   <article data-timings="">
     <p><strong>This is what you really get</strong>:</p>
@@ -2124,10 +2129,10 @@ DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-104" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-103" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Try Try See</h2>
+    <h2><br></h2>
   </hgroup>
   <article data-timings="">
     <p><center>
@@ -2141,7 +2146,7 @@ DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-105" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-104" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>A Closer Look</h2>
@@ -2159,7 +2164,7 @@ DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-106" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-105" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>A Closer Look</h2>
@@ -2173,6 +2178,42 @@ DF &lt;- read.table(&#39;cl_info_other.csv&#39;, sep = &#39;,&#39;,
 <img src="assets/img/Factor.png" width="70%" height="70%">
 </center></p>
 
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-106" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Pop Quiz</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div class="quiz quiz-single well ">
+  <p>How can we correctly convert a factor into a vector? <br></p>
+
+<p>Q: my_factor &lt;- factor(seq(10, 1, -1))</p>
+
+  <button class="quiz-submit btn btn-primary">Submit</button>
+  <button class="quiz-toggle-hint btn btn-info">Show Hint</button>
+  <button class="quiz-show-answer btn btn-success">Show Answer</button>
+  <button class="quiz-clear btn btn-danger">Clear</button>
+  
+  <div class="quiz-hint">
+  <p><br>
+1. my_vec &lt;- seq(10, 1, by = -1) <br>
+&nbsp;&nbsp;&nbsp; my_vec[c(3, 3, 5, 1, 6)] <br>
+2. levels(my_factor): this will give you a vector of levels of a factor.</p>
+
+</div>
+<div class="quiz-explanation">
+  <pre><code class="r">my_factor &lt;- factor(seq(10, 1, -1))
+Levels &lt;- levels(my_factor)
+my_vector &lt;- Levels[as.numeric(my_factor)]
+</code></pre>
+
+</div>
+</div>
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -2236,6 +2277,7 @@ final_result
   </hgroup>
   <article data-timings="">
     <pre><code>    # 讓 R 幫你驅邪避凶!!
+    # This code is for Mac only.
     for (i in 1:5){
             system(&quot;say &#39;Nann Moll Ah Mi Tow Fo&#39;&quot;)
             system(&quot;say &#39;Ah Men&#39;&quot;)
@@ -2381,341 +2423,26 @@ final_result
 <slide class="" id="slide-119" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Factor and Data Frame</h2>
+    <h2>Useful Functions</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><p>R 中有很多內建資料庫，其中包括你不可以不知道的 iris 資料庫。</p></li>
-<li><p>用法也很簡單，只要輸入以下指令：</p></li>
-</ul>
-
-<pre><code class="r">data(iris)
-head(iris)
-</code></pre>
-
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-120" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Factor and Data Frame (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <ol>
-<li><p>names(iris) 將可以看到 iris 所有欄位的名字。</p></li>
-<li><p>關於 factor ，我們來看看下面這個例子。</p></li>
-</ol>
-
-<pre><code class="r">Species &lt;- iris[, &#39;Species&#39;]
-class(Species)                  # R 會告訴你他是個 factor。
-Species2 &lt;- as.numeric(Species) # 直接把 factor 轉成 numeric 向量。
-Species2
-# 你覺得上面這行 code 會跑出什麼呢? 試試看吧!
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-121" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Useful Functions for Data Frame</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>給定一個名叫 data 的 data frame</p>
+    <p>給定一個名叫 data 的 data frame (matrix)</p>
 
 <ul>
 <li><p>names(data): 傳回 data 的所有欄位名稱。</p></li>
 <li><p>nrow(data)/ncol(data): 傳回 data 的列 / 行數目。</p></li>
+<li><p>dim(data)</p></li>
 <li><p>head(data, n)/tail(data, n)/View(data)</p></li>
-<li><p>which(exp)</p></li>
-<li><p>sort/order</p></li>
-<li><p>max/min</p></li>
-<li><p>rbind/cbind: merge different data frames</p></li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-122" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-120" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Examples: iris</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">nrow(iris)    # 顯示 iris 的列數
-ncol(iris)    # 顯示 iris 的行數
-dim(iris)     # 顯示 iris 的行、列數
-names(iris)   # 顯示 iris 的欄位名稱
-</code></pre>
-
-<pre><code>## [1] 150
-</code></pre>
-
-<pre><code>## [1] 5
-</code></pre>
-
-<pre><code>## [1] 150   5
-</code></pre>
-
-<pre><code>## [1] &quot;Sepal.Length&quot; &quot;Sepal.Width&quot;  &quot;Petal.Length&quot; &quot;Petal.Width&quot; 
-## [5] &quot;Species&quot;
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-123" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">head(iris, n = 10)    # 顯示 iris 前 10 筆資料 (預設為 6 筆)
-</code></pre>
-
-<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1           5.1         3.5          1.4         0.2  setosa
-## 2           4.9         3.0          1.4         0.2  setosa
-## 3           4.7         3.2          1.3         0.2  setosa
-## 4           4.6         3.1          1.5         0.2  setosa
-## 5           5.0         3.6          1.4         0.2  setosa
-## 6           5.4         3.9          1.7         0.4  setosa
-## 7           4.6         3.4          1.4         0.3  setosa
-## 8           5.0         3.4          1.5         0.2  setosa
-## 9           4.4         2.9          1.4         0.2  setosa
-## 10          4.9         3.1          1.5         0.1  setosa
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-124" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">tail(iris, n = 10)    # 顯示 iris 後 10 筆資料 (預設為 6 筆)
-</code></pre>
-
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 141          6.7         3.1          5.6         2.4 virginica
-## 142          6.9         3.1          5.1         2.3 virginica
-## 143          5.8         2.7          5.1         1.9 virginica
-## 144          6.8         3.2          5.9         2.3 virginica
-## 145          6.7         3.3          5.7         2.5 virginica
-## 146          6.7         3.0          5.2         2.3 virginica
-## 147          6.3         2.5          5.0         1.9 virginica
-## 148          6.5         3.0          5.2         2.0 virginica
-## 149          6.2         3.4          5.4         2.3 virginica
-## 150          5.9         3.0          5.1         1.8 virginica
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-125" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">ind1 &lt;- which(iris[, &#39;Sepal.Length&#39;] &gt;= 6.5 &amp; iris[, &#39;Species&#39;] == &#39;virginica&#39;)
-class(ind1)
-iris1 &lt;- iris[ind1, ]
-head(iris1)
-</code></pre>
-
-<pre><code>## [1] &quot;integer&quot;
-</code></pre>
-
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 103          7.1         3.0          5.9         2.1 virginica
-## 105          6.5         3.0          5.8         2.2 virginica
-## 106          7.6         3.0          6.6         2.1 virginica
-## 108          7.3         2.9          6.3         1.8 virginica
-## 109          6.7         2.5          5.8         1.8 virginica
-## 110          7.2         3.6          6.1         2.5 virginica
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-126" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">ind2 &lt;- which(iris[, &#39;Sepal.Length&#39;] &lt; 5.8 &amp; iris[, &#39;Species&#39;] == &#39;setosa&#39;)
-iris2 &lt;- iris[ind2, ]
-head(iris2)
-</code></pre>
-
-<pre><code>##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-127" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">iris3 &lt;- rbind(iris1, iris2)
-head(iris3)
-</code></pre>
-
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 103          7.1         3.0          5.9         2.1 virginica
-## 105          6.5         3.0          5.8         2.2 virginica
-## 106          7.6         3.0          6.6         2.1 virginica
-## 108          7.3         2.9          6.3         1.8 virginica
-## 109          6.7         2.5          5.8         1.8 virginica
-## 110          7.2         3.6          6.1         2.5 virginica
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-128" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">iris4 &lt;- cbind(iris1[1:10, ], iris2[1:10, ])
-head(iris4)   # View(iris4)
-</code></pre>
-
-<pre><code>##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 103          7.1         3.0          5.9         2.1 virginica
-## 105          6.5         3.0          5.8         2.2 virginica
-## 106          7.6         3.0          6.6         2.1 virginica
-## 108          7.3         2.9          6.3         1.8 virginica
-## 109          6.7         2.5          5.8         1.8 virginica
-## 110          7.2         3.6          6.1         2.5 virginica
-##     Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 103          5.1         3.5          1.4         0.2  setosa
-## 105          4.9         3.0          1.4         0.2  setosa
-## 106          4.7         3.2          1.3         0.2  setosa
-## 108          4.6         3.1          1.5         0.2  setosa
-## 109          5.0         3.6          1.4         0.2  setosa
-## 110          5.4         3.9          1.7         0.4  setosa
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-129" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">sort(iris[1:30, 2])
-ind5 &lt;- order(iris[, &#39;Sepal.Length&#39;], iris[, &#39;Petal.Length&#39;])
-ind5[1:20]
-class(ind5)
-iris5 &lt;- iris[ind5, ]
-</code></pre>
-
-<pre><code>##  [1] 2.9 3.0 3.0 3.0 3.0 3.1 3.1 3.2 3.2 3.3 3.4 3.4 3.4 3.4 3.4 3.4 3.4
-## [18] 3.5 3.5 3.5 3.6 3.6 3.7 3.7 3.8 3.8 3.9 3.9 4.0 4.4
-</code></pre>
-
-<pre><code>##  [1] 14 39 43  9 42 23  7 48  4  3 30 13 46 12 31 25  2 38 10 35
-</code></pre>
-
-<pre><code>## [1] &quot;integer&quot;
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-130" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">head(iris5)
-</code></pre>
-
-<pre><code>##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 14          4.3         3.0          1.1         0.1  setosa
-## 39          4.4         3.0          1.3         0.2  setosa
-## 43          4.4         3.2          1.3         0.2  setosa
-## 9           4.4         2.9          1.4         0.2  setosa
-## 42          4.5         2.3          1.3         0.3  setosa
-## 23          4.6         3.6          1.0         0.2  setosa
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-131" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Examples: iris (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>我們也可以改變欄位的名字。</p>
-
-<pre><code class="r">iris6 &lt;- iris
-colnames(iris6) &lt;- c(&#39;SLength&#39;, &#39;SWidth&#39;, &#39;PLength&#39;, &#39;PWidth&#39;, &#39;Sp&#39;)
-# 也可以用 names(iris6) &lt;- c(&#39;SLength&#39;, &#39;SWidth&#39;, &#39;PLength&#39;, &#39;PWidth&#39;, &#39;Sp&#39;)
-head(iris6)
-</code></pre>
-
-<pre><code>##   SLength SWidth PLength PWidth     Sp
-## 1     5.1    3.5     1.4    0.2 setosa
-## 2     4.9    3.0     1.4    0.2 setosa
-## 3     4.7    3.2     1.3    0.2 setosa
-## 4     4.6    3.1     1.5    0.2 setosa
-## 5     5.0    3.6     1.4    0.2 setosa
-## 6     5.4    3.9     1.7    0.4 setosa
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="segue" id="slide-132" style="background:green; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Matrix</h2>
+    <h2>Basic Operation - Phase II</h2>
   </hgroup>
   <article data-timings="">
     
@@ -2723,186 +2450,54 @@ head(iris6)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-133" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-121" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Matrix</h2>
+    <h2>Arithmetic Operations</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>語法: <strong>matrix(elements, norw, ncol, byrow = F)</strong></li>
-<li>例子: </li>
-</ul>
-
-<pre><code class="r">My_matrix1 &lt;- matrix(1:6, 2, 3)
-My_matrix2 &lt;- matrix(1:6, 2, 3, byrow = T)
-My_matrix1
-My_matrix2
-</code></pre>
-
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    3    5
-## [2,]    2    4    6
-</code></pre>
-
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    2    3
-## [2,]    4    5    6
-</code></pre>
-
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-134" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-122" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Basic Operations on Matrix</h2>
+    <h2>+, -, *, /, %/%, %%</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><strong>+, -, *, /</strong></li>
-<li>例子:</li>
-</ul>
-
-<pre><code class="r">My_matrix1 + My_matrix2
-My_matrix1 * My_matrix2
-</code></pre>
-
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    2    5    8
-## [2,]    6    9   12
-</code></pre>
-
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    6   15
-## [2,]    8   20   36
-</code></pre>
-
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-135" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-123" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Basic Operation on Matrix (Cont.)</h2>
+    <h2>Matrix Operations: Multiplication and Transpose</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><strong>%*%</strong>: Matrix Mulplication</li>
-<li><strong>t()</strong>: Transpose</li>
-<li>例子:</li>
-</ul>
-
-<pre><code class="r">vec &lt;- c(1:3)
-(t(vec))
-</code></pre>
-
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    2    3
-</code></pre>
-
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-136" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-124" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
-    <h2>Basic Operation on Matrix (Cont.)</h2>
+    <h2>Matrix Operations: Solving Linear System</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li><strong>%*%</strong>: Matrix Mulplication</li>
-<li><strong>t()</strong>: Transpose</li>
-<li>例子:</li>
-</ul>
-
-<pre><code class="r">my_vec &lt;- matrix(1:3, ncol = 1) 
-My_matrix1 %*% my_vec
-</code></pre>
-
-<pre><code>##      [,1]
-## [1,]   22
-## [2,]   28
-</code></pre>
-
-<pre><code class="r"># My_matrix1 %*% t(my_vec)
-</code></pre>
-
+    
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-137" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-125" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Basic Operation on Matrix (Cont.)</h2>
-  </hgroup>
   <article data-timings="">
-    <ul>
-<li><strong>my_matrix[row_index, col_index]</strong></li>
-<li>例子:</li>
-</ul>
-
-<pre><code class="r">My_matrix1[1, c(1, 3)]
-</code></pre>
-
-<pre><code>## [1] 1 5
-</code></pre>
-
-<pre><code class="r">My_matrix2[, c(2, 3)]
-</code></pre>
-
-<pre><code>##      [,1] [,2]
-## [1,]    2    3
-## [2,]    5    6
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-138" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Basic Operation on Matrix (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li><strong>dim()</strong>: Dimension</li>
-<li>例子:</li>
-</ul>
-
-<pre><code class="r">dim(My_matrix1)
-</code></pre>
-
-<pre><code>## [1] 2 3
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-139" style="background:; background-repeat:no-repeat; background-position:center; ">
-  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
-  <hgroup>
-    <h2>Basic Operation on Matrix (Cont.)</h2>
-  </hgroup>
-  <article data-timings="">
-    <ul>
-<li><strong>dim()</strong>: Dimension</li>
-<li>例子:</li>
-</ul>
-
-<pre><code class="r">dim(My_matrix1)
-</code></pre>
-
-<pre><code>## [1] 2 3
-</code></pre>
-
-<p><font size='5'>
+    <p><font size='5'>
 <code>It&#39;s time for mini project!</code>
 </font></p>
 
@@ -2910,7 +2505,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-140" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-126" style="background:navy; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project 1: Barnsley Fern Fractal</h2>
@@ -2921,7 +2516,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-141" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-127" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Mini Project 1: Barnsley Fern Fractal</h2>
@@ -2944,7 +2539,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-142" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-128" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal</h2>
@@ -2962,7 +2557,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-143" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-129" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -2978,7 +2573,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-144" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-130" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -3001,7 +2596,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-145" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-131" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Barnsley Fern Fractal: Tips</h2>
@@ -3025,7 +2620,40 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-146" style="background:green; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-132" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Function</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-133" style="background:; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>First Look</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-134" style="background:navy; background-repeat:no-repeat; background-position:center; ">
+  <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
+  <hgroup>
+    <h2>Mini Project II - Battleship</h2>
+  </hgroup>
+  <article data-timings="">
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="segue" id="slide-135" style="background:green; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>One Last Thing: Help Yourself by Yourself</h2>
@@ -3036,7 +2664,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-147" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-136" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Why?</h2>
@@ -3052,7 +2680,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-148" style="background:; background-repeat:no-repeat; background-position:center; ">
+<slide class="" id="slide-137" style="background:; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>But How?</h2>
@@ -3068,7 +2696,7 @@ My_matrix1 %*% my_vec
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="segue" id="slide-149" style="background:orange; background-repeat:no-repeat; background-position:center; ">
+<slide class="segue" id="slide-138" style="background:orange; background-repeat:no-repeat; background-position:center; ">
   <img src="assets/img/Taiwan-R-logo.png" class="logo fit100" />
   <hgroup>
     <h2>Thanks for Your Attention!</h2>
@@ -3685,25 +3313,25 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=101 title='Try Try See'>
+        data-slide=101 title='Try This Code'>
          101
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=102 title='Try Try See'>
+        data-slide=102 title='The Answer'>
          102
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=103 title='Try Try See'>
+        data-slide=103 title='<br>'>
          103
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=104 title='Try Try See'>
+        data-slide=104 title='A Closer Look'>
          104
       </a>
     </li>
@@ -3715,7 +3343,7 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=106 title='A Closer Look'>
+        data-slide=106 title='Pop Quiz'>
          106
       </a>
     </li>
@@ -3793,188 +3421,122 @@ My_matrix1 %*% my_vec
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=119 title='Factor and Data Frame'>
+        data-slide=119 title='Useful Functions'>
          119
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=120 title='Factor and Data Frame (Cont.)'>
+        data-slide=120 title='Basic Operation - Phase II'>
          120
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=121 title='Useful Functions for Data Frame'>
+        data-slide=121 title='Arithmetic Operations'>
          121
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=122 title='Examples: iris'>
+        data-slide=122 title='+, -, *, /, %/%, %%'>
          122
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=123 title='Examples: iris (Cont.)'>
+        data-slide=123 title='Matrix Operations: Multiplication and Transpose'>
          123
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=124 title='Examples: iris (Cont.)'>
+        data-slide=124 title='Matrix Operations: Solving Linear System'>
          124
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=125 title='Examples: iris (Cont.)'>
+        data-slide=125 title=''>
          125
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=126 title='Examples: iris (Cont.)'>
+        data-slide=126 title='Mini Project 1: Barnsley Fern Fractal'>
          126
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=127 title='Examples: iris (Cont.)'>
+        data-slide=127 title='Mini Project 1: Barnsley Fern Fractal'>
          127
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=128 title='Examples: iris (Cont.)'>
+        data-slide=128 title='Barnsley Fern Fractal'>
          128
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=129 title='Examples: iris (Cont.)'>
+        data-slide=129 title='Barnsley Fern Fractal: Tips'>
          129
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=130 title='Examples: iris (Cont.)'>
+        data-slide=130 title='Barnsley Fern Fractal: Tips'>
          130
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=131 title='Examples: iris (Cont.)'>
+        data-slide=131 title='Barnsley Fern Fractal: Tips'>
          131
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=132 title='Matrix'>
+        data-slide=132 title='Function'>
          132
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=133 title='Matrix'>
+        data-slide=133 title='First Look'>
          133
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=134 title='Basic Operations on Matrix'>
+        data-slide=134 title='Mini Project II - Battleship'>
          134
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=135 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=135 title='One Last Thing: Help Yourself by Yourself'>
          135
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=136 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=136 title='Why?'>
          136
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=137 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=137 title='But How?'>
          137
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=138 title='Basic Operation on Matrix (Cont.)'>
+        data-slide=138 title='Thanks for Your Attention!'>
          138
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=139 title='Basic Operation on Matrix (Cont.)'>
-         139
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=140 title='Mini Project 1: Barnsley Fern Fractal'>
-         140
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=141 title='Mini Project 1: Barnsley Fern Fractal'>
-         141
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=142 title='Barnsley Fern Fractal'>
-         142
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=143 title='Barnsley Fern Fractal: Tips'>
-         143
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=144 title='Barnsley Fern Fractal: Tips'>
-         144
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=145 title='Barnsley Fern Fractal: Tips'>
-         145
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=146 title='One Last Thing: Help Yourself by Yourself'>
-         146
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=147 title='Why?'>
-         147
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=148 title='But How?'>
-         148
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=149 title='Thanks for Your Attention!'>
-         149
       </a>
     </li>
   </ul>

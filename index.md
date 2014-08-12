@@ -155,8 +155,8 @@ And you can claim that you can do sketch by a computer!
 - **Basic Operation - Phase II**
   - Arithmetic Operations
 - **Loop**
-  - if/else if/else
   - for
+  - if/else if/else
   - while
 - **Mini Project**
   - Barnsley Fern Fractal
@@ -1475,36 +1475,32 @@ DF <- read.table('cl_info_other.csv', sep = ',',
 
 `同款就不同師父啊(台)`
 
----
+--- &radio
 
-## Try Try See
-
-**Try this code**:
-
-```
-Petal.W <- as.numeric(Petal.W)
-```
-
----
-
-## Try Try See
-
-**Try this code**:
-
-```
-Petal.W <- as.numeric(Petal.W)
-```
+## Try This Code
+<div>
+<font color="blue" size="5">
+<strong>Petal.W <- as.numeric(Petal.W)</strong> <br>
   <br>
+Which is the correct outcome? <br>
+  <br>
+</font>
+</div>
 
-**You may expect something like this**:
+1. 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
+2. "I" "love" "data" "science" "It's" "the" "coolest" "thing" "ever" 
+3. _2 2 2 2 2 4 3 2 2 1 2 2_
+4. None of above.
 
-```
-[1] 0.2 0.2 0.2 0.2 0.2 0.4 0.3 0.2 0.2 0.1 0.2 0.2
-```
+*** .hint
+Just try it!
+
+*** .explanation
+Factor in R is a key-value mapping.
 
 ---
 
-## Try Try See
+## The Answer
 
 **This is what you really get**:
 
@@ -1519,7 +1515,7 @@ as.numeric(Petal.W)
 
 ---
 
-## Try Try See
+##  <br>
 
 <center>
 <img src="assets/img/What.png" width="50%" height="50%">
@@ -1551,6 +1547,29 @@ as.numeric(Petal.W)
 <center>
 <img src="assets/img/Factor.png" width="70%" height="70%">
 </center>
+
+--- &radio
+
+## Pop Quiz
+
+How can we correctly convert a factor into a vector? <br>
+
+Q: my_factor <- factor(seq(10, 1, -1))
+
+*** .hint
+   <br>
+1. my_vec <- seq(10, 1, by = -1) <br>
+&nbsp;&nbsp;&nbsp; my_vec[c(3, 3, 5, 1, 6)] <br>
+2. levels(my_factor): this will give you a vector of levels of a factor.
+
+*** .explanation
+
+```r
+my_factor <- factor(seq(10, 1, -1))
+Levels <- levels(my_factor)
+my_vector <- Levels[as.numeric(my_factor)]
+```
+
 
 --- .segue bg:navy
 
@@ -1593,6 +1612,7 @@ final_result
 ## 剛剛的例子有點兒無聊....
 
         # 讓 R 幫你驅邪避凶!!
+        # This code is for Mac only.
         for (i in 1:5){
                 system("say 'Nann Moll Ah Mi Tow Fo'")
                 system("say 'Ah Men'")
@@ -1681,459 +1701,42 @@ Note: **else if** and **else** are optional.
 `其他更精彩的資料分析模型的理論與操作，敬請期待 Data Analysis 課程!`
 </font>
 
-
 ---
 
-## Factor and Data Frame
+## Useful Functions
 
-- R 中有很多內建資料庫，其中包括你不可以不知道的 iris 資料庫。
-
-- 用法也很簡單，只要輸入以下指令：
-
-
-```r
-data(iris)
-head(iris)
-```
-
-```
-##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-```
-
----
-
-## Factor and Data Frame (Cont.)
-
-1. names(iris) 將可以看到 iris 所有欄位的名字。
-
-2. 關於 factor ，我們來看看下面這個例子。
-
-
-```r
-Species <- iris[, 'Species']
-class(Species)                  # R 會告訴你他是個 factor。
-Species2 <- as.numeric(Species) # 直接把 factor 轉成 numeric 向量。
-Species2
-# 你覺得上面這行 code 會跑出什麼呢? 試試看吧!
-```
-
----
-
-## Useful Functions for Data Frame
-
-給定一個名叫 data 的 data frame
+給定一個名叫 data 的 data frame (matrix)
 
 - names(data): 傳回 data 的所有欄位名稱。
 
 - nrow(data)/ncol(data): 傳回 data 的列 / 行數目。
 
+- dim(data)
+
 - head(data, n)/tail(data, n)/View(data)
 
-- which(exp)
+--- .segue bg:navy
 
-- sort/order
-
-- max/min
-
-- rbind/cbind: merge different data frames
-
----
-
-## Examples: iris
-
-
-```r
-nrow(iris)    # 顯示 iris 的列數
-ncol(iris)    # 顯示 iris 的行數
-dim(iris)     # 顯示 iris 的行、列數
-names(iris)   # 顯示 iris 的欄位名稱
-```
-
-```
-## [1] 150
-```
-
-```
-## [1] 5
-```
-
-```
-## [1] 150   5
-```
-
-```
-## [1] "Sepal.Length" "Sepal.Width"  "Petal.Length" "Petal.Width" 
-## [5] "Species"
-```
-
----
-
-## Examples: iris (Cont.)
-
-
-```r
-head(iris, n = 10)    # 顯示 iris 前 10 筆資料 (預設為 6 筆)
-```
-
-```
-##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1           5.1         3.5          1.4         0.2  setosa
-## 2           4.9         3.0          1.4         0.2  setosa
-## 3           4.7         3.2          1.3         0.2  setosa
-## 4           4.6         3.1          1.5         0.2  setosa
-## 5           5.0         3.6          1.4         0.2  setosa
-## 6           5.4         3.9          1.7         0.4  setosa
-## 7           4.6         3.4          1.4         0.3  setosa
-## 8           5.0         3.4          1.5         0.2  setosa
-## 9           4.4         2.9          1.4         0.2  setosa
-## 10          4.9         3.1          1.5         0.1  setosa
-```
-
----
-
-## Examples: iris (Cont.)
-
-
-```r
-tail(iris, n = 10)    # 顯示 iris 後 10 筆資料 (預設為 6 筆)
-```
-
-```
-##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 141          6.7         3.1          5.6         2.4 virginica
-## 142          6.9         3.1          5.1         2.3 virginica
-## 143          5.8         2.7          5.1         1.9 virginica
-## 144          6.8         3.2          5.9         2.3 virginica
-## 145          6.7         3.3          5.7         2.5 virginica
-## 146          6.7         3.0          5.2         2.3 virginica
-## 147          6.3         2.5          5.0         1.9 virginica
-## 148          6.5         3.0          5.2         2.0 virginica
-## 149          6.2         3.4          5.4         2.3 virginica
-## 150          5.9         3.0          5.1         1.8 virginica
-```
-
----
-
-## Examples: iris (Cont.)
-
-
-```r
-ind1 <- which(iris[, 'Sepal.Length'] >= 6.5 & iris[, 'Species'] == 'virginica')
-class(ind1)
-iris1 <- iris[ind1, ]
-head(iris1)
-```
-
-```
-## [1] "integer"
-```
-
-```
-##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 103          7.1         3.0          5.9         2.1 virginica
-## 105          6.5         3.0          5.8         2.2 virginica
-## 106          7.6         3.0          6.6         2.1 virginica
-## 108          7.3         2.9          6.3         1.8 virginica
-## 109          6.7         2.5          5.8         1.8 virginica
-## 110          7.2         3.6          6.1         2.5 virginica
-```
-
----
-
-## Examples: iris (Cont.)
-
-
-```r
-ind2 <- which(iris[, 'Sepal.Length'] < 5.8 & iris[, 'Species'] == 'setosa')
-iris2 <- iris[ind2, ]
-head(iris2)
-```
-
-```
-##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 1          5.1         3.5          1.4         0.2  setosa
-## 2          4.9         3.0          1.4         0.2  setosa
-## 3          4.7         3.2          1.3         0.2  setosa
-## 4          4.6         3.1          1.5         0.2  setosa
-## 5          5.0         3.6          1.4         0.2  setosa
-## 6          5.4         3.9          1.7         0.4  setosa
-```
-
----
-
-## Examples: iris (Cont.)
-
-
-```r
-iris3 <- rbind(iris1, iris2)
-head(iris3)
-```
-
-```
-##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 103          7.1         3.0          5.9         2.1 virginica
-## 105          6.5         3.0          5.8         2.2 virginica
-## 106          7.6         3.0          6.6         2.1 virginica
-## 108          7.3         2.9          6.3         1.8 virginica
-## 109          6.7         2.5          5.8         1.8 virginica
-## 110          7.2         3.6          6.1         2.5 virginica
-```
-
----
-
-## Examples: iris (Cont.)
-
-
-```r
-iris4 <- cbind(iris1[1:10, ], iris2[1:10, ])
-head(iris4)   # View(iris4)
-```
-
-```
-##     Sepal.Length Sepal.Width Petal.Length Petal.Width   Species
-## 103          7.1         3.0          5.9         2.1 virginica
-## 105          6.5         3.0          5.8         2.2 virginica
-## 106          7.6         3.0          6.6         2.1 virginica
-## 108          7.3         2.9          6.3         1.8 virginica
-## 109          6.7         2.5          5.8         1.8 virginica
-## 110          7.2         3.6          6.1         2.5 virginica
-##     Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 103          5.1         3.5          1.4         0.2  setosa
-## 105          4.9         3.0          1.4         0.2  setosa
-## 106          4.7         3.2          1.3         0.2  setosa
-## 108          4.6         3.1          1.5         0.2  setosa
-## 109          5.0         3.6          1.4         0.2  setosa
-## 110          5.4         3.9          1.7         0.4  setosa
-```
-
----
-
-## Examples: iris (Cont.)
-
-
-```r
-sort(iris[1:30, 2])
-ind5 <- order(iris[, 'Sepal.Length'], iris[, 'Petal.Length'])
-ind5[1:20]
-class(ind5)
-iris5 <- iris[ind5, ]
-```
-
-```
-##  [1] 2.9 3.0 3.0 3.0 3.0 3.1 3.1 3.2 3.2 3.3 3.4 3.4 3.4 3.4 3.4 3.4 3.4
-## [18] 3.5 3.5 3.5 3.6 3.6 3.7 3.7 3.8 3.8 3.9 3.9 4.0 4.4
-```
-
-```
-##  [1] 14 39 43  9 42 23  7 48  4  3 30 13 46 12 31 25  2 38 10 35
-```
-
-```
-## [1] "integer"
-```
-
----
-
-## Examples: iris (Cont.)
-
-
-```r
-head(iris5)
-```
-
-```
-##    Sepal.Length Sepal.Width Petal.Length Petal.Width Species
-## 14          4.3         3.0          1.1         0.1  setosa
-## 39          4.4         3.0          1.3         0.2  setosa
-## 43          4.4         3.2          1.3         0.2  setosa
-## 9           4.4         2.9          1.4         0.2  setosa
-## 42          4.5         2.3          1.3         0.3  setosa
-## 23          4.6         3.6          1.0         0.2  setosa
-```
-
----
-
-## Examples: iris (Cont.)
-
-我們也可以改變欄位的名字。
-
-
-```r
-iris6 <- iris
-colnames(iris6) <- c('SLength', 'SWidth', 'PLength', 'PWidth', 'Sp')
-# 也可以用 names(iris6) <- c('SLength', 'SWidth', 'PLength', 'PWidth', 'Sp')
-head(iris6)
-```
-
-```
-##   SLength SWidth PLength PWidth     Sp
-## 1     5.1    3.5     1.4    0.2 setosa
-## 2     4.9    3.0     1.4    0.2 setosa
-## 3     4.7    3.2     1.3    0.2 setosa
-## 4     4.6    3.1     1.5    0.2 setosa
-## 5     5.0    3.6     1.4    0.2 setosa
-## 6     5.4    3.9     1.7    0.4 setosa
-```
-
+## Basic Operation - Phase II
 
 --- .segue bg:green
 
-## Matrix
+## Arithmetic Operations
 
 ---
 
-## Matrix
-
-- 語法: **matrix(elements, norw, ncol, byrow = F)**
-- 例子: 
-
-```r
-My_matrix1 <- matrix(1:6, 2, 3)
-My_matrix2 <- matrix(1:6, 2, 3, byrow = T)
-My_matrix1
-My_matrix2
-```
-
-```
-##      [,1] [,2] [,3]
-## [1,]    1    3    5
-## [2,]    2    4    6
-```
-
-```
-##      [,1] [,2] [,3]
-## [1,]    1    2    3
-## [2,]    4    5    6
-```
+## +, -, *, /, %/%, %%
 
 ---
 
-## Basic Operations on Matrix
-
-- **+, -, *, /**
-- 例子:
-
-```r
-My_matrix1 + My_matrix2
-My_matrix1 * My_matrix2
-```
-
-```
-##      [,1] [,2] [,3]
-## [1,]    2    5    8
-## [2,]    6    9   12
-```
-
-```
-##      [,1] [,2] [,3]
-## [1,]    1    6   15
-## [2,]    8   20   36
-```
+## Matrix Operations: Multiplication and Transpose
 
 ---
 
-## Basic Operation on Matrix (Cont.)
-
-- **%*%**: Matrix Mulplication
-- **t()**: Transpose
-- 例子:
-
-```r
-vec <- c(1:3)
-(t(vec))
-```
-
-```
-##      [,1] [,2] [,3]
-## [1,]    1    2    3
-```
+## Matrix Operations: Solving Linear System
 
 ---
 
-## Basic Operation on Matrix (Cont.)
-
-- **%*%**: Matrix Mulplication
-- **t()**: Transpose
-- 例子:
-
-
-
-```r
-my_vec <- matrix(1:3, ncol = 1) 
-My_matrix1 %*% my_vec
-```
-
-```
-##      [,1]
-## [1,]   22
-## [2,]   28
-```
-
-```r
-# My_matrix1 %*% t(my_vec)
-```
-
-
----
-
-## Basic Operation on Matrix (Cont.)
-
-- **my_matrix[row_index, col_index]**
-- 例子:
-
-```r
-My_matrix1[1, c(1, 3)]
-```
-
-```
-## [1] 1 5
-```
-
-```r
-My_matrix2[, c(2, 3)]
-```
-
-```
-##      [,1] [,2]
-## [1,]    2    3
-## [2,]    5    6
-```
-
----
-
-## Basic Operation on Matrix (Cont.)
-
-- **dim()**: Dimension
-- 例子:
-
-```r
-dim(My_matrix1)
-```
-
-```
-## [1] 2 3
-```
-
----
-
-## Basic Operation on Matrix (Cont.)
-
-- **dim()**: Dimension
-- 例子:
-
-```r
-dim(My_matrix1)
-```
-
-```
-## [1] 2 3
-```
 
 <font size='5'>
 `It's time for mini project!`
@@ -2216,6 +1819,20 @@ dim(My_matrix1)
 <font size='6'>
 - `敬請期待 Data Visualization 教學課程。`
 </font>
+
+--- .segue bg:navy
+
+## Function
+
+---
+
+## First Look
+
+
+
+--- .segue bg:navy
+
+## Mini Project II - Battleship
 
 
 --- .segue bg:green

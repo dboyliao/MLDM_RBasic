@@ -1,1 +1,6 @@
+
+# Ignore cache files
 .cache
+
+# Ignore .DS_Store
+.DS_Store
